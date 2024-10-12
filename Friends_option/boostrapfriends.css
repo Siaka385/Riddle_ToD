@@ -1,0 +1,261 @@
+body{
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/dark\ forest\ picture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.playersform{
+    width: 40%;
+    height: 90vh;
+}
+.addplayer{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+.playeers{
+    background-image: url(../images/red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45px;
+    color: aqua;
+}
+.remove{
+    display: none;
+}
+.playeers::placeholder {
+    color: #ff0000; /* Change this to your desired color */
+  }
+#modalbutton{
+    color:black;
+    font-weight: 800px;
+}
+.head {
+    width: 100vw;
+    height: 10vh;
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;   
+}
+.scoreboard{
+    align-items: center;
+}
+#playername{
+    color:red; /* White text color */
+    font-family: 'Vampiro One', cursive;
+}
+#score{
+    color:red; /* White text color */
+    font-family: 'Vampiro One', cursive;
+}
+.gameover{
+    display: flex;
+    justify-content: center;
+}
+#battle{
+    width: 30%;
+    height: 80%;
+    background-image: url(../images/red.jpg);
+    font-weight: 900;
+    color: black;
+}
+.buttonbattle{
+    margin-top: 8%;
+}
+#battle{
+    width:20%;
+    margin-top:2%;
+}
+.riddle{
+    margin-top:70px;
+}
+.riddlecontent{
+    height: 80vh;
+}
+#riddles{
+    width: 100%;
+    height: 40vh;
+    border: 1px solid white;
+    font-size: 30px;
+    background-image: url(../images/red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: ridge;
+    border-radius: 10px;  
+}
+#riddle{
+    color: aqua;
+}
+.batttlee{
+    display: flex;
+    justify-content: center;
+}
+input[type="text"]{
+    background-image: url(../images/red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#useranswer{
+    height: 50px;
+    color: aqua;
+}
+
+/*!gameover */
+.gameoverContainer{
+    width:100%;
+    height: 45vh;   
+}
+#gameover{
+    color: red;
+    font-size: 60px;
+    font-weight: 800;
+}
+.imager{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}
+#image{
+    width:60px;
+    height: 100%;
+}
+.winner{
+    width:100%;
+    height: 25%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+#winnerplayer{
+    font-size: 30px;
+	font-weight: 1000;
+    color: transparent; 
+    -webkit-text-stroke: 1px white;
+    background-image: url(../images/red.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    text-align: center;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+#submit{
+    border-radius: 10px;
+    background-image: url(../images/red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+#back {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url(../images/red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    font-weight: 600;  
+  }
+
+ #tod{
+    margin-top: 100px;
+    height: 70vh; 
+}
+#truthdare{
+    margin-top: 60px;
+    height: 200px;
+}
+#toddisplay{
+    margin-top: 100px;
+    height: 70vh;
+}
+.tod{
+    width: 100%;
+    height: 60%;
+     background-image: url(../images/blacky.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-style: ridge;
+     border-radius: 10px;
+}
+#truthordare{
+    color:red;
+    font-size: 40px;   
+}
+.butttons{
+    margin-top: 5%;
+}
+
+.wrong{
+    width:100px;
+}
+#wbutton{
+    width: 100%;
+    height: 80%;
+}
+.tick{
+    width:150px;
+}
+#tbutton{
+    width: 100%;
+    height: 80%;
+}
+.skip{
+    width: 100px;
+}
+#sbutton{
+    width: 100%;
+    height: 80%;    
+}
+
+@media screen and (max-width : 768px){
+    .playersform{
+        width:80%;
+    }
+    #riddle{
+        color: aqua;
+        font-size: 18px;
+    }
+    .butttons{
+        margin-top: 10%;
+    }
+    #tbutton{
+        width: 100%;
+        height: 60%;
+    }
+    #sbutton{
+        width: 100%;
+        height: 60%;    
+    }
+    #wbutton{
+        width: 100%;
+        height: 60%;
+    }
+
+    #truthordare{
+        font-size: 25px;
+
+    }
+    #playername{
+        font-size: 15px;
+    }
+    #score{
+        font-size: 15px;
+    }
+}

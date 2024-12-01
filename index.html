@@ -24,33 +24,79 @@
   <body>
     <div class="containter">
       <div class="row">
-        <div class="col-12">
-          <div id="containters">
+        <div class="col">
+          <div class="boxcontainer">
             <div id="header">
               <h1 class="text-sm">Riddle Realm of Dread</h1>
-              <p class="text-sm text-md">
+              <p class="text-sm">
                 Welcome to a world of mystery and danger. Can you solve the
                 riddles and survive?
               </p>
             </div>
-            <button  type="button" class="btn btn-sm" id="oneplayer">One player</button>
-            <button  type="button" class="btn btn-sm" id="twoplayerbtn">Two player</button>
-            <button    type="button" class="btn btn-sm" id="couplebtn">Cryptic Horrors</button>
-
-            
-
-            <div id="videos">
-              <video id="vid">
-                <source
-                  src="The Truth About Team Strength in eFootball 2023 Mobile! Ep2.mkv"
-                  type="video/mp4"
-                />
-                your browser does not support this video.
-              </video>
+            <div>
+                   <button  type="button" class="btn btn-md" id="oneplayer">Solo player</button>
+            <button  type="button" class="btn btn-md" id="twoplayerbtn">Multiplayer</button>
+            <button    type="button" class="btn btn-md" id="couplebtn">Co-op mode</button>
+            <button    type="button" class="btn btn-md" id="couplebtn">Online Multiplayer</button>
+            <button    type="button" class="btn btn-md" id="couplebtn">Help</button>
             </div>
+           
           </div>
+
+          <div class="boxcontainer d-none">
+            <div id="gametypehead">
+              <h1 class="text-sm">Riddle Realm of Dread</h1>
+              <p class="text-sm">
+                Welcome to a world of mystery and danger. Can you solve the
+                riddles and survive?
+              </p>
+            </div>
+            <div>
+              <div class="riddle-categories">
+                <div class="riddle-category" id="math-riddles">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path d="M16 10l-4 4-4-4"/>
+                        <path d="M16 6l-4 4-4-4"/>
+                        <path stroke-linecap="round" d="M3 20h18v-8a3 3 0 00-3-3H6a3 3 0 00-3 3v8z"/>
+                    </svg>
+                    <h3>Mathematics Riddles</h3>
+                </div>
+        
+                <div class="riddle-category" id="general-riddles">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path d="M9.5 14c0 1.38-.56 2.63-1.47 3.53L7 19h4v1H5v-2.14c.93-.98 1.5-2.31 1.5-3.77 0-2.33-1.46-3.97-3.3-4.11A3.635 3.635 0 005.23 6c.99 0 1.82.68 1.97 1.58M21.73 12.5a4 4 0 00-7.46 0 4 4 0 00-7.46 0C5.93 14.39 7.5 16 9 16l.29.03 1.42 1.39 1.29 1.3V19h4v-1.28l.71-.7 1-.99c1.5 0 3.07-1.61 3.07-3.53z"/>
+                    </svg>
+                    <h3>General Riddles</h3>
+                </div>
+        
+                <div class="riddle-category" id="word-riddles">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path d="M4 7V4a2 2 0 012-2h2"/>
+                        <path d="M4 17v3a2 2 0 002 2h2"/>
+                        <path d="M16 4h2a2 2 0 012 2v3"/>
+                        <path d="M16 20h2a2 2 0 002-2v-3"/>
+                        <rect x="4" y="8" width="16" height="8" rx="1"/>
+                    </svg>
+                    <h3>Word Riddles</h3>
+                </div>
+        
+                <div class="riddle-category" id="logic-riddles">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path d="M10 14l-3-3 3-3"/>
+                        <path d="M14 10l3 3-3 3"/>
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    </svg>
+                    <h3>Logic Riddles</h3>
+                </div>
+            </div>
+
+
+
+          </div>
+
         </div>
       </div>
+    </div>
     </div>
 
 <script src="indexFolder/starterbotstrap.js"></script>

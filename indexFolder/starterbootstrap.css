@@ -3,7 +3,7 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-    background-image: url( ../images/dark\ forest\ picture.jpg);
+    background-image: url( "../images/dark\ forest\ picture.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -13,7 +13,7 @@ h1{
 	font-weight: 1000;
     color: transparent; 
     -webkit-text-stroke: 1px white;
-    background-image: url(../images/red.jpg);
+    background-image: url("../images/red.jpg");
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
@@ -44,7 +44,7 @@ p{
     width: 25%;
     border-radius: 10px;
     font-weight: 900;
-    background-image: url(../images/red.jpg);
+    background-image: url("../images/red.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 

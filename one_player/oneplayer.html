@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>oneplayer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Realm of Dread</title>
     <link rel="stylesheet" href="oneplayer.css">
-  </head>
-  <body>
+</head>
+<body>
     <div id="contain">
-      <div id="head">
-        <div id="score">
-          <p id="texts"><span id="scor"></span></p>
+        <div id="head">
+            <div id="score">
+                Score: <span id="scor">0</span>
+            </div>
+            <div id="time">
+                Time: <span id="timer">60</span>
+            </div>
         </div>
-        <p class="gameover"></p>
-        <div id="time">
-          <p id="times"><span id="timer"> </span></p>
+
+        <div id="riddle">
+            <!-- Riddle text will be dynamically inserted here -->
         </div>
-      </div>
 
-      <div id="riddle">
-        <p id="riddling"></p>
-      </div>
+        <div id="answer-container">
+            <button class="answer-btn" id="answer-btn1"></button>
+            <button class="answer-btn" id="answer-btn2"></button>
+            <button class="answer-btn" id="answer-btn3"></button>
+            <button class="answer-btn" id="answer-btn4"></button>
+        </div>
 
-      <div id="answer">
-        <label for="userinput"></label>
-        <input type="text" id="userinput" placeholder="enter answer" />
-      </div>
+        <div id="correct">
+            <span id="cor"></span>
+        </div>
 
-      <div id="correct">
-        <p id="cor"></p>
-      </div>
-
-      <div id="btn">
-        <button type="button" id="btns">Submit</button>
-        <button type="button" id="button">Next</button>
-      </div>
-      
+        <button id="back">Back to Categories</button>
     </div>
-  </body>
-  <script src="oneplayer.js"></script>
+
+    <script src="oneplayer.js"></script>
+</body>
 </html>

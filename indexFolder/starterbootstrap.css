@@ -9,7 +9,8 @@
 
 body{
     padding: 0;
-    margin: 0;
+    margin:15%;
+    margin-top: 4%;
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -36,7 +37,7 @@ body::after {
 
 
 .boxcontainer{
-    width: auto;
+    width: 75vw;
     height: auto;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
@@ -190,7 +191,13 @@ h1#riddle-realm-of-dread {
     color: white;
     font-family: 'Nosifer', cursive;
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 15px;
+}
+.back{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Riddle Realm of Dread</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --dark-bg: #121212;
+    --blood-red: #8B0000;
+    --muted-red: #5D1E1E;
+    --text-glow: rgba(139, 0, 0, 0.7);
+}
+
+body {
+    padding: 0;
+    margin: 15%;
+    margin-top: 4%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/dark\ forest\ picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(139,0,0,0.1), rgba(0,0,0,0.5));
+    animation: bg-shift 15s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.boxcontainer {
+    width: 75vw;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--blood-red);
+}
+
+h1 {
+    font-family: 'Nosifer', cursive;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: transparent; 
+    -webkit-text-stroke: 2px var(--blood-red);
+    text-shadow: 0 0 15px var(--text-glow);
+    background-image: linear-gradient(45deg, var(--blood-red), #ff4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: blood-pulse 3s ease-in-out infinite alternate;
+}
+
+.btn {
+    padding: 15px 25px;
+    margin: 15px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
+    color: white;
+    font-family: 'Nosifer', sans-serif;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+}
+
+.difficulty-btn {
+    background-image: linear-gradient(to right, #4a4a4a, #2c2c2c);
+    color: #aaaaaa;
+    box-shadow: 0 0 15px rgba(50, 50, 50, 0.5);
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s;
+}
+
+.btn:hover:before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
+}
+
+.difficulty-btn:hover {
+    background-image: linear-gradient(to right, #5a5a5a, #3c3c3c);
+}
+
+.btn i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background-color: var(--muted-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Nosifer', sans-serif;
+    font-size: 16px;
+}
+
+@keyframes blood-pulse {
+    0% { text-shadow: 0 0 10px var(--text-glow); transform: scale(1); }
+    100% { text-shadow: 0 0 25px var(--text-glow); transform: scale(1.03); }
+}
+
+@keyframes bg-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media screen and (max-width: 768px) {
+    h1 { font-size: 35px; }
+    .btn { width: 200px; font-size: 16px; }
+}
+
+   </style>
+</head>
+<body>
+    <div class="boxcontainer">
+        <h1 id="riddle-realm-of-dread">Riddle Realm of Dread</h1>
+        <h4> Select mode</h4>
+        <div>
+            <button class="btn"><i class="ri-book-open-line"></i>Classic Mode</button>
+            <button class="btn"><i class="ri-timer-line"></i>Time Attack</button>
+            <button class="btn"><i class="ri-skull-line"></i>Survival Mode</button>
+            <button class="btn difficulty-btn"><i class="ri-settings-3-line"></i>Select Difficulty</button>
+        </div>
+
+        <div class="back">
+            <a href="#" class="back-btn">Back</a>
+        </div>
+    </div>
+</body>
+</html>

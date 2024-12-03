@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap');
+
+        :root {
+            --dark-bg: #121212;
+            --blood-red: #8B0000;
+            --muted-red: #5D1E1E;
+            --text-glow: rgba(139, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Merriweather', serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .game-container {
+            width: 75vw;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--blood-red);
+        }
+
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--blood-red);
+            opacity: 0.7;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .total-score {
+            font-family: 'Nosifer', sans-serif;
+            font-size: 2rem;
+            color: var(--blood-red);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--text-glow);
+        }
+
+        .performance-details {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .achievements {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .achievement-badge {
+            background: rgba(139, 0, 0, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            width: 250px;
+            border: none;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
+            color: white;
+            font-family: 'Nosifer', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
+        }
+
+        .main-menu {
+            margin-top: 20px;
+            color: #ff4500;
+            font-family: 'Merriweather', serif;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .main-menu:hover {
+            color: #ff6347;
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .motivational-message {
+            margin-top: 20px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div id="confettiContainer" class="confetti-container"></div>
+    
+    <div class="game-container">
+        <div class="total-score">
+            You Scored: 120 Points!
+        </div>
+
+        <div class="performance-details">
+            Levels Completed: 5
+
+            <div class="achievements">
+                <div class="achievement-badge">
+                    Streak Master
+                </div>
+                <div class="achievement-badge">
+                    Speed Runner
+                </div>
+            </div>
+
+            Time Taken: 12:45
+        </div>
+
+        <div class="button-group">
+            <button class="btn">
+                Replay Level
+            </button>
+            
+            <button class="btn">
+                Next Level
+            </button>
+        </div>
+
+        <div class="main-menu">
+            Main Menu
+        </div>
+
+        <div class="motivational-message">
+            Great Job! Ready for the next challenge?
+        </div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            var colors = ['#8B0000', '#5D1E1E', '#9B2226'];
+            var container = document.getElementById('confettiContainer');
+            
+            for (var i = 0; i < 50; i++) {
+                var confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                
+                container.appendChild(confetti);
+            }
+        }
+
+        window.onload = createConfetti;
+    </script>
+</body>
+</html>

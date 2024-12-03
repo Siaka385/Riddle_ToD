@@ -5,23 +5,100 @@
     --blood-red: #8B0000;
     --muted-red: #5D1E1E;
     --text-glow: rgba(139, 0, 0, 0.7);
+    --gradient-bg: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #534686);
 }
 
-body{
-    padding: 0;
-    margin:15%;
-    margin-top: 4%;
-    /* display: flex;
+body {
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; */
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("./images/dark\ forest\ picture.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    font-family: 'Merriweather', serif;
-    color: #ffffff;
+    align-items: center;
+    margin: 0;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 20px;
 }
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.game-mode-selector {
+    margin-bottom: 20px;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+}
+
+.mode-options {
+    display: flex;
+    gap: 20px;
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--blood-red);
+    color: white;
+    font-family: 'Merriweather', serif;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mode-btn.active {
+    background-color: var(--blood-red);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
+}
+
+.mode-btn:hover {
+    transform: scale(1.05);
+    background-color: rgba(139, 0, 0, 0.8);
+}
+
+.game-container {
+    width: 75vw;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--blood-red);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.riddle-info, .level-indicator, .mode-display {
+    background: rgba(139, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.current-riddle, .total-riddles, .current-level, .current-mode {
+    color: #ff4500;
+}
+
+/* ... (rest of the previous CSS remains the same) */
 
 .game-container {
     width: 75vw;
@@ -47,18 +124,6 @@ body{
     color: white;
     font-family: 'Merriweather', serif;
 }
-
-.riddle-info, .level-indicator, .mode-display {
-    background: rgba(139, 0, 0, 0.3);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.current-riddle, .total-riddles, .current-level, .current-mode {
-    color: #ff4500;
-}
-
 
 .riddle {
     margin-bottom: 30px;
@@ -218,3 +283,16 @@ body{
 }
 
 /* Rest of the previous CSS remains the same */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .game-mode-selector,
+    .game-container {
+        width: 90vw;
+    }
+
+    .mode-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

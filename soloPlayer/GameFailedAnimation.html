@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almost There!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap');
+
+        :root {
+            --dark-bg: #121212;
+            --blood-red: #8B0000;
+            --muted-red: #5D1E1E;
+            --text-glow: rgba(139, 0, 0, 0.7);
+            --soft-bg: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Merriweather', serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .game-container {
+            width: 75vw;
+            max-width: 500px;
+            background: var(--soft-bg);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.3);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(139, 0, 0, 0.5);
+        }
+
+        .motivational-message {
+            font-family: 'Nosifer', sans-serif;
+            font-size: 2rem;
+            color: var(--blood-red);
+            text-shadow: 0 0 10px var(--text-glow);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .performance-summary {
+            background: rgba(139, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .score-details {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 65%; /* Adjust based on progress */
+            height: 15px;
+            background: linear-gradient(to right, var(--blood-red), var(--muted-red));
+            border-radius: 10px;
+        }
+
+        .feedback {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            width: 250px;
+            border: none;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
+            color: white;
+            font-family: 'Nosifer', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+        }
+
+        .btn-primary {
+            animation: bounce 1.5s infinite;
+        }
+
+        .btn-secondary {
+            background-image: linear-gradient(to right, #4a4a4a, #2a2a2a);
+            font-size: 14px;
+        }
+
+        .bonus-incentive {
+            color: #ff4500;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .bonus-incentive:hover {
+            color: #ff6347;
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .character-icon {
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%238B0000"><circle cx="50" cy="50" r="45"/><path d="M35 40c0 5-4 9-9 9s-9-4-9-9 4-9 9-9 9 4 9 9zm48 0c0 5-4 9-9 9s-9-4-9-9 4-9 9-9 9 4 9 9zm-37 20c16 0 16 16 16 16s0 16-16 16-16-16-16-16 0-16 16-16z"/></svg>') no-repeat center;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="character-icon"></div>
+
+        <div class="motivational-message">
+            Almost There!
+        </div>
+
+        <div class="performance-summary">
+            <div class="score-details">
+                <p>You scored: 120 points</p>
+                <p>You need: 150 points to move to the next level</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="feedback">
+                Try answering faster for bonus points!
+                Hints used: 2 (Each hint reduces points)
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-primary">
+                Try Again!
+            </button>
+
+            <button class="btn btn-secondary">
+                Main Menu
+            </button>
+
+            <div class="bonus-incentive">
+                Earn Extra Points!
+            </div>
+        </div>
+    </div>
+</body>
+</html>

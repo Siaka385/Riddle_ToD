@@ -27,6 +27,8 @@ func Router(w http.ResponseWriter, r *http.Request) {
 		Filehandler("index.html", w)
 	} else if path == "/gameplaymode" {
 		Selectmode(w, r)
+	} else if path == "/playsection" {
+		Playsection(w, r)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

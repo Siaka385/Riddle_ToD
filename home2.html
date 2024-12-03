@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home2.css">
+</head>
+<body>
+    <div class="game-mode-selector">
+        <div class="mode-options">
+            <button class="mode-btn active" data-mode="classic">Classic</button>
+            <button class="mode-btn" data-mode="time-attack">Time Attack</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="riddle-info">
+                Riddle <span class="current-riddle">1</span>/<span class="total-riddles">5</span>
+            </div>
+            <div class="level-indicator">
+                Level: <span class="current-level">2</span>
+            </div>
+            <div class="mode-display">
+                Mode: <span class="current-mode">Classic</span>
+            </div>
+            <div class="timer">
+                Time: 60s
+            </div>
+            <div class="score">
+                Score: 100
+            </div>
+        </div>
+
+        <div class="riddle">
+            <h2>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</h2>
+        </div>
+
+        <div id="hint" class="hint" style="display: none;">
+            Hint: I repeat what you say without a mouth.
+        </div>
+
+        <div class="answer-buttons">
+            An Echo
+
+            A Shadow
+
+            A Whisper
+
+            A Cloud
+        </div>
+
+        <div id="custom-answer-container" class="custom-answer-container" style="display: none;">
+            <input type="text" class="custom-answer-input" placeholder="Enter your answer">
+            <button class="btn custom-answer-submit">Submit</button>
+        </div>
+
+        <div class="game-footer">
+            <div class="footer-links">
+                <span class="hint-link">Need a Hint?</span>
+                <span class="custom-answer-link">Custom Answer</span>
+            </div>
+
+            <div id="feedback" class="feedback">
+                <!-- Feedback will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

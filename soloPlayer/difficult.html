@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Difficulty Selection - Riddle Realm of Dread</title>
+    <link href="../css/difficult.css" rel="stylesheet">
+</head>
+<body>
+    <div class="boxcontainer">
+        <h1>Difficulty Selection</h1>
+        <div class="difficulty-selection">
+            <button class="btn difficulty-btn active" data-difficulty="easy">
+                <i class="fa fa-skull-crossbones"></i>Novice Curse(easy)
+            </button>
+            <button class="btn difficulty-btn" data-difficulty="medium">
+                <i class="fa fa-ghost"></i>Haunting Challenge(medium)
+            </button>
+            <button class="btn difficulty-btn" data-difficulty="hard">
+                <i class="fa fa-demon"></i>Realm of Despair(hard)
+            </button>
+        </div>
+        <div class="difficulty-description">
+            <p id="difficulty-info">Choose the darkness that matches your courage...</p>
+        </div>
+        <div class="back">
+            <a href="#" class="back-btn">Return to Modes</a>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+        const difficultyInfo = document.getElementById('difficulty-info');
+
+        const difficultyDescriptions = {
+            easy: "A gentle descent into the shadows. Riddles whisper softly, challenges are kind.",
+            medium: "The darkness grows thick. Riddles bite with sharp teeth, testing your resolve.",
+            hard: "Pure nightmare fuel. Only the bravest souls dare to tread this path of absolute terror."
+        };
+
+        difficultyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const difficulty = button.dataset.difficulty;
+                difficultyInfo.textContent = difficultyDescriptions[difficulty];
+                
+                // Remove active state from all buttons
+                difficultyButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active state to clicked button
+                button.classList.add('active');
+            });
+        });
+    });
+    </script>
+</body>
+</html>

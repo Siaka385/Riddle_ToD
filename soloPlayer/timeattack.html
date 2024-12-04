@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Attack Challenge</title>
+    <link rel="stylesheet" href="timeattack.css">
+</head>
+<body>
+    <div class="game-container time-attack-container">
+        <div class="game-header">
+            <div class="timer-container">
+                <span class="timer-label">Time Left:</span>
+                <span class="timer">30</span>
+                <span class="timer-unit">s</span>
+            </div>
+            <div class="score-container">
+                Score: <span class="current-score">0</span>
+            </div>
+        </div>
+
+        <div class="challenge-section">
+            <h2 class="challenge-title">Lightning Round!</h2>
+            <div class="challenge-description">
+                Answer as many questions as you can before time runs out!
+            </div>
+        </div>
+
+        <div class="riddle">
+            <h2 class="riddle-text">What travels around the world but stays in one corner?</h2>
+        </div>
+
+        <div class="answer-buttons">
+            <button class="btn answer-btn">A Stamp</button>
+            <button class="btn answer-btn">A Letter</button>
+            <button class="btn answer-btn">A Postcard</button>
+            <button class="btn answer-btn">An Envelope</button>
+        </div>
+
+        <div class="game-footer">
+            <div class="progress-tracker">
+                Correct Answers: <span class="correct-count">0</span> / <span class="total-challenges">10</span>
+            </div>
+
+            <div class="game-actions">
+                <a href="#" class="hint-link">Need a Hint?</a>
+                <a href="#" class="custom-answer-link">Custom Answer</a>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <script src="../js/timeattack.js"></script>
+</body>
+</html>

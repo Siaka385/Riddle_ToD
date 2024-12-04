@@ -171,13 +171,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hint Link (to be implemented)
     hintLink.addEventListener('click', () => {
+
+
+
         const currentRiddle = riddleBank.find(r => 
             r.question === riddleText.textContent
         );
-        
-        // Toggle hint visibility or show hint
-        feedbackElement.textContent = currentRiddle.hint;
-        feedbackElement.style.color = 'orange';
+
+        document.getElementById("hint").style.display="block";
+        document.getElementById("hint").textContent = `Hint: ${currentRiddle.hint}`;
     });
 
     // Custom Answer Link (placeholder)

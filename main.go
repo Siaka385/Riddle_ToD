@@ -13,6 +13,8 @@ func main() {
 
 	mux.HandleFunc("/indexFolder/", Serverside.StaticServer)
 	mux.HandleFunc("/images/", Serverside.StaticServer)
+	mux.HandleFunc("/js/", Serverside.StaticServer)
+	mux.HandleFunc("/css/",Serverside.StaticServer)
 
 	mux.HandleFunc("/", Serverside.Router)
 

@@ -13,7 +13,7 @@ type RiddleCategoteries struct {
 }
 
 func Selectmode(w http.ResponseWriter, r *http.Request) {
-	Filehandler("indexFolder/gameplaymode.html", w)
+	Filehandler("soloPlayer/GameMode.html", w)
 
 	path := r.URL.Query().Get("category")
 	if path == "" {
@@ -21,9 +21,6 @@ func Selectmode(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Bad request", http.StatusBadRequest)
 		return
 	}
-
-	fmt.Println(path)
-
 	selectedcategory := &RiddleCategoteries{}
 
 	if path == "mathematics" {

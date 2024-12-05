@@ -25,12 +25,14 @@ window.onload = () => {
 
   }
 
-
+//proceed to gamemode
   function ChooseGameMode(){
     var btn=document.getElementById("home")
     btn.classList.add("d-none")
     document.getElementById("selectriddlecategory").classList.remove("d-none")
   }
+
+  //proceed to home
   function backtohome(){
     let back=document.getElementById("home")
     back.classList.remove("d-none")

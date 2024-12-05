@@ -35,5 +35,4 @@ func Selectmode(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "NOT FOUND", http.StatusNotFound)
 		return
 	}
-
 }

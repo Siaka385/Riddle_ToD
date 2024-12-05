@@ -29,6 +29,8 @@ func Router(w http.ResponseWriter, r *http.Request) {
 		Selectmode(w, r)
 	} else if path == "/playsection" {
 		Playsection(w, r)
+	} else if path == "/DifficultySetting" {
+		Filehandler("soloPlayer/difficult.html", w)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

@@ -1,6 +1,7 @@
 package Serverside
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 )
@@ -10,7 +11,25 @@ func Playsection(w http.ResponseWriter, r *http.Request) {
 
 	if path == "classic" {
 		temp, err := template.ParseFiles("soloPlayer/playsection.html")
+		if err != nil {
+			http.Error(w, "Error file", http.StatusInternalServerError)
+		}
 
+		if err = temp.Execute(w, nil); err != nil {
+			http.Error(w, "Error file", http.StatusInternalServerError)
+		}
+	} else if path == "timeattack" {
+		fmt.Println("helo")
+		temp, err := template.ParseFiles("soloPlayer/timeattack.html")
+		if err != nil {
+			http.Error(w, "Error file", http.StatusInternalServerError)
+		}
+
+		if err = temp.Execute(w, nil); err != nil {
+			http.Error(w, "Error file", http.StatusInternalServerError)
+		}
+	} else if path == "survival" {
+		temp, err := template.ParseFiles("soloPlayer/timeattack.html")
 		if err != nil {
 			http.Error(w, "Error file", http.StatusInternalServerError)
 		}
@@ -19,5 +38,4 @@ func Playsection(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Error file", http.StatusInternalServerError)
 		}
 	}
-
 }

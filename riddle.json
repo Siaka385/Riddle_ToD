@@ -1,0 +1,242 @@
+[
+ {
+  "qustion": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Echo",
+   "Shadow",
+   "Wind",
+   "Sound"
+  ],
+  "difficulty": "Medium",
+  "level": 1
+ },
+ {
+  "qustion": "The more of me you take, the more you leave behind. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Footsteps",
+   "Memories",
+   "Time",
+   "Shadow"
+  ],
+  "difficulty": "Medium",
+  "level": 1
+ },
+ {
+  "qustion": "What has keys but can't open locks?",
+  "category": "Word Riddle",
+  "choices": [
+   "Piano",
+   "Keyboard",
+   "Map",
+   "Book"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+  "category": "Word Riddle",
+  "choices": [
+   "The letter 'M'",
+   "Time",
+   "Infinity",
+   "Silence"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "What number comes next in the sequence: 1, 11, 21, 1211, 111221?",
+  "category": "Mathematics",
+  "choices": [
+   "312211",
+   "111211",
+   "131122",
+   "211221"
+  ],
+  "difficulty": "Hard",
+  "level": 3
+ },
+ {
+  "qustion": "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Candle",
+   "Tree",
+   "Shadow",
+   "Mountain"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "What is always in front of you but can’t be seen?",
+  "category": "Logic",
+  "choices": [
+   "Future",
+   "Air",
+   "Dream",
+   "Reflection"
+  ],
+  "difficulty": "Medium",
+  "level": 1
+ },
+ {
+  "qustion": "What has one eye but can’t see?",
+  "category": "Word Riddle",
+  "choices": [
+   "Needle",
+   "Cyclops",
+   "Storm",
+   "Clock"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "If two’s company and three’s a crowd, what are four and five?",
+  "category": "Word Riddle",
+  "choices": [
+   "Nine",
+   "Party",
+   "Friends",
+   "Math Problem"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "If you have me, you want to share me. If you share me, you don’t have me. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Secret",
+   "Happiness",
+   "Silence",
+   "Gift"
+  ],
+  "difficulty": "Hard",
+  "level": 3
+ },
+ {
+  "qustion": "I’m found in the sky, but you can also hold me in your hands. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Cloud",
+   "Star",
+   "Water",
+   "Dream"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "What has four wheels and flies?",
+  "category": "Word Riddle",
+  "choices": [
+   "Garbage Truck",
+   "Airplane",
+   "Helicopter",
+   "Race Car"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "The more you take away, the bigger I get. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Hole",
+   "Shadow",
+   "Silence",
+   "Cloud"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "I am always hungry, I must always be fed. The finger I touch, will soon turn red. What am I?",
+  "category": "Logic",
+  "choices": [
+   "Fire",
+   "Lava",
+   "Flame",
+   "Sun"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "What is so fragile that saying its name breaks it?",
+  "category": "Logic",
+  "choices": [
+   "Silence",
+   "Glass",
+   "Promise",
+   "Shadow"
+  ],
+  "difficulty": "Medium",
+  "level": 2
+ },
+ {
+  "qustion": "What has roots as nobody sees, is taller than trees, up, up it goes, and yet it never grows?",
+  "category": "Logic",
+  "choices": [
+   "Mountain",
+   "Tree",
+   "Cloud",
+   "Building"
+  ],
+  "difficulty": "Hard",
+  "level": 3
+ },
+ {
+  "qustion": "I can be cracked, made, told, and played. What am I?",
+  "category": "Word Riddle",
+  "choices": [
+   "Joke",
+   "Puzzle",
+   "Song",
+   "Game"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "The person who makes it sells it. The person who buys it never uses it. The person who uses it never knows they’re using it. What is it?",
+  "category": "Logic",
+  "choices": [
+   "Coffin",
+   "Clock",
+   "Medicine",
+   "Gift"
+  ],
+  "difficulty": "Hard",
+  "level": 3
+ },
+ {
+  "qustion": "What has a head, a tail, is brown, and has no legs?",
+  "category": "Logic",
+  "choices": [
+   "Coin",
+   "Worm",
+   "Snail",
+   "Stick"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ },
+ {
+  "qustion": "What begins with an ‘E’, but only contains one letter?",
+  "category": "Word Riddle",
+  "choices": [
+   "Envelope",
+   "Eagle",
+   "Edge",
+   "Eel"
+  ],
+  "difficulty": "Easy",
+  "level": 1
+ }
+]

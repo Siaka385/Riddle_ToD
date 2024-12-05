@@ -1,7 +1,6 @@
 package Serverside
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -17,10 +16,10 @@ func Selectmode(w http.ResponseWriter, r *http.Request) {
 
 	path := r.URL.Query().Get("category")
 	if path == "" {
-		fmt.Println("hhyh")
 		http.Error(w, "Bad request", http.StatusBadRequest)
 		return
 	}
+	LoadRiddle(w, r)
 	selectedcategory := &RiddleCategoteries{}
 
 	if path == "mathematics" {

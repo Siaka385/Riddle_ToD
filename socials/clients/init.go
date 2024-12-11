@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	clients map[chan types.SSEvent]bool // registered clients channel
-	clientsMutex *sync.Mutex  // protect the access to the clients channel map
+	clients      map[chan types.SSEvent]bool // registered clients channel
+	clientsMutex *sync.Mutex                 // protect the access to the clients channel map
 )
 
 func Init() map[chan types.SSEvent]bool {

@@ -23,6 +23,12 @@ window.onload = () => {
       window.location.assign("cryptic_horrors/boostrap tod riddlesmenu.html");
     })
 
+    //help
+    var help=document.getElementById("helpbtn")
+    help.addEventListener("click",()=>{
+      window.location.href="/help"
+    })
+
   }
 
 //proceed to gamemode

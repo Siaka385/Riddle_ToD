@@ -24,13 +24,15 @@ func Router(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
 	if path == "/" {
-		Filehandler("index.html", w)
+		LoadIndexPage(w, r)
 	} else if path == "/gameplaymode" {
 		Selectmode(w, r)
 	} else if path == "/playsection" {
 		Playsection(w, r)
 	} else if path == "/DifficultySetting" {
 		Filehandler("soloPlayer/difficult.html", w)
+	} else if path == "/help" {
+		Filehandler("help/help.html", w)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

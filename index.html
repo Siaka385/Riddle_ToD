@@ -25,7 +25,7 @@
     <div class="containter">
       <div class="row">
         <div class="col">
-          <div class="boxcontainer" id="home">
+          <div class="boxcontainer {{.ShowmainMenu}}" id="home">
             <div id="header">
               <h1 class="text-sm" id="riddle-realm-of-dread">Riddle Realm of Dread</h1>
               <p class="text-sm">
@@ -46,13 +46,13 @@
               <button type="button" class="btn btn-md" id="couplebtn">
                 Online Multiplayer
               </button>
-              <button type="button" class="btn btn-md" id="couplebtn">
+              <button type="button" class="btn btn-md" id="helpbtn">
                 Help
               </button>
             </div>
           </div>
 
-          <div class="boxcontainer d-none" id="selectriddlecategory">
+          <div class="boxcontainer {{.Showcategory}}" id="selectriddlecategory">
             <div id="gametypehead">
               <h1 class="text-sm">Riddle Realm of Dread</h1>
               <p class="text-sm">

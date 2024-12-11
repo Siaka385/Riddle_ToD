@@ -9,7 +9,6 @@ import (
 
 func Filehandler(filename string, w http.ResponseWriter) {
 	tmp, err := template.ParseFiles(filename)
-
 	if err != nil {
 		http.Error(w, "Server Error", http.StatusInternalServerError)
 		fmt.Println(err)
@@ -20,5 +19,4 @@ func Filehandler(filename string, w http.ResponseWriter) {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		os.Exit(1)
 	}
-
 }

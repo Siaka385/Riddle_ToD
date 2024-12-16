@@ -29,7 +29,7 @@ func Playsection(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Error file", http.StatusInternalServerError)
 		}
 	} else if path == "survival" {
-		temp, err := template.ParseFiles("soloPlayer/timeattack.html")
+		temp, err := template.ParseFiles("soloPlayer/Survival.html")
 		if err != nil {
 			http.Error(w, "Error file", http.StatusInternalServerError)
 		}

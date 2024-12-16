@@ -30,7 +30,7 @@ func Router(w http.ResponseWriter, r *http.Request) {
 	} else if path == "/playsection" {
 		Playsection(w, r)
 	} else if path == "/DifficultySetting" {
-		Filehandler("soloPlayer/difficult.html", w)
+		Filehandler("soloPlayer/disfficult.html", w)
 	} else if path == "/help" {
 		Filehandler("help/help.html", w)
 	} else {

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>homepage</title>
+    <!-- Required meta tags -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+
+  <body>
+    <div class="containter">
+      <div class="row">
+        <div class="col">
+          <div class="boxcontainer {{.ShowmainMenu}}" id="home">
+            <div id="header">
+              <h1 class="text-sm" id="riddle-realm-of-dread">Riddle Realm of Dread</h1>
+              <p class="text-sm">
+                Welcome to a world of mystery and danger. Can you solve the
+                riddles and survive?
+              </p>
+              <!-- Add this section inside the #header div, after the existing <p> tag -->
+                <div class="user-profile">
+                    <div class="avatar-container">
+                        <img src="path/to/default-avatar.png" alt="User Avatar" class="user-avatar">
+                        <div class="avatar-overlay">
+                            <span class="avatar-level-badge">Lv.1</span>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-primary-info">
+                            <span class="username">DreadMaster</span>
+                            <span class="user-level">Level 1 | Novice Riddler</span>
+                        </div>
+                        <div class="user-quick-actions">
+                            <div class="action-buttons">
+                                <button type="button" class="btn btn-profile btn-settings" id="profile-settings" title="Profile Settings">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-profile btn-logout" id="logout" title="Logout">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                        <polyline points="16 17 21 12 16 7"></polyline>
+                                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+              <button type="button" class="btn btn-md" id="oneplayer">
+                Solo player
+              </button>
+              <button type="button" class="btn btn-md" id="twoplayerbtn">
+                Multiplayer
+              </button>
+              <button type="button" class="btn btn-md" id="couplebtn">
+                Co-op mode
+              </button>
+              <button type="button" class="btn btn-md" id="couplebtn">
+                Online Multiplayer
+              </button>
+              <button type="button" class="btn btn-md" id="helpbtn">
+                Help
+              </button>
+            </div>
+          </div>
+
+          <div class="boxcontainer {{.Showcategory}}" id="selectriddlecategory">
+            <div id="gametypehead">
+              <h1 class="text-sm">Riddle Realm of Dread</h1>
+              <p class="text-sm">
+                Welcome to a world of mystery and danger. Can you solve the
+                riddles and survive?
+              </p>
+            </div>
+            <div>
+              <div class="riddle-categories">
+                <div class="riddle-category" id="math-riddles">
+                  <a href="/gameplaymode?category=mathematics">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                    >
+                      <path d="M16 10l-4 4-4-4" />
+                      <path d="M16 6l-4 4-4-4" />
+                      <path
+                        stroke-linecap="round"
+                        d="M3 20h18v-8a3 3 0 00-3-3H6a3 3 0 00-3 3v8z"
+                      />
+                    </svg>
+                    <h3>Mathematics Riddles</h3>
+                  </a>
+                </div>
+
+                <div class="riddle-category" id="general-riddles">
+                  <a href="/gameplaymode?category=generalriddles">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M9.5 14c0 1.38-.56 2.63-1.47 3.53L7 19h4v1H5v-2.14c.93-.98 1.5-2.31 1.5-3.77 0-2.33-1.46-3.97-3.3-4.11A3.635 3.635 0 005.23 6c.99 0 1.82.68 1.97 1.58M21.73 12.5a4 4 0 00-7.46 0 4 4 0 00-7.46 0C5.93 14.39 7.5 16 9 16l.29.03 1.42 1.39 1.29 1.3V19h4v-1.28l.71-.7 1-.99c1.5 0 3.07-1.61 3.07-3.53z"
+                      />
+                    </svg>
+                    <h3>General Riddles</h3>
+                  </a>
+                </div>
+
+                <div class="riddle-category" id="word-riddles">
+                  <a href="/gameplaymode?category=wordriddles">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                    >
+                      <path d="M4 7V4a2 2 0 012-2h2" />
+                      <path d="M4 17v3a2 2 0 002 2h2" />
+                      <path d="M16 4h2a2 2 0 012 2v3" />
+                      <path d="M16 20h2a2 2 0 002-2v-3" />
+                      <rect x="4" y="8" width="16" height="8" rx="1" />
+                    </svg>
+                    <h3>Word Riddles</h3>
+                  </a>
+                </div>
+
+                <div class="riddle-category" id="logic-riddles">
+                  <a href="/gameplaymode?category=logicriddles">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 14l-3-3 3-3" />
+                      <path d="M14 10l3 3-3 3" />
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                    </svg>
+                    <h3>Logic Riddles</h3>
+                  </a>
+                </div>
+              </div>
+
+              <div class="back">
+                <button type="button" class="btn btn-md" id="back">Back</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

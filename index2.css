@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --dark-bg: #121212;
+    --blood-red: #8B0000;
+    --muted-red: #5D1E1E;
+    --text-glow: rgba(139, 0, 0, 0.7);
+}
+
+body {
+    padding: 0;
+    margin: 15%;
+    margin-top: 4%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/dark\ forest\ picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(139,0,0,0.1), rgba(0,0,0,0.5));
+    animation: bg-shift 15s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(51, 0, 0, 0.9));
+    border-radius: 20px;
+    border: 3px solid var(--blood-red);
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--blood-red);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: scale(1.05);
+}
+
+.avatar-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.avatar-level-badge {
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    display: block;
+}
+
+.user-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(120%) contrast(110%);
+}
+
+.user-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.user-primary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-family: 'Nosifer', cursive;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+.user-level {
+    font-family: 'Merriweather', serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 5px;
+    background: rgba(139, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.user-quick-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-profile {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background: rgba(139, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+.btn-profile:hover {
+    background: rgba(139, 0, 0, 0.8);
+    transform: scale(1.1) rotate(15deg);
+}
+
+.btn-profile svg {
+    stroke: white;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .user-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-info {
+        margin-left: 0;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    .user-primary-info {
+        align-items: center;
+    }
+
+    .user-quick-actions {
+        margin-top: 10px;
+    }
+}
+.boxcontainer {
+    width: 75vw;
+    height: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--blood-red);
+}
+
+h1 {
+    font-family: 'Nosifer', cursive;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: transparent; 
+    -webkit-text-stroke: 2px var(--blood-red);
+    text-shadow: 0 0 15px var(--text-glow);
+    background-image: linear-gradient(45deg, var(--blood-red), #ff4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: blood-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes blood-pulse {
+    0% {
+        text-shadow: 0 0 10px var(--text-glow);
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 25px var(--text-glow);
+        transform: scale(1.03);
+    }
+}
+
+.btn {
+    padding: 15px 25px;
+    margin: 15px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
+    color: white;
+    font-family: 'Nosifer', sans-serif;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s;
+}
+
+.btn:hover:before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
+}
+
+.btn-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes bg-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.riddle-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 5px solid white;
+}
+
+.riddle-category {
+    width: 180px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #8B0000;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.riddle-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+.riddle-category svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    stroke: #8B0000;
+    fill: none;
+}
+
+.riddle-category h3 {
+    color: white;
+    font-family: 'Nosifer', cursive;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 5% 3%;
+        font-size: 14px;
+    }
+
+    .boxcontainer {
+        width: 95vw;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    h1#riddle-realm-of-dread {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .user-profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .user-info {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .username {
+        font-size: 18px;
+    }
+
+    .user-level {
+        font-size: 14px;
+    }
+
+    .profile-actions {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .btn-profile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .riddle-categories {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .riddle-category {
+        width: 250px;
+        height: 150px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .riddle-category svg {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+    }
+
+    .riddle-category h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .container, .row, .col {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 2% 2%;
+        font-size: 12px;
+    }
+
+    h1#riddle-realm-of-dread {
+        font-size: 28px;
+    }
+
+    .btn {
+        max-width: 220px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .riddle-category {
+        width: 90%;
+        height: 120px;
+    }
+
+    .riddle-category svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .riddle-category h3 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        touch-action: manipulation;
+    }
+
+    .btn, .riddle-category, .btn-profile {
+        min-touch-target-size: 44px;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

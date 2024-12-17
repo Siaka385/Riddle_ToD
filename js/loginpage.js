@@ -22,6 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
             { username: 'player', password: 'gamepass456' }
         ];
 
+        var user={
+            Username:username,
+            Password:password
+        }
+
+
+        fetch("/login",{
+            headers: { 'Content-Type': 'application/json' },
+            method:"POST",
+            body:JSON.stringify(user)
+        }).then(response => response.json()).then(data => console.log(data)).catch(error => console.log(error))
+
         const userMatch = validUsers.find(
             user => user.username === username && user.password === password
         );

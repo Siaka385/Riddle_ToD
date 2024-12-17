@@ -70,20 +70,23 @@
 
 function handleServerResponse(message){
 
-  if(message == "Email already Exist"){
+  if(message == "Email already exists"){
     errorMessage.textContent="Email Already Exist"
     errorMessage.style.display = 'block';
+    scrollToTop()
     return
   }
-  if(message == "username already exist"){
+  if(message == "Username already exists"){
       errorMessage.textContent="Username Already Exist"
       errorMessage.style.display = 'block';
+      scrollToTop()
     return
   }
 
-  if (message == "passwords do not match"){
+  if (message == "Passwords do not match"){
       errorMessage.textContent="Passwords do not match"
       errorMessage.style.display = 'block';
+      scrollToTop()
       return
   }
 
@@ -94,6 +97,12 @@ function handleServerResponse(message){
 // },1000)
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,        // Scroll to the top
+        behavior: 'smooth' // Smooth scrolling
+    });
+}
 
 
 

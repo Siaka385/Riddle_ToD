@@ -3,6 +3,8 @@ package Serverside
 import (
 	"net/http"
 	"os"
+
+	auth "Riddle_ToD/Serverside/auth"
 )
 
 func StaticServer(w http.ResponseWriter, r *http.Request) {
@@ -24,7 +26,7 @@ func Router(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
 	if path == "/" {
-		LoadIndexPage(w, r)
+		Reg(w, r)
 	} else if path == "/gameplaymode" {
 		Selectmode(w, r)
 	} else if path == "/playsection" {
@@ -33,6 +35,8 @@ func Router(w http.ResponseWriter, r *http.Request) {
 		Filehandler("soloPlayer/disfficult.html", w)
 	} else if path == "/help" {
 		Filehandler("help/help.html", w)
+	} else if path == "/register" {
+		auth.Register(w, r)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

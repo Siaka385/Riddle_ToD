@@ -4,57 +4,103 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
+
+	"gorm.io/gorm"
+
+	database "Riddle_ToD/Serverside/database"
 )
 
-type Player struct {
-	Username       string `json:"username"`
-	Email          string `json:"email"`
-	Password       string `json:"password"`
-	ConfirmPass    string `json:"ConfirmPass"`
-	SelectedAvatar string `json:"SelectedAvatar"`
+// Renamed struct and variables
+type PlayerInput struct {
+	Username        string `json:"username"`
+	Email           string `json:"email"`
+	Password        string `json:"password"`
+	ConfirmPassword string `json:"confirmPass"`
+	Avatar          string `json:"selectedAvatar"`
 }
 
-type Message struct {
-	Response string `json:"response"`
+type APIResponse struct {
+	Message string `json:"response"`
 }
 
-// var avatars string=[]string{""}
+type ExistingUser struct {
+	Username string
+	Email    string
+}
 
-func Register(w http.ResponseWriter, r *http.Request) {
+var existingUsers []ExistingUser
+
+func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 	if r.Header.Get("Content-Type") != "application/json" {
 		http.Error(w, "Invalid content type, expected application/json", http.StatusUnsupportedMediaType)
 		return
 	}
 
+	uservalid := true
+
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
-		fmt.Println("error reading")
+		fmt.Println("Error reading request body")
 		os.Exit(1)
 	}
 
-	var user Player
-	json.Unmarshal(body, &user)
-	fmt.Println(user)
+	var playerInput PlayerInput
+	json.Unmarshal(body, &playerInput)
+	fmt.Println(playerInput)
 
-	var response Message
-	response = Message{"ok"}
+	var apiResponse APIResponse
+	apiResponse = APIResponse{"ok"}
 
-	if user.Password != user.ConfirmPass {
-		response = Message{"passwords do not match"}
+	if playerInput.Password != playerInput.ConfirmPassword {
+		apiResponse = APIResponse{"Passwords do not match"}
+		uservalid = false
 	}
-	// if !CheckEmail(user.Email) {
-	// 	response = map[string]string{
-	// 		"message": "Email already Exist",
-	// 	}
-	// }
-	// if !CheckUsername(user.Username) {
-	// 	response = map[string]string{
-	// 		"message": "username already exist",
-	// 	}
-	// }
+
+	LoadExistingUsers(db)
+
+	for i := 0; i < len(existingUsers); i++ {
+		if existingUsers[i].Email == playerInput.Email {
+			apiResponse = APIResponse{"Email already exists"}
+			uservalid = false
+		}
+		if existingUsers[i].Username == playerInput.Username {
+			apiResponse = APIResponse{"Username already exists"}
+			uservalid = false
+		}
+	}
+
+	if uservalid {
+
+		AddNewUser(db, playerInput)
+	}
 
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(response)
+	json.NewEncoder(w).Encode(apiResponse)
+}
+
+func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
+	var newPlayer database.Player
+
+	newPlayer.Username = playerInput.Username
+	newPlayer.Email = playerInput.Email
+	newPlayer.Password = playerInput.Password
+
+	if err := db.Create(&newPlayer).Error; err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func LoadExistingUsers(db *gorm.DB) {
+	var playerRecord database.Player
+
+	if err := db.Model(&playerRecord).Select("username", "email").Find(&existingUsers).Error; err != nil {
+		log.Println("Error retrieving usernames and emails:", err)
+	} else {
+		fmt.Println("Existing users:", existingUsers)
+	}
 }

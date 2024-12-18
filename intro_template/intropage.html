@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Realm of Dread - Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="../css/intropage.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Skip Button -->
+        <button class="btn-welcome btn-skip" id="skip-button">Skip Intro</button>
+
+        <!-- Rest of the HTML remains the same as in the previous version -->
+        <!-- ... (previous slide content) ... -->
+             <!-- Slide 1: Welcome -->
+             <div class="slide-container active" id="slide1">
+                <h1 class="welcome-title">Riddle Realm of Dread</h1>
+                <div class="welcome-content">
+                    <p>Embark on a spine-chilling journey of wit, mystery, and thrilling challenges! Solve riddles, face daring truths, and conquer epic dares in the most intense game of mental and social prowess.</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide1">Begin Your Adventure</button>
+                <div class="navigation-dots">
+                    <span class="dot active" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 2: How It Works -->
+            <div class="slide-container" id="slide2">
+                <h1 class="welcome-title">How It Works</h1>
+                <div class="welcome-content">
+                    <p>🧩 Solve Riddles to Level Up!</p>
+                    <p>🏆 Earn Points Across Three Challenges</p>
+                    <p>🔮 Explore Riddle, Truth, and Dare Categories</p>
+                    <p>👥 Challenge Friends in Multiplayer Modes</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide2">Continue</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot active" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 3: Game Modes -->
+            <div class="slide-container" id="slide3">
+                <h1 class="welcome-title">Game Modes</h1>
+                <div class="welcome-content">
+                    <p>Choose Your Challenge:</p>
+                    <p>🧩 Riddles: Test Your Mental Acuity</p>
+                    <p>💡 Truths: Reveal Hidden Secrets</p>
+                    <p>🔥 Dares: Push Your Boundaries</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide3">Explore Modes</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot active" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 4: Call to Action -->
+            <div class="slide-container" id="slide4">
+                <h1 class="welcome-title">Ready to Play?</h1>
+                <div class="welcome-content">
+                    <p>The Realm of Dread awaits! Solve riddles, share truths, and accept dares. Your ultimate challenge begins now!</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="login">Sign In</button>
+                <button class="btn-welcome btn-truth" id="signup">Create Account</button>
+                <button class="btn-welcome btn-dare" id="guest-play">Play as Guest</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot active" data-slide="4"></span>
+                </div>
+            </div>
+    </div>
+
+    <script defer src="../js/intropage.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

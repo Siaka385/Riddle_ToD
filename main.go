@@ -13,8 +13,10 @@ import (
 	database "Riddle_ToD/Serverside/database"
 )
 
-var db *gorm.DB
-var mu sync.Mutex
+var (
+	db *gorm.DB
+	mu sync.Mutex
+)
 
 func InitilizeDatabase() {
 	db = database.Init()
@@ -24,7 +26,7 @@ func Router(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
 	if path == "/" {
-		Serverside.Reg(w, r)
+		Serverside.AuthenticationPageHandler(w, r, "auth_templates/loginpage.html")
 	} else if path == "/gameplaymode" {
 		Serverside.Selectmode(w, r)
 	} else if path == "/playsection" {

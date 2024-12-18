@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 
+	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
 	database "Riddle_ToD/Serverside/database"
@@ -51,6 +52,8 @@ func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 
 	// Prepare the response
 	var response APIResponse
+
+	response = APIResponse{"ok"}
 	if !isUserExist {
 		response = APIResponse{"Username does not exist"}
 	} else if !isPasswordCorrect {
@@ -77,5 +80,10 @@ func ValidateLoginCredentials(loginDetails PlayerLogin, db *gorm.DB) bool {
 	}
 
 	// Compare the provided password with the stored password
-	return loginDetails.Password == storedPassword
+	return VerifyPassword(loginDetails.Password, storedPassword)
+}
+
+func VerifyPassword(providedPassword, storedPassword string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(storedPassword), []byte(providedPassword))
+	return err == nil
 }

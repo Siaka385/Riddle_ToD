@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Realm of Dread - Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Merriweather:wght@400;700&display=swap');
+
+        :root {
+            --dark-bg: #121212;
+            --blood-red: #8B0000;
+            --muted-red: #5D1E1E;
+            --text-glow: rgba(139, 0, 0, 0.7);
+            --dare-purple: #4B0082;
+            --truth-blue: #191970;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/dark\ forest\ picture.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Merriweather', serif;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .welcome-container {
+            width: 100%;
+            max-width: 700px;
+            min-height: 500px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--blood-red);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-title {
+            font-family: 'Nosifer', cursive;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+            color: transparent; 
+            -webkit-text-stroke: 2px var(--blood-red);
+            text-shadow: 0 0 15px var(--text-glow);
+            background-image: linear-gradient(45deg, var(--blood-red), #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: blood-pulse 1s ease-in-out infinite alternate;
+        }
+
+        .welcome-content {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-welcome {
+            padding: 12px 25px;
+            margin: 10px;
+            width: 250px;
+            max-width: 100%;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Nosifer', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+        }
+
+        .btn-riddle {
+            background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
+        }
+
+        .btn-truth {
+            background-image: linear-gradient(to right, var(--truth-blue), #000080);
+        }
+
+        .btn-dare {
+            background-image: linear-gradient(to right, var(--dare-purple), #4B0082);
+        }
+
+        .btn-skip {
+            background-image: linear-gradient(to right, #333, #111);
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 120px;
+            padding: 10px;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .btn-skip:hover {
+            transform: scale(1.05);
+            opacity: 1;
+            background-image: linear-gradient(to right, #444, #222);
+        }
+
+        .welcome-title {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-welcome:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
+        }
+
+        .slide-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            padding: 0 15px;
+        }
+
+        .slide-container.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: var(--blood-red);
+        }
+
+        @keyframes blood-pulse {
+            0% { text-shadow: 0 0 10px var(--text-glow); transform: scale(1); }
+            100% { text-shadow: 0 0 25px var(--text-glow); transform: scale(1.03); }
+        }
+
+        @media screen and (max-width: 768px) {
+            .welcome-container {
+                width: 95%;
+                min-height: 450px;
+                padding: 20px 15px;
+            }
+
+            .welcome-content {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+
+            .btn-welcome {
+                width: 100%;
+                max-width: 300px;
+                margin: 8px 0;
+                padding: 10px 20px;
+            }
+
+            .btn-skip {
+                width: 100px;
+                font-size: 0.7rem;
+                top: 10px;
+                right: 10px;
+                padding: 8px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .btn-skip {
+                width: 80px;
+                font-size: 0.6rem;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Skip Button -->
+        <button class="btn-welcome btn-skip" id="skip-button">Skip Intro</button>
+
+        <!-- Rest of the HTML remains the same as in the previous version -->
+        <!-- ... (previous slide content) ... -->
+             <!-- Slide 1: Welcome -->
+             <div class="slide-container active" id="slide1">
+                <h1 class="welcome-title">Riddle Realm of Dread</h1>
+                <div class="welcome-content">
+                    <p>Embark on a spine-chilling journey of wit, mystery, and thrilling challenges! Solve riddles, face daring truths, and conquer epic dares in the most intense game of mental and social prowess.</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide1">Begin Your Adventure</button>
+                <div class="navigation-dots">
+                    <span class="dot active" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 2: How It Works -->
+            <div class="slide-container" id="slide2">
+                <h1 class="welcome-title">How It Works</h1>
+                <div class="welcome-content">
+                    <p>🧩 Solve Riddles to Level Up!</p>
+                    <p>🏆 Earn Points Across Three Challenges</p>
+                    <p>🔮 Explore Riddle, Truth, and Dare Categories</p>
+                    <p>👥 Challenge Friends in Multiplayer Modes</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide2">Continue</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot active" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 3: Game Modes -->
+            <div class="slide-container" id="slide3">
+                <h1 class="welcome-title">Game Modes</h1>
+                <div class="welcome-content">
+                    <p>Choose Your Challenge:</p>
+                    <p>🧩 Riddles: Test Your Mental Acuity</p>
+                    <p>💡 Truths: Reveal Hidden Secrets</p>
+                    <p>🔥 Dares: Push Your Boundaries</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="next-slide3">Explore Modes</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot active" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+    
+            <!-- Slide 4: Call to Action -->
+            <div class="slide-container" id="slide4">
+                <h1 class="welcome-title">Ready to Play?</h1>
+                <div class="welcome-content">
+                    <p>The Realm of Dread awaits! Solve riddles, share truths, and accept dares. Your ultimate challenge begins now!</p>
+                </div>
+                <button class="btn-welcome btn-riddle" id="login">Sign In</button>
+                <button class="btn-welcome btn-truth" id="signup">Create Account</button>
+                <button class="btn-welcome btn-dare" id="guest-play">Play as Guest</button>
+                <div class="navigation-dots">
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot active" data-slide="4"></span>
+                </div>
+            </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide-container');
+            const dots = document.querySelectorAll('.dot');
+            const nextButtons = [
+                document.getElementById('next-slide1'),
+                document.getElementById('next-slide2'),
+                document.getElementById('next-slide3')
+            ];
+            const skipButton = document.getElementById('skip-button');
+
+            function switchSlide(currentSlide, nextSlide) {
+                slides[currentSlide].classList.remove('active');
+                slides[nextSlide].classList.add('active');
+
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[nextSlide].classList.add('active');
+            }
+
+            // Skip button functionality
+            skipButton.addEventListener('click', () => {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[3].classList.add('active');
+
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[3].classList.add('active');
+            });
+
+            // Rest of the JavaScript remains the same as in the previous version
+            // ... (previous event listeners)
+
+            nextButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    switchSlide(index, index + 1);
+                });
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.dataset.slide) - 1;
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    slides[slideIndex].classList.add('active');
+
+                    dots.forEach(d => d.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Login/Signup/Guest Play Handlers (Placeholder)
+            document.getElementById('login').addEventListener('click', () => {
+                alert('Login functionality to be implemented');
+            });
+
+            document.getElementById('signup').addEventListener('click', () => {
+                alert('Signup functionality to be implemented');
+            });
+
+            document.getElementById('guest-play').addEventListener('click', () => {
+                alert('Guest play functionality to be implemented');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

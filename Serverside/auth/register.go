@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 
+	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
 	database "Riddle_ToD/Serverside/database"
@@ -73,7 +74,6 @@ func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 	}
 
 	if uservalid {
-
 		AddNewUser(db, playerInput)
 	}
 
@@ -86,7 +86,7 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 
 	newPlayer.Username = playerInput.Username
 	newPlayer.Email = playerInput.Email
-	newPlayer.Password = playerInput.Password
+	newPlayer.Password = HashPassword(playerInput.Password)
 
 	if err := db.Create(&newPlayer).Error; err != nil {
 		return err
@@ -103,4 +103,13 @@ func LoadExistingUsers(db *gorm.DB) {
 	} else {
 		fmt.Println("Existing users:", existingUsers)
 	}
+}
+
+func HashPassword(password string) string {
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		fmt.Println("Error hashing password")
+		return ""
+	}
+	return string(hashedPassword)
 }

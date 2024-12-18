@@ -16,12 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Simulated login check 
-        const validUsers = [
-            { username: 'admin', password: 'password123' },
-            { username: 'player', password: 'gamepass456' }
-        ];
-
+      
         var user={
             Username:username,
             Password:password
@@ -32,19 +27,36 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: { 'Content-Type': 'application/json' },
             method:"POST",
             body:JSON.stringify(user)
-        }).then(response => response.json()).then(data => console.log(data)).catch(error => console.log(error))
+        }).then(response => response.json()).then(data => handleServerResponse(data.response)).catch(error => console.log(error))
 
-        const userMatch = validUsers.find(
-            user => user.username === username && user.password === password
-        );
-
-        if (userMatch) {
-            console.log('Login successful', username);
-            errorMessage.style.display = 'none';
-        } else {
-            errorMessage.style.display = 'block';
-        }
     });
+
+function handleServerResponse(message){
+
+    if(message == "Username does not exist"){
+        errorMessage.textContent="Username does not exist"
+        errorMessage.style.display = 'block';
+        scrollToTop()
+        return
+      }
+      if(message == "Incorrect password"){
+          errorMessage.textContent="Incorrect password"
+          errorMessage.style.display = 'block';
+          scrollToTop()
+        return
+      }
+     
+      console.log(message)
+    
+
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,        // Scroll to the top
+        behavior: 'smooth' // Smooth scrolling
+    });
+}
 
     // Forgot Password Link
     forgotPasswordLink.addEventListener('click', (e) => {

@@ -37,8 +37,8 @@ import (
 // 	}
 // }
 
-func Reg(w http.ResponseWriter, r *http.Request) {
-	tmp, err := template.ParseFiles("auth_templates/signuppage.html")
+func AuthenticationPageHandler(w http.ResponseWriter, r *http.Request, temp string) {
+	tmp, err := template.ParseFiles(temp)
 	if err != nil {
 		http.Error(w, "Server Error", http.StatusInternalServerError)
 		fmt.Println(err)

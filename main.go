@@ -6,11 +6,13 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/gorilla/sessions"
 	"gorm.io/gorm"
 
 	"Riddle_ToD/Serverside"
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
+	utils "Riddle_ToD/Serverside/utils"
 )
 
 var (
@@ -18,15 +20,25 @@ var (
 	mu sync.Mutex
 )
 
+// Note: Don't store your key in your source code. Pass it via an
+// environmental variable, or flag (or both), and don't accidentally commit it
+// alongside your code. Ensure your key is sufficiently random - i.e. use Go's
+// crypto/rand or securecookie.GenerateRandomKey(32) and persist the result.
+var Store *sessions.CookieStore
+
 func InitilizeDatabase() {
 	db = database.Init()
+	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomString(40)))
+
 }
 
 func Router(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
-	if path == "/" {
-		Serverside.AuthenticationPageHandler(w, r, "auth_templates/loginpage.html")
+	if path == "/loginpage" {
+		Serverside.RenderAuthPage(w, r, "auth_templates/loginpage.html")
+	} else if path == "/" {
+		Serverside.CheckUserSession(w, r, Store, db)
 	} else if path == "/gameplaymode" {
 		Serverside.Selectmode(w, r)
 	} else if path == "/playsection" {
@@ -38,7 +50,7 @@ func Router(w http.ResponseWriter, r *http.Request) {
 	} else if path == "/register" {
 		auth.Register(w, r, db)
 	} else if path == "/login" {
-		auth.Login(db, w, r)
+		auth.Login(db, w, r, Store)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

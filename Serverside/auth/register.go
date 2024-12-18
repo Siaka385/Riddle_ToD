@@ -82,17 +82,40 @@ func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 }
 
 func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
-	var newPlayer database.Player
-
-	newPlayer.Username = playerInput.Username
-	newPlayer.Email = playerInput.Email
-	newPlayer.Password = HashPassword(playerInput.Password)
-
-	if err := db.Create(&newPlayer).Error; err != nil {
-		return err
+	// Validate input
+	if playerInput.Username == "" || playerInput.Email == "" || playerInput.Password == "" {
+		return fmt.Errorf("invalid input: username, email, and password are required")
 	}
 
-	return nil
+	// Initialize Player and PlayerLevel
+	newPlayer := database.Player{
+		Username: playerInput.Username,
+		Email:    playerInput.Email,
+		Password: HashPassword(playerInput.Password), // Hash the password securely
+	}
+
+	playlevel := database.PlayerLevel{
+		Level:    1,
+		Username: playerInput.Username,
+	}
+
+	// Use a transaction for atomicity
+	//A transaction in a database is a sequence of operations (like INSERT, UPDATE, or DELETE) that are executed as a single logical unit.
+	// If all the operations within the transaction succeed, the changes are permanently saved to the database (committed).
+	// If any operation fails, all changes made during the transaction are undone (rolled back).
+	return db.Transaction(func(tx *gorm.DB) error {
+		// Create the new player
+		if err := tx.Create(&newPlayer).Error; err != nil {
+			return fmt.Errorf("failed to create player: %w", err)
+		}
+
+		// Initialize the player's level
+		if err := tx.Create(&playlevel).Error; err != nil {
+			return fmt.Errorf("failed to create player level: %w", err)
+		}
+
+		return nil
+	})
 }
 
 func LoadExistingUsers(db *gorm.DB) {

@@ -5,6 +5,9 @@ import (
 	"html/template"
 	"net/http"
 	"os"
+
+	"github.com/gorilla/sessions"
+	"gorm.io/gorm"
 )
 
 func Filehandler(filename string, w http.ResponseWriter) {
@@ -19,4 +22,17 @@ func Filehandler(filename string, w http.ResponseWriter) {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		os.Exit(1)
 	}
+}
+
+func CheckUserSession(w http.ResponseWriter, r *http.Request, Store *sessions.CookieStore, db *gorm.DB) {
+	session, _ := Store.Get(r, "session-name")
+
+	username := session.Values["Username"]
+	isLogged := session.Values["Authenticated"]
+
+	if username == nil || isLogged == false {
+		http.Redirect(w, r, "/loginpage", http.StatusFound)
+		return
+	}
+	RenderIndexPage(w, r, db,username)
 }

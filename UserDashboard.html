@@ -15,14 +15,14 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="index2.css" />
+    <link rel="stylesheet" href="css/UserDashboard.css" />
   </head>
 
   <body>
     <div class="containter">
       <div class="row">
         <div class="col">
-          <div class="boxcontainer {{.ShowmainMenu}}" id="home">
+          <div class="boxcontainer {{.MainMenuClass}}" id="home">
             <div id="header">
               <h1 class="text-sm" id="riddle-realm-of-dread">Riddle Realm of Dread</h1>
               <p class="text-sm">
@@ -33,13 +33,13 @@
                   <div class="avatar-container">
                       <img src="path/to/default-avatar.png" alt="User Avatar" class="user-avatar">
                       <div class="avatar-overlay">
-                          <span class="avatar-level-badge">Lv.1</span>
+                          <span class="avatar-level-badge">Lv.{{.UserLevel}}</span>
                       </div>
                   </div>
                   <div class="user-info">
                       <div class="user-primary-info">
-                          <span class="username">DreadMaster</span>
-                          <span class="user-level">Level 1 | Novice Riddler</span>
+                          <span class="username">{{.UserName}}</span>
+                          <span class="user-level">Level {{.UserLevel}} | {{.LevelAlias}}</span>
                       </div>
                       <div class="user-quick-actions">
                           <div class="action-buttons">
@@ -91,7 +91,7 @@
 
           <!-- Rest of the HTML remains the same -->
          
-   <div class="boxcontainer {{.Showcategory}}" id="selectriddlecategory">
+   <div class="boxcontainer {{.CategoryClass}}" id="selectriddlecategory">
   <div id="gametypehead">
     <h1 class="text-sm">Riddle Realm of Dread</h1>
     <p class="text-sm">

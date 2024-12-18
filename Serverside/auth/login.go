@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/gorilla/sessions"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
@@ -21,7 +22,7 @@ type PlayerLogin struct {
 }
 
 // Login handles user login requests
-func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
+func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request, store *sessions.CookieStore) {
 	// Validate that the content type is application/json
 	if r.Header.Get("Content-Type") != "application/json" {
 		http.Error(w, "Invalid content type, expected application/json", http.StatusUnsupportedMediaType)
@@ -58,6 +59,22 @@ func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		response = APIResponse{"Username does not exist"}
 	} else if !isPasswordCorrect {
 		response = APIResponse{"Incorrect password"}
+	}
+
+	if isUserExist && isPasswordCorrect {
+		session, _ := store.Get(r, "session-name")
+		// Set some session values.
+		session.Values["Username"] = loginDetails.Username
+		session.Values["Authenitcated"] = true
+		store.Options = &sessions.Options{
+			Path:     "/",                  // The root path for the cookie (accessible from all paths)
+			MaxAge:   3600,                 // Session expiration in seconds (1 hour in this case)
+			HttpOnly: true,                 // Prevents JavaScript access to the cookie
+			Secure:   true,                 // Ensures the cookie is sent only over HTTPS
+			SameSite: http.SameSiteLaxMode, // Prevents the cookie from being sent with cross-site requests
+		}
+
+		session.Save(r, w)
 	}
 
 	// Return the response as JSON

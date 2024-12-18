@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch("/login",{
             headers: { 'Content-Type': 'application/json' },
             method:"POST",
+            credentials: 'include', // Ensures cookies are sent
             body:JSON.stringify(user)
         }).then(response => response.json()).then(data => handleServerResponse(data.response)).catch(error => console.log(error))
 

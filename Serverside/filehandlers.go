@@ -31,8 +31,29 @@ func CheckUserSession(w http.ResponseWriter, r *http.Request, Store *sessions.Co
 	isLogged := session.Values["Authenticated"]
 
 	if username == nil || isLogged == false {
-		http.Redirect(w, r, "/loginpage", http.StatusFound)
+		http.Redirect(w, r, "/intro", http.StatusFound)
 		return
 	}
-	RenderIndexPage(w, r, db,username)
+	RenderIndexPage(w, r, db, username)
+}
+
+func RenderAuthPage(responseWriter http.ResponseWriter, request *http.Request) {
+	var templatePath string
+	if request.URL.Path == "/loginpage" {
+		templatePath = "auth_templates/loginpage.html"
+	} else {
+		templatePath = "auth_templates/signuppage.html"
+	}
+
+	templateFile, err := template.ParseFiles(templatePath)
+	if err != nil {
+		http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	if err := templateFile.Execute(responseWriter, nil); err != nil {
+		http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		os.Exit(1)
+	}
 }

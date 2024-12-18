@@ -47,7 +47,9 @@ function handleServerResponse(message){
         return
       }
      
-      console.log(message)
+      if(message == "ok"){
+        window.location.href="/"
+      }
     
 
 }
@@ -58,6 +60,7 @@ function scrollToTop() {
         behavior: 'smooth' // Smooth scrolling
     });
 }
+
 
     // Forgot Password Link
     forgotPasswordLink.addEventListener('click', (e) => {
@@ -85,6 +88,6 @@ function scrollToTop() {
     });
 
     btnSignup.addEventListener('click', () => {
-        window.location.href = 'signup2.html';
+        window.location.href = '/registerpage';
     });
 });

@@ -27,8 +27,8 @@ type UserLevelInfo struct {
 func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, username any) {
 	templateFile, err := template.ParseFiles("UserDashboard.html")
 	if err != nil {
-		http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
-		fmt.Println(err)
+		//http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
+		fmt.Println("template error", err)
 		os.Exit(1)
 	}
 
@@ -36,7 +36,8 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	pageContent := IndexContent{}
 	userlevel, err := FetchUserLevel(db, username)
 	if err != nil {
-		http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		//	http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		fmt.Println("fetch error", err)
 		os.Exit(1)
 	}
 
@@ -53,7 +54,8 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	}
 
 	if err := templateFile.Execute(responseWriter, pageContent); err != nil {
-		http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		//http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		fmt.Println("template execut error", err)
 		os.Exit(1)
 	}
 }
@@ -63,9 +65,9 @@ func FetchUserLevel(db *gorm.DB, username any) (UserLevelInfo, error) {
 
 	// Perform the query
 	if err := db.Model(&database.PlayerLevel{}).
-		Select("level").
+		Select("Level").
 		Where("username = ?", username).
-		Scan(&userLevel).Error; err != nil {
+		Scan(&userLevel.CurrentLevel).Error; err != nil {
 		return UserLevelInfo{}, fmt.Errorf("failed to fetch user level: %w", err)
 	}
 
@@ -88,18 +90,4 @@ func FetchUserLevel(db *gorm.DB, username any) (UserLevelInfo, error) {
 	}
 
 	return userLevel, nil
-}
-
-func RenderAuthPage(responseWriter http.ResponseWriter, request *http.Request, templatePath string) {
-	templateFile, err := template.ParseFiles(templatePath)
-	if err != nil {
-		http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	if err := templateFile.Execute(responseWriter, nil); err != nil {
-		http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
-		os.Exit(1)
-	}
 }

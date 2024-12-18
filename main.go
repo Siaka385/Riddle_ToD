@@ -35,8 +35,10 @@ func InitilizeDatabase() {
 func Router(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
-	if path == "/loginpage" {
-		Serverside.RenderAuthPage(w, r, "auth_templates/loginpage.html")
+	if path == "/loginpage" || path == "/registerpage" {
+		Serverside.RenderAuthPage(w, r)
+	} else if path == "/intro" {
+		Serverside.Filehandler("intro_template/intropage.html", w)
 	} else if path == "/" {
 		Serverside.CheckUserSession(w, r, Store, db)
 	} else if path == "/gameplaymode" {

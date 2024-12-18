@@ -18,11 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Skip button functionality
     skipButton.addEventListener('click', () => {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[3].classList.add('active');
-
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[3].classList.add('active');
+        window.location.href="/loginpage"
     });
 
     // Rest of the JavaScript remains the same as in the previous version
@@ -47,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Login/Signup/Guest Play Handlers (Placeholder)
     document.getElementById('login').addEventListener('click', () => {
-        alert('Login functionality to be implemented');
+            window.location.href="/loginpage"
     });
 
     document.getElementById('signup').addEventListener('click', () => {
-        alert('Signup functionality to be implemented');
+            window.location.href="/registerpage"
     });
 
     document.getElementById('guest-play').addEventListener('click', () => {

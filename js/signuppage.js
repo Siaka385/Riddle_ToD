@@ -4,6 +4,8 @@
     const hiddenAvatarInput = document.getElementById('selected-avatar');
     const errorMessage = document.getElementById('error-message');
     const signupForm = document.getElementById('signup-form');
+
+    hiddenAvatarInput.value="1";
     
     // Avatar Selection
     avatarOptions.forEach(avatar => {
@@ -90,7 +92,9 @@ function handleServerResponse(message){
       return
   }
 
-  console.log(message)
+  if (message == "ok"){
+      window.location.href="/loginpage"
+  }
 
 // setTimeout(()=>{
 //     window.location.href="/dashboard"

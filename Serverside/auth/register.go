@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
@@ -86,12 +87,15 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 	if playerInput.Username == "" || playerInput.Email == "" || playerInput.Password == "" {
 		return fmt.Errorf("invalid input: username, email, and password are required")
 	}
+	CurrentTime := time.Now()
 
 	// Initialize Player and PlayerLevel
 	newPlayer := database.Player{
-		Username: playerInput.Username,
-		Email:    playerInput.Email,
-		Password: HashPassword(playerInput.Password), // Hash the password securely
+		Username:       playerInput.Username,
+		Email:          playerInput.Email,
+		Password:       HashPassword(playerInput.Password), // Hash the password securely
+		AvatarSelected: playerInput.Avatar,
+		CreationDate:   CurrentTime.Format("2006-01-02 15:04:05"),
 	}
 
 	playlevel := database.PlayerLevel{

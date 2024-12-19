@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Riddle Realm of Dread - Sign Up</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS v5.3.2 -->
     <link
@@ -13,53 +16,106 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../css/signuppage.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="../css/signuppage.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="signup-container">
-                    <h1>Riddle Realm of Dread</h1>
-                    <p class="text-sm">
-                        Choose Your Adventurer and Enter the Realm
-                    </p>
-                    
-                    <form class="signup-form" id="signup-form">
-                        <!-- Error Message Div -->
-                        <div id="error-message" class="error-message">
-                            Username or email already exists. Please choose another.
-                        </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="signup-container">
+            <h1>Riddle Realm of Dread</h1>
+            <p class="text-sm">Choose Your Adventurer and Enter the Realm</p>
 
-                        <div class="avatar-selection">
-                            <div class="avatar-option" data-avatar="1" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=1&backgroundType=gradientLinear')"></div>
-                            <div class="avatar-option" data-avatar="2" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=2&backgroundType=gradientLinear')"></div>
-                            <div class="avatar-option" data-avatar="3" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=3&backgroundType=gradientLinear')"></div>
-                            <div class="avatar-option" data-avatar="4" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=4&backgroundType=gradientLinear')"></div>
-                            <div class="avatar-option" data-avatar="5" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=5&backgroundType=gradientLinear')"></div>
-                            <div class="avatar-option" data-avatar="6" style="background-image: url('https://api.dicebear.com/7.x/adventurer/svg?seed=6&backgroundType=gradientLinear')"></div>
-                        </div>
+            <form class="signup-form" id="signup-form">
+              <!-- Error Message Div -->
+              <div id="error-message" class="error-message">
+                Username or email already exists. Please choose another.
+              </div>
 
-                        <input type="hidden" id="selected-avatar" name="avatar" required>
-
-                        <input type="text" id="username" class="form-control" placeholder="Username" required>
-                        <input type="email" id="email" class="form-control" placeholder="Email Address" required>
-                        <input type="password" id="password" class="form-control" placeholder="Password" required>
-                        <input type="password" id="confirm-password" class="form-control" placeholder="Confirm Password" required>
-                        
-                        <button type="submit" class="btn btn-signup">Create Your Adventurer</button>
-                        
-                        <a href="/loginpage" class="login-link">Already have an account? Login</a>
-                    </form>
+              <div class="avatar-selection">
+                <div class="avatar-option selected" data-avatar="1">
+                  <img
+                    src="https://api.dicebear.com/7.x/adventurer/svg?seed=1"
+                    alt="Warrior Avatar"
+                  />
+                  <span class="avatar-label">Warrior</span>
                 </div>
-            </div>
+                <div class="avatar-option" data-avatar="2">
+                  <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=2" alt="Mage Avatar" />
+                  <span class="avatar-label">Mage</span>
+                </div>
+                <div class="avatar-option" data-avatar="3">
+                  <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=3" alt="Rogue Avatar" />
+                  <span class="avatar-label">Rogue</span>
+                </div>
+                <div class="avatar-option" data-avatar="4">
+                  <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=4" alt="Cleric Avatar" />
+                  <span class="avatar-label">Cleric</span>
+                </div>
+                <div class="avatar-option" data-avatar="5">
+                  <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=5" alt="Ranger Avatar" />
+                  <span class="avatar-label">Ranger</span>
+                </div>
+                <div class="avatar-option" data-avatar="6">
+                  <img
+                    src="https://api.dicebear.com/7.x/adventurer/svg?seed=6"
+                    alt="Necromancer Avatar"
+                  />
+                  <span class="avatar-label">Necromancer</span>
+                </div>
+              </div>
+
+              <input
+                 type="hidden"
+                id="selected-avatar"
+                name="avatar"
+                required
+              />
+
+              <input
+                type="text"
+                id="username"
+                class="form-control"
+                placeholder="Username"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+              <input
+                type="password"
+                id="confirm-password"
+                class="form-control"
+                placeholder="Confirm Password"
+                required
+              />
+
+              <button type="submit" class="btn btn-signup">
+                Create Your Adventurer
+              </button>
+
+              <a href="/loginpage" class="login-link"
+                >Already have an account? Login</a
+              >
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
-   
-      <script src="../js/signuppage.js"></script>
+    <script src="../js/signuppage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

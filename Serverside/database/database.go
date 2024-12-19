@@ -8,9 +8,11 @@ import (
 )
 
 type Player struct {
-	Username string `gorm:"primaryKey"`
-	Email    string `gorm:"unique"`
-	Password string
+	Username       string `gorm:"primaryKey"`
+	Email          string `gorm:"unique"`
+	Password       string
+	AvatarSelected string
+	CreationDate   string
 }
 
 type PlayerLevel struct {

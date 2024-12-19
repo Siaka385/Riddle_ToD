@@ -17,6 +17,7 @@ type IndexContent struct {
 	LevelAlias    string
 	MainMenuClass string
 	CategoryClass string
+	AvatarIcon    string
 }
 
 type UserLevelInfo struct {
@@ -44,6 +45,12 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	pageContent.UserName = fmt.Sprint(username)
 	pageContent.UserLevel = userlevel.CurrentLevel
 	pageContent.LevelAlias = userlevel.LevelAlias
+	pageContent.AvatarIcon, err = FetchAvatarIcon(db, username)
+	if err != nil {
+		//	http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		fmt.Println("fetch icon", err)
+		os.Exit(1)
+	}
 
 	if category == "" {
 		pageContent.MainMenuClass = ""
@@ -90,4 +97,18 @@ func FetchUserLevel(db *gorm.DB, username any) (UserLevelInfo, error) {
 	}
 
 	return userLevel, nil
+}
+
+func FetchAvatarIcon(db *gorm.DB, username any) (string, error) {
+	var avatarIcon string
+
+	// Perform the query
+	if err := db.Model(&database.Player{}).
+		Select("AvatarSelected").
+		Where("username = ?", username).
+		Scan(&avatarIcon).Error; err != nil {
+		return avatarIcon, fmt.Errorf("failed to fetch user level: %w", err)
+	}
+
+	return avatarIcon, nil
 }

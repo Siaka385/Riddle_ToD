@@ -1,7 +1,31 @@
 [
   {
     "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
@@ -13,7 +37,31 @@
   },
   {
     "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Hard",
+    "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
@@ -25,19 +73,7 @@
   },
   {
     "question": "",
-    "category": "Word Riddle",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Easy",
-    "level": 1
-  },
-  {
-    "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
@@ -49,31 +85,55 @@
   },
   {
     "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
       "Edge",
       "Eel"
     ],
-    "difficulty": "Easy",
-    "level": 1
+    "difficulty": "Medium",
+    "level": 2
   },
   {
     "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
       "Edge",
       "Eel"
     ],
-    "difficulty": "Easy",
-    "level": 1
+    "difficulty": "Medium",
+    "level": 2
   },
   {
     "question": "",
-    "category": "Word Riddle",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Hard",
+    "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Hard",
+    "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",

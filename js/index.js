@@ -10,6 +10,8 @@ window.onload = () => {
     backbtn.onclick=()=>{
        backtohome()
     }
+
+    //
   
     //button two player click
     var twoplayerbtn=document.getElementById("twoplayerbtn");

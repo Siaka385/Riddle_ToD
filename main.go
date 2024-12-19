@@ -29,7 +29,6 @@ var Store *sessions.CookieStore
 func InitilizeDatabase() {
 	db = database.Init()
 	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomString(40)))
-
 }
 
 func Router(w http.ResponseWriter, r *http.Request) {
@@ -53,6 +52,8 @@ func Router(w http.ResponseWriter, r *http.Request) {
 		auth.Register(w, r, db)
 	} else if path == "/login" {
 		auth.Login(db, w, r, Store)
+	} else if path == "/logout" {
+		auth.Logout(w, r, Store)
 	} else {
 		http.Error(w, "Not found", http.StatusNotFound)
 	}

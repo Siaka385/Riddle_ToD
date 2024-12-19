@@ -98,19 +98,55 @@ body {
     border: 2px solid var(--blood-red);
     border-radius: 15px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .account-details h2 {
     font-family: 'Nosifer', cursive;
     color: var(--blood-red);
     margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.account-form {
+    position: relative;
 }
 
 .account-form input {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: 2px solid var(--blood-red);
+    padding: 10px 15px;
 }
+
+.account-form input:disabled {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--muted-red);
+    cursor: not-allowed;
+}
+
+.account-form label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.btn-save-email,
+.btn-save-password {
+    background: linear-gradient(to right, var(--blood-red), var(--muted-red));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-save-email:hover,
+.btn-save-password:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--text-glow);
+}
+
 
 .profile-stats-section {
     background: rgba(0, 0, 0, 0.6);
@@ -224,12 +260,20 @@ body {
     .difficulty-stats {
         flex-direction: column;
     }
+    .profile-header h1 {
+     
+        font-size: 2.0rem;
+    }
 }
 
 @media (max-width: 576px) {
     .profile-header {
         flex-direction: column;
         text-align: center;
+    }
+    .profile-header h1 {
+     
+        font-size: 1.5rem;
     }
 
     .profile-header .btn-back {
@@ -245,3 +289,4 @@ body {
         align-items: center;
     }
 }
+

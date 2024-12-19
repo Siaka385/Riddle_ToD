@@ -11,7 +11,7 @@
     <div class="container profile-edit-container">
         <div class="profile-header">
             <h1>Edit Profile</h1>
-            <a href="#" class="btn btn-back">← Back to Main</a>
+            <a href="#" class="btn btn-back" style="display: none;">← Back to Main</a>
         </div>
 
         <div class="profile-edit-wrapper">
@@ -34,12 +34,27 @@
 
             <div class="profile-details-section">
                 <div class="account-details">
-                    <h2>Account Details</h2>
+                    <h2>Email Settings</h2>
                     <div class="account-form">
                         <div class="mb-3">
-                            <label for="email-input" class="form-label">Email</label>
-                            <input type="email" id="email-input" class="form-control" value="dreadmaster@riddlerealm.com" placeholder="Enter your email">
+                            <label for="current-email" class="form-label">Current Email</label>
+                            <input type="email" id="current-email" class="form-control" value="dreadmaster@riddlerealm.com" disabled>
                         </div>
+                        <div class="mb-3">
+                            <label for="new-email" class="form-label">New Email</label>
+                            <input type="email" id="new-email" class="form-control" placeholder="Enter new email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm-email" class="form-label">Confirm New Email</label>
+                            <input type="email" id="confirm-email" class="form-control" placeholder="Confirm new email">
+                        </div>
+                        <button class="btn btn-save-email">Update Email</button>
+                    </div>
+                </div>
+
+                <div class="account-details">
+                    <h2>Password Settings</h2>
+                    <div class="account-form">
                         <div class="mb-3">
                             <label for="current-password" class="form-label">Current Password</label>
                             <input type="password" id="current-password" class="form-control" placeholder="Enter current password">
@@ -52,58 +67,61 @@
                             <label for="confirm-password" class="form-label">Confirm New Password</label>
                             <input type="password" id="confirm-password" class="form-control" placeholder="Confirm new password">
                         </div>
+                        <button class="btn btn-save-password">Update Password</button>
                     </div>
                 </div>
 
-                <div class="profile-stats-section">
-                    <div class="riddle-stats">
-                        <h2>Riddle Solving Stats</h2>
-                        <div class="difficulty-stats">
-                            <div class="stat-card easy-mode">
-                                <h3>Easy Mode</h3>
-                                <div class="stat-details">
-                                    <p>Total Solved: <span id="easy-total">34</span></p>
-                                    <div class="category-breakdown">
-                                        <span>🧮 Math: 12</span>
-                                        <span>📝 Word: 10</span>
-                                        <span>🤔 Logic: 12</span>
-                                        <span>🌐 General: 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stat-card medium-mode">
-                                <h3>Medium Mode</h3>
-                                <div class="stat-details">
-                                    <p>Total Solved: <span id="medium-total">22</span></p>
-                                    <div class="category-breakdown">
-                                        <span>🧮 Math: 8</span>
-                                        <span>📝 Word: 7</span>
-                                        <span>🤔 Logic: 7</span>
-                                        <span>🌐 General: 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stat-card hard-mode">
-                                <h3>Hard Mode</h3>
-                                <div class="stat-details">
-                                    <p>Total Solved: <span id="hard-total">15</span></p>
-                                    <div class="category-breakdown">
-                                        <span>🧮 Math: 5</span>
-                                        <span>📝 Word: 4</span>
-                                        <span>🤔 Logic: 6</span>
-                                        <span>🌐 General: 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
+
+<div class="profile-stats-section">
+    <div class="riddle-stats">
+        <h2>Riddle Solving Stats</h2>
+        <div class="difficulty-stats">
+            <div class="stat-card easy-mode">
+                <h3>Easy Mode</h3>
+                <div class="stat-details">
+                    <p>Total Solved: <span id="easy-total">34</span></p>
+                    <div class="category-breakdown">
+                        <span>🧮 Math: 12</span>
+                        <span>📝 Word: 10</span>
+                        <span>🤔 Logic: 12</span>
+                        <span>🌐 General: 0</span>
                     </div>
                 </div>
+            </div>
+            <div class="stat-card medium-mode">
+                <h3>Medium Mode</h3>
+                <div class="stat-details">
+                    <p>Total Solved: <span id="medium-total">22</span></p>
+                    <div class="category-breakdown">
+                        <span>🧮 Math: 8</span>
+                        <span>📝 Word: 7</span>
+                        <span>🤔 Logic: 7</span>
+                        <span>🌐 General: 0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card hard-mode">
+                <h3>Hard Mode</h3>
+                <div class="stat-details">
+                    <p>Total Solved: <span id="hard-total">15</span></p>
+                    <div class="category-breakdown">
+                        <span>🧮 Math: 5</span>
+                        <span>📝 Word: 4</span>
+                        <span>🤔 Logic: 6</span>
+                        <span>🌐 General: 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
             </div>
         </div>
 
         <div class="profile-actions">
             <button class="btn btn-save-profile">Save Profile</button>
-            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-cancel">← Back to Main</button>
         </div>
     </div>
 

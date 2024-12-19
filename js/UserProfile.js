@@ -2,28 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const avatarOptions = document.querySelectorAll('.avatar-option');
     const hiddenAvatarInput = document.getElementById('selected-avatar');
     const usernameInput = document.getElementById('username-input');
-    const emailInput = document.getElementById('email-input');
-    const currentPasswordInput = document.getElementById('current-password');
-    const newPasswordInput = document.getElementById('new-password');
-    const confirmPasswordInput = document.getElementById('confirm-password');
-    const profileEditContainer = document.querySelector('.profile-edit-container');
 
-    // Create success message div
-    function createSuccessMessage() {
-        const successDiv = document.createElement('div');
-        successDiv.className = 'success-overlay';
-        successDiv.innerHTML = `
+    // Create a reusable overlay message function
+    function showOverlayMessage(title, message) {
+        const overlayDiv = document.createElement('div');
+        overlayDiv.className = 'message-overlay';
+        overlayDiv.innerHTML = `
             <div class="success-message">
-                <h2>Profile Updated</h2>
-                <p>Your profile changes have been saved successfully!</p>
+                <h2>${title}</h2>
+                <p>${message}</p>
                 <div class="profile-actions">
-                    <button class="btn btn-save-profile dismiss-success">Continue</button>
+                    <button class="btn btn-save-profile dismiss-message">Continue</button>
                 </div>
             </div>
         `;
         
-        // Style the success message overlay
-        successDiv.style.cssText = `
+        // Style the overlay
+        overlayDiv.style.cssText = `
             position: fixed;
             top: 0;
             left: 0;
@@ -36,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
             z-index: 1000;
         `;
 
-        // Style the success message content
-        const successMessage = successDiv.querySelector('.success-message');
-        successMessage.style.cssText = `
+        // Style the message box
+        const messageBox = overlayDiv.querySelector('.success-message');
+        messageBox.style.cssText = `
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid #8B0000;
             border-radius: 15px;
@@ -50,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         // Style the heading
-        const heading = successMessage.querySelector('h2');
+        const heading = messageBox.querySelector('h2');
         heading.style.cssText = `
             font-family: 'Nosifer', cursive;
             color: #8B0000;
@@ -59,99 +54,129 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         // Style the paragraph
-        const paragraph = successMessage.querySelector('p');
+        const paragraph = messageBox.querySelector('p');
         paragraph.style.cssText = `
             color: white;
             margin-bottom: 20px;
         `;
 
         // Add dismiss functionality
-        successDiv.querySelector('.dismiss-success').addEventListener('click', () => {
-            successDiv.remove();
+        overlayDiv.querySelector('.dismiss-message').addEventListener('click', () => {
+            overlayDiv.remove();
         });
 
-        // Add to the document
-        document.body.appendChild(successDiv);
+        // Add to document
+        document.body.appendChild(overlayDiv);
     }
 
     // Avatar Selection Logic
     avatarOptions.forEach(avatar => {
         avatar.addEventListener('click', () => {
-            // Remove selected class from all avatars
             avatarOptions.forEach(a => a.classList.remove('selected'));
-            
-            // Add selected class to clicked avatar
             avatar.classList.add('selected');
-            
-            // Set the hidden input value to the selected avatar's data-avatar
             hiddenAvatarInput.value = avatar.dataset.avatar;
         });
     });
 
-    // Username Edit
-    usernameInput.addEventListener('focus', (e) => {
-        e.target.select();
+    // Email Update Logic
+    const emailUpdateBtn = document.querySelector('.btn-save-email');
+    emailUpdateBtn.addEventListener('click', () => {
+        const currentEmail = document.getElementById('current-email').value;
+        const newEmail = document.getElementById('new-email').value;
+        const confirmEmail = document.getElementById('confirm-email').value;
+
+        // Validate emails
+        if (!newEmail || !confirmEmail) {
+            showOverlayMessage('Error', 'Please fill in all email fields');
+            return;
+        }
+
+        if (!newEmail.includes('@')) {
+            showOverlayMessage('Error', 'Please enter a valid email address');
+            return;
+        }
+
+        if (newEmail !== confirmEmail) {
+            showOverlayMessage('Error', 'New emails do not match');
+            return;
+        }
+
+        if (newEmail === currentEmail) {
+            showOverlayMessage('Error', 'New email must be different from current email');
+            return;
+        }
+
+        // If validation passes, show success message and clear fields
+        showOverlayMessage('Email Updated', 'Your email has been successfully updated!');
+        document.getElementById('new-email').value = '';
+        document.getElementById('confirm-email').value = '';
     });
 
-    // Save Profile Functionality
+    // Password Update Logic
+    const passwordUpdateBtn = document.querySelector('.btn-save-password');
+    passwordUpdateBtn.addEventListener('click', () => {
+        const currentPassword = document.getElementById('current-password').value;
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Validate passwords
+        if (!currentPassword || !newPassword || !confirmPassword) {
+            showOverlayMessage('Error', 'Please fill in all password fields');
+            return;
+        }
+
+        if (newPassword.length < 8) {
+            showOverlayMessage('Error', 'New password must be at least 8 characters long');
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            showOverlayMessage('Error', 'New passwords do not match');
+            return;
+        }
+
+        if (newPassword === currentPassword) {
+            showOverlayMessage('Error', 'New password must be different from current password');
+            return;
+        }
+
+        // If validation passes, show success message and clear fields
+        showOverlayMessage('Password Updated', 'Your password has been successfully updated!');
+        document.getElementById('current-password').value = '';
+        document.getElementById('new-password').value = '';
+        document.getElementById('confirm-password').value = '';
+    });
+
+    // Main Profile Save Logic
     const saveProfileBtn = document.querySelector('.btn-save-profile');
     const cancelBtn = document.querySelector('.btn-cancel');
 
     saveProfileBtn.addEventListener('click', () => {
-        // Validate inputs
         const newUsername = usernameInput.value.trim();
-        const newEmail = emailInput.value.trim();
-        const currentPassword = currentPasswordInput.value;
-        const newPassword = newPasswordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
         const selectedAvatar = hiddenAvatarInput.value;
 
-        // Basic validation
+        // Validate username
         if (!newUsername) {
-            alert('Username cannot be empty');
+            showOverlayMessage('Error', 'Username cannot be empty');
             return;
         }
 
-        if (!newEmail || !newEmail.includes('@')) {
-            alert('Please enter a valid email address');
-            return;
-        }
-
-        // Password change validation (optional)
-        if (newPassword || confirmPassword) {
-            if (newPassword !== confirmPassword) {
-                alert('New passwords do not match');
-                return;
-            }
-            
-            if (newPassword.length < 8) {
-                alert('New password must be at least 8 characters long');
-                return;
-            }
-        }
-
-        // In a real application, you would send this data to a backend
+        // Save profile data
         const profileData = {
             username: newUsername,
-            email: newEmail,
-            avatar: `https://api.dicebear.com/7.x/adventurer/svg?seed=${selectedAvatar}&backgroundType=gradientLinear`,
-            currentPassword: currentPassword,
-            newPassword: newPassword || null
+            avatar: `https://api.dicebear.com/7.x/adventurer/svg?seed=${selectedAvatar}&backgroundType=gradientLinear`
         };
 
         console.log('Saving Profile:', profileData);
-        
-        // Create and show success message
-        createSuccessMessage();
-
-        // Clear password fields after submission
-        currentPasswordInput.value = '';
-        newPasswordInput.value = '';
-        confirmPasswordInput.value = '';
+        showOverlayMessage('Profile Updated', 'Your profile has been successfully updated!');
     });
 
     cancelBtn.addEventListener('click', () => {
-        // Reset to original values or navigate back
-        window.location.href = 'main-page.html'; // Adjust the redirect as needed
+        window.location.href = 'main-page.html';
+    });
+
+    // Username Edit Focus
+    usernameInput.addEventListener('focus', (e) => {
+        e.target.select();
     });
 });

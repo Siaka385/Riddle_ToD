@@ -44,8 +44,8 @@ func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request, store *sessions.
 	// Check if the username exists and validate the password
 	var isPasswordCorrect bool
 	isUserExist := false
-	for i := 0; i < len(existingUsers); i++ {
-		if existingUsers[i].Username == loginDetails.Username {
+	for i := 0; i < len(ExistingUsers); i++ {
+		if ExistingUsers[i].Username == loginDetails.Username {
 			isUserExist = true
 			isPasswordCorrect = ValidateLoginCredentials(loginDetails, db)
 		}
@@ -65,6 +65,7 @@ func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request, store *sessions.
 		session, _ := store.Get(r, "session-name")
 		// Set some session values.
 		session.Values["Username"] = loginDetails.Username
+		session.Values["User_ID"] = FindUserId(loginDetails, db)
 		session.Values["Authenitcated"] = true
 		store.Options = &sessions.Options{
 			Path:     "/",                  // The root path for the cookie (accessible from all paths)
@@ -103,4 +104,20 @@ func ValidateLoginCredentials(loginDetails PlayerLogin, db *gorm.DB) bool {
 func VerifyPassword(providedPassword, storedPassword string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(storedPassword), []byte(providedPassword))
 	return err == nil
+}
+
+func FindUserId(loginDetails PlayerLogin, db *gorm.DB) string {
+	var existingPlayer database.Player // Structure for database query
+	var UserId string
+
+	// Query the database for the password associated with the username
+	err := db.Model(&existingPlayer).Select("User_ID").Where("Username = ?", loginDetails.Username).Scan(&UserId).Error
+	if err != nil {
+		log.Println("Error retrieving userId:", err)
+		os.Exit(1)
+	} else {
+		fmt.Println("userId found:", UserId)
+	}
+
+	return UserId
 }

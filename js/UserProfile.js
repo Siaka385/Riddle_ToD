@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showPasswordForm = document.getElementById('show-password-form');
     const passwordSection = document.getElementById('password-section');
     const savePassword = document.getElementById('save-password');
-    
+    let avatar;
     // Generate avatar options
     for (let i = 1; i <= 6; i++) {
         const avatarOption = document.createElement('img');
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             avatarOption.classList.add('selected');
             currentAvatarImg.src = avatarOption.src;
+            avatar=avatarOption.dataset.avatarId
         });
         
         avatarGallery.appendChild(avatarOption);
@@ -44,6 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        var UserUpdateDetails={
+                NewUsername:username,
+                NewEmail:email,
+                NewAvatar:avatar
+
+        }
+
+        fetch("/updateprofile",{
+            method:"POST",
+            headers:{ 'Content-Type': 'application/json' },
+            body:JSON.stringify(UserUpdateDetails)
+
+        }).then(response => response.json()).then(data => console.log(data)).catch(err=> console.log(err))
+
+
+
+
+
+         console.log(UserUpdateDetails.NewAvatar)
         showMessage('Success', 'Profile updated successfully!');
     });
 
@@ -62,6 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
             showMessage('Error', 'New passwords do not match.');
             return;
         }
+
+        var UserUpdatePassword={
+           NewPassword:newPassword,
+           ConfirmPassword:confirmPassword
+
+    }
+
+    fetch("/updatepassword",{
+        method:"POST",
+        headers:{ 'Content-Type': 'application/json' },
+        body:JSON.stringify(UserUpdatePassword)
+
+    }).then(response => response.json()).then(data => console.log(data)).catch(err=> console.log(err))
+
 
         showMessage('Success', 'Password updated successfully!');
         

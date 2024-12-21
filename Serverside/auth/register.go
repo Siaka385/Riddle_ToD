@@ -7,6 +7,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
+	"strconv"
 	"time"
 
 	"golang.org/x/crypto/bcrypt"
@@ -31,9 +33,10 @@ type APIResponse struct {
 type ExistingUser struct {
 	Username string
 	Email    string
+	User_ID  string
 }
 
-var existingUsers []ExistingUser
+var ExistingUsers []ExistingUser
 
 func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 	if r.Header.Get("Content-Type") != "application/json" {
@@ -63,12 +66,12 @@ func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 
 	LoadExistingUsers(db)
 
-	for i := 0; i < len(existingUsers); i++ {
-		if existingUsers[i].Email == playerInput.Email {
+	for i := 0; i < len(ExistingUsers); i++ {
+		if ExistingUsers[i].Email == playerInput.Email {
 			apiResponse = APIResponse{"Email already exists"}
 			uservalid = false
 		}
-		if existingUsers[i].Username == playerInput.Username {
+		if ExistingUsers[i].Username == playerInput.Username {
 			apiResponse = APIResponse{"Username already exists"}
 			uservalid = false
 		}
@@ -91,6 +94,7 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 
 	// Initialize Player and PlayerLevel
 	newPlayer := database.Player{
+		User_ID:        GiveUserId(),
 		Username:       playerInput.Username,
 		Email:          playerInput.Email,
 		Password:       HashPassword(playerInput.Password), // Hash the password securely
@@ -99,8 +103,8 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 	}
 
 	playlevel := database.PlayerLevel{
-		Level:    1,
-		Username: playerInput.Username,
+		Level:   1,
+		User_ID: playerInput.Username,
 	}
 
 	// Use a transaction for atomicity
@@ -125,10 +129,10 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 func LoadExistingUsers(db *gorm.DB) {
 	var playerRecord database.Player
 
-	if err := db.Model(&playerRecord).Select("username", "email").Find(&existingUsers).Error; err != nil {
-		log.Println("Error retrieving usernames and emails:", err)
+	if err := db.Model(&playerRecord).Select("username", "email", "User_ID").Find(&ExistingUsers).Error; err != nil {
+		log.Println("Error retrieving usernames,emails and User_ID:", err)
 	} else {
-		fmt.Println("Existing users:", existingUsers)
+		fmt.Println("Existing users:", ExistingUsers)
 	}
 }
 
@@ -139,4 +143,25 @@ func HashPassword(password string) string {
 		return ""
 	}
 	return string(hashedPassword)
+}
+
+func GiveUserId() string {
+	var id []int
+	for i := 0; i < len(ExistingUsers); i++ {
+		num, err := strconv.Atoi(ExistingUsers[i].User_ID)
+		if err != nil {
+			fmt.Println("error converting the user id")
+		}
+		id = append(id, num)
+	}
+
+	if len(id) == 0 {
+		return "1"
+	}
+	sort.Ints(id)
+
+	userid := id[len(id)-1] + 1
+
+	return strconv.Itoa(userid)
+
 }

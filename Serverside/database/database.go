@@ -8,7 +8,8 @@ import (
 )
 
 type Player struct {
-	Username       string `gorm:"primaryKey"`
+	User_ID        string `gorm:"primaryKey"`
+	Username       string
 	Email          string `gorm:"unique"`
 	Password       string
 	AvatarSelected string
@@ -16,9 +17,9 @@ type Player struct {
 }
 
 type PlayerLevel struct {
-	Level    int    `gorm:"not null"`
-	Username string `gorm:"not null"` // Ensures the foreign key cannot be null
-	Player   Player `gorm:"foreignKey:Username;references:Username"`
+	Level   int    `gorm:"not null"`
+	User_ID string `gorm:"not null"` // Ensures the foreign key cannot be null
+	Player  Player `gorm:"foreignKey:Username;references:User_ID"`
 }
 
 func Init() *gorm.DB {

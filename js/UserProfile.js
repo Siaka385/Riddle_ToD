@@ -64,11 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify(UserUpdateDetails)
 
-        }).then(response => response.json()).then(data => Profile(data.Message)).catch(err=> console.log(err))
+        }).then(response => response.json()).then(data => Profile(data.message)).catch(err=> console.log(err))
 
     });
 
     function Profile(message){
+        console.log(message)
          if(message == "Cannot change to this email, it already exists." ){
             showMessage("Failed to change email",message)
               return
@@ -108,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers:{ 'Content-Type': 'application/json' },
         body:JSON.stringify(UserUpdatePassword)
    
-    }).then(response => response.json()).then((data) =>{isPasswordUpdate=password(data.Message)}).catch(err=> console.log(err))
+    }).then(response => response.json()).then((data) =>{isPasswordUpdate=password(data.message)}).catch(err=> console.log(err))
           
         if (isPasswordUpdate){
         // Clear password fields

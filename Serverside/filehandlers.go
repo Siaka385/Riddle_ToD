@@ -34,7 +34,7 @@ func CheckUserSession(w http.ResponseWriter, r *http.Request, Store *sessions.Co
 		http.Redirect(w, r, "/intro", http.StatusFound)
 		return
 	}
-	RenderIndexPage(w, r, db, username)
+	RenderIndexPage(w, r, db, Store)
 }
 
 func RenderAuthPage(responseWriter http.ResponseWriter, request *http.Request) {

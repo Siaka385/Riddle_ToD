@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/gorilla/sessions"
 	"gorm.io/gorm"
 
 	database "Riddle_ToD/Serverside/database"
@@ -25,7 +26,7 @@ type UserLevelInfo struct {
 	LevelAlias   string
 }
 
-func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, username any) {
+func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, sessionn *sessions.CookieStore) {
 	templateFile, err := template.ParseFiles("UserDashboard.html")
 	if err != nil {
 		//http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
@@ -33,16 +34,26 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 		os.Exit(1)
 	}
 
+	session, _ := sessionn.Get(request, "session-name")
+
+	username := session.Values["Username"]
+	userId := session.Values["User_ID"]
+
 	category := request.URL.Query().Get("selectcategory")
 	pageContent := IndexContent{}
-	userlevel, err := FetchUserLevel(db, username)
+	userlevel, err := FetchUserLevel(db, userId)
 	if err != nil {
 		//	http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
 		fmt.Println("fetch error", err)
 		os.Exit(1)
 	}
 
-	pageContent.UserName = fmt.Sprint(username)
+	pageContent.UserName, err = FetchUsername(db, userId)
+	if err != nil {
+		//	http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
+		fmt.Println("fetch username:", err)
+		os.Exit(1)
+	}
 	pageContent.UserLevel = userlevel.CurrentLevel
 	pageContent.LevelAlias = userlevel.LevelAlias
 	pageContent.AvatarIcon, err = FetchAvatarIcon(db, username)
@@ -67,13 +78,13 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	}
 }
 
-func FetchUserLevel(db *gorm.DB, username any) (UserLevelInfo, error) {
+func FetchUserLevel(db *gorm.DB, userids any) (UserLevelInfo, error) {
 	var userLevel UserLevelInfo
-
+	fmt.Println(userids)
 	// Perform the query
 	if err := db.Model(&database.PlayerLevel{}).
 		Select("Level").
-		Where("username = ?", username).
+		Where("User_ID = ?", userids).
 		Scan(&userLevel.CurrentLevel).Error; err != nil {
 		return UserLevelInfo{}, fmt.Errorf("failed to fetch user level: %w", err)
 	}
@@ -99,16 +110,31 @@ func FetchUserLevel(db *gorm.DB, username any) (UserLevelInfo, error) {
 	return userLevel, nil
 }
 
-func FetchAvatarIcon(db *gorm.DB, username any) (string, error) {
+func FetchAvatarIcon(db *gorm.DB, userids any) (string, error) {
 	var avatarIcon string
 
 	// Perform the query
 	if err := db.Model(&database.Player{}).
 		Select("AvatarSelected").
-		Where("username = ?", username).
+		Where("User_ID   = ?", userids).
 		Scan(&avatarIcon).Error; err != nil {
 		return avatarIcon, fmt.Errorf("failed to fetch user level: %w", err)
 	}
 
 	return avatarIcon, nil
+}
+
+func FetchUsername(db *gorm.DB, userids any) (string, error) {
+	var Username string
+
+	// Perform the query
+	if err := db.Model(&database.Player{}).
+		Select("Username").
+		Where("User_ID   = ?", userids).
+		Scan(&Username).Error; err != nil {
+		return Username, fmt.Errorf("failed to fetch user level: %w", err)
+	}
+
+	return Username, nil
+
 }

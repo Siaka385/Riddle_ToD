@@ -20,12 +20,8 @@ window.onload = () => {
       //button to profile editing
       var profilebtn=document.getElementById("profile-settings")      
        profilebtn.onclick=()=>{
-        window.location.href="/profileEdit"
+        window.location.href="/editprofile"
        }
-
-
-
-  
     //button two player click
     var twoplayerbtn=document.getElementById("twoplayerbtn");
     twoplayerbtn.addEventListener("click",()=>{

@@ -12,6 +12,7 @@ import (
 	"Riddle_ToD/Serverside"
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
+	prof "Riddle_ToD/Serverside/updateprofile"
 	utils "Riddle_ToD/Serverside/utils"
 )
 
@@ -36,6 +37,12 @@ func Router(w http.ResponseWriter, r *http.Request) {
 
 	if path == "/loginpage" || path == "/registerpage" {
 		Serverside.RenderAuthPage(w, r)
+	} else if path == "/editprofile" {
+		prof.ProfileHandler(w, r, Store, db)
+	} else if path == "/updateprofile" {
+		prof.UpdateUserProfileHandler(w, r, db, Store)
+	} else if path == "/updatepassword" {
+		prof.UpdateUserPasswordHandler(w, r, db, Store)
 	} else if path == "/intro" {
 		Serverside.Filehandler("intro_template/intropage.html", w)
 	} else if path == "/" {

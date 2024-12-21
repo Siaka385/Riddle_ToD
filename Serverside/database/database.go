@@ -23,7 +23,7 @@ type PlayerLevel struct {
 }
 
 func Init() *gorm.DB {
-	db, err := gorm.Open(sqlite.Open("./mydatabase"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("./Database/DarkRelmDatabase"), &gorm.Config{})
 	if err != nil {
 		fmt.Println("error creating database")
 	}

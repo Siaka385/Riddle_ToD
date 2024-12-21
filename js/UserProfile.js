@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const showPasswordForm = document.getElementById('show-password-form');
     const passwordSection = document.getElementById('password-section');
     const savePassword = document.getElementById('save-password');
+    const backbutton=document.getElementById("backbtn")
     let avatar;
+
+    //back button
+    backbutton.onclick=()=>{
+        window.location.href="/"
+    }
+    
     // Generate avatar options
     for (let i = 1; i <= 6; i++) {
         const avatarOption = document.createElement('img');
@@ -57,15 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify(UserUpdateDetails)
 
-        }).then(response => response.json()).then(data => console.log(data)).catch(err=> console.log(err))
+        }).then(response => response.json()).then(data => Profile(data.Message)).catch(err=> console.log(err))
 
-
-
-
-
-         console.log(UserUpdateDetails.NewAvatar)
-        showMessage('Success', 'Profile updated successfully!');
     });
+
+    function Profile(message){
+         if(message == "Cannot change to this email, it already exists." ){
+            showMessage("Failed to change email",message)
+              return
+         }
+         if(message == "Cannot change to this username, it already exists."){
+            showMessage("Failed to change Username",message)
+                return
+         }
+         showMessage('Success', 'Profile updated successfully!');
+
+    }
 
     // Handle password save
     savePassword.addEventListener('click', () => {
@@ -88,17 +102,15 @@ document.addEventListener('DOMContentLoaded', () => {
            ConfirmPassword:confirmPassword
 
     }
-
+       var isPasswordUpdate=false
     fetch("/updatepassword",{
         method:"POST",
         headers:{ 'Content-Type': 'application/json' },
         body:JSON.stringify(UserUpdatePassword)
-
-    }).then(response => response.json()).then(data => console.log(data)).catch(err=> console.log(err))
-
-
-        showMessage('Success', 'Password updated successfully!');
-        
+   
+    }).then(response => response.json()).then((data) =>{isPasswordUpdate=password(data.Message)}).catch(err=> console.log(err))
+          
+        if (isPasswordUpdate){
         // Clear password fields
         document.getElementById('current-password').value = '';
         document.getElementById('new-password').value = '';
@@ -107,8 +119,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide password section
         passwordSection.classList.remove('active');
         showPasswordForm.textContent = 'Change Password';
+        }
     });
 });
+
+function password(message){
+    if (message == "Your old password is incorrect, password update failed"){
+          showMessage("failed to update password",message)
+          return false
+    }
+    showMessage("success",message)
+    return true
+}
+
+
 
 function showMessage(title, text) {
     const messageOverlay = document.getElementById('message-overlay');

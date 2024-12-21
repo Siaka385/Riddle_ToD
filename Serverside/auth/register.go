@@ -104,7 +104,7 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 
 	playlevel := database.PlayerLevel{
 		Level:   1,
-		User_ID: playerInput.Username,
+		User_ID: newPlayer.User_ID,
 	}
 
 	// Use a transaction for atomicity

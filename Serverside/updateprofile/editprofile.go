@@ -98,13 +98,13 @@ func UpdateUserProfileHandler(w http.ResponseWriter, r *http.Request, db *gorm.D
 // UpdateUserProfileInDatabase updates the user profile in the database within a transaction.
 func UpdateUserProfileInDatabase(db *gorm.DB, userID interface{}, userDetails UserProfile) error {
 	return db.Transaction(func(tx *gorm.DB) error {
-		if err := tx.Model(&database.Player{}).Where("id = ?", userID).Update("Email", userDetails.NewEmail).Error; err != nil {
+		if err := tx.Model(&database.Player{}).Where("User_ID = ?", userID).Update("Email", userDetails.NewEmail).Error; err != nil {
 			return err
 		}
-		if err := tx.Model(&database.Player{}).Where("id = ?", userID).Update("Username", userDetails.NewUsername).Error; err != nil {
+		if err := tx.Model(&database.Player{}).Where("User_ID = ?", userID).Update("Username", userDetails.NewUsername).Error; err != nil {
 			return err
 		}
-		if err := tx.Model(&database.Player{}).Where("id = ?", userID).Update("AvatarSelected", userDetails.NewAvatar).Error; err != nil {
+		if err := tx.Model(&database.Player{}).Where("User_ID = ?", userID).Update("AvatarSelected", userDetails.NewAvatar).Error; err != nil {
 			return err
 		}
 		return nil
@@ -167,5 +167,5 @@ func UpdateUserPasswordHandler(w http.ResponseWriter, r *http.Request, db *gorm.
 
 // UpdateUserPasswordInDatabase updates the user's password in the database.
 func UpdateUserPasswordInDatabase(db *gorm.DB, userID interface{}, newPassword string) error {
-	return db.Model(&database.Player{}).Where("id = ?", userID).Update("Password", newPassword).Error
+	return db.Model(&database.Player{}).Where("User_ID = ?", userID).Update("Password", newPassword).Error
 }

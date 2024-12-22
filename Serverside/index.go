@@ -36,7 +36,7 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 
 	session, _ := sessionn.Get(request, "session-name")
 
-	username := session.Values["Username"]
+	//username := session.Values["Username"]
 	userId := session.Values["User_ID"]
 
 	category := request.URL.Query().Get("selectcategory")
@@ -56,7 +56,7 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	}
 	pageContent.UserLevel = userlevel.CurrentLevel
 	pageContent.LevelAlias = userlevel.LevelAlias
-	pageContent.AvatarIcon, err = FetchAvatarIcon(db, username)
+	pageContent.AvatarIcon, err = FetchAvatarIcon(db, userId)
 	if err != nil {
 		//	http.Error(responseWriter, "Internal Server Error", http.StatusInternalServerError)
 		fmt.Println("fetch icon", err)
@@ -112,7 +112,7 @@ func FetchUserLevel(db *gorm.DB, userids any) (UserLevelInfo, error) {
 
 func FetchAvatarIcon(db *gorm.DB, userids any) (string, error) {
 	var avatarIcon string
-
+	fmt.Println(userids)
 	// Perform the query
 	if err := db.Model(&database.Player{}).
 		Select("AvatarSelected").
@@ -121,6 +121,7 @@ func FetchAvatarIcon(db *gorm.DB, userids any) (string, error) {
 		return avatarIcon, fmt.Errorf("failed to fetch user level: %w", err)
 	}
 
+	fmt.Println("AVATAR:", avatarIcon)
 	return avatarIcon, nil
 }
 
@@ -134,7 +135,7 @@ func FetchUsername(db *gorm.DB, userids any) (string, error) {
 		Scan(&Username).Error; err != nil {
 		return Username, fmt.Errorf("failed to fetch user level: %w", err)
 	}
-
+	fmt.Println("username:", Username)
 	return Username, nil
 
 }

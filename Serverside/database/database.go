@@ -12,7 +12,7 @@ type Player struct {
 	Username       string
 	Email          string `gorm:"unique"`
 	Password       string
-	AvatarSelected string
+	AvatarSelected string `gorm:"not null"`
 	CreationDate   string
 }
 

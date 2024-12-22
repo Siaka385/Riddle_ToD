@@ -99,10 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         var UserUpdatePassword={
+           OldPassword:currentPassword,
            NewPassword:newPassword,
            ConfirmPassword:confirmPassword
 
     }
+    console.log(UserUpdatePassword)
        var isPasswordUpdate=false
     fetch("/updatepassword",{
         method:"POST",

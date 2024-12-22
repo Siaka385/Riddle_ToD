@@ -144,6 +144,7 @@ func UpdateUserPasswordHandler(w http.ResponseWriter, r *http.Request, db *gorm.
 		Username: fmt.Sprint(username),
 		Password: userPassword.OldPassword,
 	}
+	fmt.Println("MY PASSWORD", userPassword)
 
 	// Validate the old password.
 	if !auth.ValidateLoginCredentials(userDetails, db) {
@@ -153,6 +154,7 @@ func UpdateUserPasswordHandler(w http.ResponseWriter, r *http.Request, db *gorm.
 
 	// Update the password if validation is successful.
 	if isUpdateAllowed {
+		userPassword.NewPassword = auth.HashPassword(userPassword.NewPassword)
 		err = UpdateUserPasswordInDatabase(db, userID, userPassword.NewPassword)
 		if err != nil {
 			http.Error(w, "Error updating user password", http.StatusInternalServerError)

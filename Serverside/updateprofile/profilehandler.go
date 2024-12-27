@@ -9,12 +9,14 @@ import (
 	"github.com/gorilla/sessions"
 	"gorm.io/gorm"
 
+	"Riddle_ToD/Serverside"
 	"Riddle_ToD/Serverside/auth"
 )
 
 type UserProfiles struct {
-	Username  string
-	Useremail string
+	UserAvatar string
+	Username   string
+	Useremail  string
 }
 
 func ProfileHandler(w http.ResponseWriter, r *http.Request, store *sessions.CookieStore, db *gorm.DB) {
@@ -36,6 +38,7 @@ func ProfileHandler(w http.ResponseWriter, r *http.Request, store *sessions.Cook
 		if users[i].User_ID == userID {
 			userprofile.Username = users[i].Username
 			userprofile.Useremail = users[i].Email
+			userprofile.UserAvatar, _ = Serverside.FetchAvatarIcon(db, userID)
 		}
 	}
 	tmp, err := template.ParseFiles("UserProfileEdit_template/UserProfile.html")

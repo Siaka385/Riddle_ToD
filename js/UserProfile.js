@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const savePassword = document.getElementById('save-password');
     const backbutton=document.getElementById("backbtn")
     let avatar;
-
+    const selectedAvatar=document.getElementById("avatartype").value
     //back button
     backbutton.onclick=()=>{
         window.location.href="/"
@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
         avatarOption.src = `https://api.dicebear.com/7.x/adventurer/svg?seed=${i}`;
         avatarOption.classList.add('avatar-option');
         avatarOption.dataset.avatarId = i;
+
+        if (i == parseInt(selectedAvatar)){
+            document.querySelectorAll('.avatar-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            avatarOption.classList.add('selected');
+            currentAvatarImg.src = avatarOption.src;
+            avatar=avatarOption.dataset.avatarId
+        }
         
         avatarOption.addEventListener('click', () => {
             document.querySelectorAll('.avatar-option').forEach(opt => {

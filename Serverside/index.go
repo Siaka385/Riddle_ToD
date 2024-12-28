@@ -112,7 +112,6 @@ func FetchUserLevel(db *gorm.DB, userids any) (UserLevelInfo, error) {
 
 func FetchAvatarIcon(db *gorm.DB, userids any) (string, error) {
 	var avatarIcon string
-	fmt.Println(userids)
 	// Perform the query
 	if err := db.Model(&database.Player{}).
 		Select("AvatarSelected").

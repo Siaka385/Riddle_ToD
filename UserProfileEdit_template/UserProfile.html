@@ -69,69 +69,69 @@
                 <div class="stats-grid">
                     <div class="stat-card easy">
                         <h3>Easy Mode</h3>
-                        <div class="total">Total Solved: 34</div>
+                        <div class="total">Total Solved: {{.EasyStat.Total}}</div>
                         <div class="category-stats">
                             <div class="category-item">
                                 <span>🧮 Math</span>
-                                <span>12</span>
+                                <span>{{.EasyStat.Mathematic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>📝 Word</span>
-                                <span>10</span>
+                                <span>{{.EasyStat.Word}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🤔 Logic</span>
-                                <span>12</span>
+                                <span>{{.EasyStat.Logic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🌐 General</span>
-                                <span>0</span>
+                                <span>{{.EasyStat.General}}</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="stat-card medium">
                         <h3>Medium Mode</h3>
-                        <div class="total">Total Solved: 22</div>
+                        <div class="total">Total Solved: {{.MediumStat.Total}}</div>
                         <div class="category-stats">
                             <div class="category-item">
                                 <span>🧮 Math</span>
-                                <span>8</span>
+                                <span>{{.MediumStat.Mathematic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>📝 Word</span>
-                                <span>7</span>
+                                <span>{{.MediumStat.Word}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🤔 Logic</span>
-                                <span>7</span>
+                                <span>{{.MediumStat.Logic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🌐 General</span>
-                                <span>0</span>
+                                <span>{{.MediumStat.General}}</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="stat-card hard">
                         <h3>Hard Mode</h3>
-                        <div class="total">Total Solved: 15</div>
+                        <div class="total">Total Solved: {{.HardStat.Total}}</div>
                         <div class="category-stats">
                             <div class="category-item">
                                 <span>🧮 Math</span>
-                                <span>5</span>
+                                <span>{{.HardStat.Mathematic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>📝 Word</span>
-                                <span>4</span>
+                                <span>{{.HardStat.Word}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🤔 Logic</span>
-                                <span>6</span>
+                                <span>{{.HardStat.Logic}}</span>
                             </div>
                             <div class="category-item">
                                 <span>🌐 General</span>
-                                <span>0</span>
+                                <span>{{.HardStat.General}}</span>
                             </div>
                         </div>
                     </div>

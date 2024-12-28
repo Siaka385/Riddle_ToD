@@ -107,6 +107,33 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 		User_ID: newPlayer.User_ID,
 	}
 
+	playerEasyStat := database.EasyStat{
+		User_ID:    newPlayer.User_ID,
+		General:    0,
+		Logic:      0,
+		Mathematic: 0,
+		Word:       0,
+		Total:      0,
+	}
+
+	playerMediumStat := database.MediumStat{
+		User_ID:    newPlayer.User_ID,
+		General:    0,
+		Logic:      0,
+		Mathematic: 0,
+		Word:       0,
+		Total:      0,
+	}
+
+	playerHardStat := database.HardStat{
+		User_ID:    newPlayer.User_ID,
+		General:    0,
+		Logic:      0,
+		Mathematic: 0,
+		Word:       0,
+		Total:      0,
+	}
+
 	// Use a transaction for atomicity
 	//A transaction in a database is a sequence of operations (like INSERT, UPDATE, or DELETE) that are executed as a single logical unit.
 	// If all the operations within the transaction succeed, the changes are permanently saved to the database (committed).
@@ -120,6 +147,18 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 		// Initialize the player's level
 		if err := tx.Create(&playlevel).Error; err != nil {
 			return fmt.Errorf("failed to create player level: %w", err)
+		}
+
+		if err := tx.Create(&playerEasyStat).Error; err != nil {
+			return fmt.Errorf("failed to create player easy stat: %w", err)
+		}
+
+		if err := tx.Create(&playerMediumStat).Error; err != nil {
+			return fmt.Errorf("failed to create player medium stat: %w", err)
+		}
+
+		if err := tx.Create(&playerHardStat).Error; err != nil {
+			return fmt.Errorf("failed to create Hard stat: %w", err)
 		}
 
 		return nil

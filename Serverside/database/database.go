@@ -16,9 +16,10 @@ type Player struct {
 	CreationDate   string
 }
 type PlayerLevel struct {
-	Level   int    `gorm:"not null"`
-	User_ID string `gorm:"not null"`                              // Foreign key referring to Player.User_ID
-	Player  Player `gorm:"foreignKey:User_ID;references:User_ID"` // Foreign key constraint on User_ID
+	Level              int `gorm:"not null"`
+	PreferedDifficulty string 
+	User_ID            string `gorm:"not null"`                              // Foreign key referring to Player.User_ID
+	Player             Player `gorm:"foreignKey:User_ID;references:User_ID"` // Foreign key constraint on User_ID
 }
 
 type Riddle struct {

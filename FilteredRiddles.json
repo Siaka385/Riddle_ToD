@@ -1,7 +1,55 @@
 [
   {
     "question": "",
-    "category": "Mathematics",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Easy",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 1
+  },
+  {
+    "question": "",
+    "category": "Logic",
     "choices": [
       "Envelope",
       "Eagle",
@@ -10,5 +58,89 @@
     ],
     "difficulty": "Hard",
     "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 2
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 2
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 2
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Medium",
+    "level": 2
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Hard",
+    "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Hard",
+    "level": 3
+  },
+  {
+    "question": "",
+    "category": "Logic",
+    "choices": [
+      "Envelope",
+      "Eagle",
+      "Edge",
+      "Eel"
+    ],
+    "difficulty": "Easy",
+    "level": 1
   }
 ]

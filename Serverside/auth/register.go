@@ -103,8 +103,9 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 	}
 
 	playlevel := database.PlayerLevel{
-		Level:   1,
-		User_ID: newPlayer.User_ID,
+		Level:              1,
+		PreferedDifficulty: "Easy",
+		User_ID:            newPlayer.User_ID,
 	}
 
 	playerEasyStat := database.EasyStat{

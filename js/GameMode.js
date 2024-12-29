@@ -16,7 +16,7 @@ survivalBtn.onclick=()=>{
 
 let difficultyBtn=document.getElementById("difficulty")
 difficultyBtn.onclick=()=>{
-    window.location.href="/DifficultySetting"
+    window.location.href="/difficultysetting"
 }
 
 })

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Realm of Dread - Game</title>
+    <link rel="stylesheet" href="starterbootstrap.css">
+    <link rel="stylesheet" href="../css/playsection.css">
+</head>
+<body>
+    <div class="boxcontainer game-container">
+        <div class="game-header">
+            <div class="timer">Difficulty: Hard</div>
+            <div class="level-indicator">
+                Level: <span class="current-level">2</span>
+            </div>
+            <div class="riddle-info">
+                Riddle: <span class="current-riddle">1</span>/<span class="total-riddles">5</span>
+            </div>
+            <div class="score">Score: 100</div>
+        </div>
+
+        <div class="riddle">
+            <h2>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</h2>
+        </div>
+
+        <div id="hint" class="hint" style="display: none;">
+            Hint: I repeat what you say without a mouth.
+        </div>
+
+        <div class="answer-section">
+            <div class="custom-answer-container">
+                <input type="text" id="custom-answer" class="custom-answer-input" placeholder="Enter your answer">
+                <button class="btn custom-answer-submit">Submit Answer</button>
+            </div>
+
+            <div class="answer-buttons" style="display: none;">
+                <button class="btn">An Echo</button>
+                <button class="btn">A Shadow</button>
+                <button class="btn">A Whisper</button>
+                <button class="btn">A Cloud</button>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            <span class="hint-link">Need a Hint?</span>
+            <span class="multiple-choice-link">Need Multiple Choice?</span>
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <h3 class="modal-title">Warning!</h3>
+            <div class="modal-content">
+                <p class="warning-text">Using multiple choice will result in a 50% point penalty for this riddle.</p>
+                <p class="warning-text">Are you sure you want to continue?</p>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-cancel">Cancel</button>
+                <button class="btn show-choices-btn">Accept Penalty</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hintLink = document.querySelector('.hint-link');
+            const hintElement = document.getElementById('hint');
+            const multipleChoiceLink = document.querySelector('.multiple-choice-link');
+            const modalOverlay = document.querySelector('.modal-overlay');
+            const showChoicesBtn = document.querySelector('.show-choices-btn');
+            const cancelBtn = document.querySelector('.btn-cancel');
+            const answerButtons = document.querySelector('.answer-buttons');
+            const feedbackElement = document.getElementById('feedback');
+            const customAnswerInput = document.getElementById('custom-answer');
+            const customAnswerSubmit = document.querySelector('.custom-answer-submit');
+            
+            let currentPoints = 100;
+            let isMultipleChoiceUsed = false;
+        
+            // Hint toggle
+            hintLink.addEventListener('click', () => {
+                hintElement.style.display = hintElement.style.display === 'none' ? 'block' : 'none';
+            });
+        
+            // Show modal when clicking multiple choice link
+            multipleChoiceLink.addEventListener('click', () => {
+                if (!isMultipleChoiceUsed) {
+                    modalOverlay.style.display = 'flex';
+                }
+            });
+        
+            // Hide modal when clicking cancel
+            cancelBtn.addEventListener('click', () => {
+                modalOverlay.style.display = 'none';
+            });
+        
+            // Hide modal when clicking outside
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    modalOverlay.style.display = 'none';
+                }
+            });
+        
+            // Show multiple choice buttons with penalty
+            showChoicesBtn.addEventListener('click', () => {
+                isMultipleChoiceUsed = true;
+                currentPoints *= 0.5; // Apply 50% penalty
+                document.querySelector('.score').textContent = `Score: ${currentPoints}`;
+                answerButtons.style.display = 'flex';
+                modalOverlay.style.display = 'none';
+                multipleChoiceLink.style.display = 'none';
+            });
+        
+            // Handle custom answer submission
+            customAnswerSubmit.addEventListener('click', () => {
+                const answer = customAnswerInput.value.trim().toLowerCase();
+                checkAnswer(answer);
+            });
+        
+            // Handle Enter key in input
+            customAnswerInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const answer = customAnswerInput.value.trim().toLowerCase();
+                    checkAnswer(answer);
+                }
+            });
+        
+            // Handle multiple choice answers
+            const choiceButtons = answerButtons.querySelectorAll('.btn');
+            choiceButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.textContent.trim().toLowerCase();
+                    checkAnswer(answer);
+                });
+            });
+        
+            function checkAnswer(answer) {
+                const correctAnswer = 'echo';
+                const isCorrect = answer.includes(correctAnswer);
+        
+                if (isCorrect) {
+                    feedbackElement.textContent = `Correct! ${isMultipleChoiceUsed ? '(50% penalty applied)' : ''}`;
+                    feedbackElement.style.color = '#4CAF50';
+                } else {
+                    feedbackElement.textContent = 'Incorrect. Try again!';
+                    feedbackElement.style.color = '#ff4500';
+                }
+        
+                customAnswerInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
+

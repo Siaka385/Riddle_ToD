@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const difficultyButtons = document.querySelectorAll('.difficulty-btn');
     const difficultyInfo = document.getElementById('difficulty-info');
-
+       const diff=document.getElementById("playprefferedDifficulty").value;
+       
     const difficultyMap = {
         easy: "Easy",
         medium: "Medium",
@@ -13,9 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
         medium: "The darkness grows thick. Riddles bite with sharp teeth, testing your resolve.",
         hard: "Pure nightmare fuel. Only the bravest souls dare to tread this path of absolute terror."
     };
+     
+    if (diff == "Medium"){
+
+            // Remove active state from all buttons
+            difficultyButtons.forEach(btn => btn.classList.remove('active'));
+
+        difficultyButtons[1].classList.add("active")
+    }
+    if(diff == "Hard"){
+
+            // Remove active state from all buttons
+            difficultyButtons.forEach(btn => btn.classList.remove('active'));
+        difficultyButtons[2].classList.add("active")
+    }
+
+
 
     difficultyButtons.forEach(button => {
         button.addEventListener('click', (e) => {
+        
             e.preventDefault(); // Prevent default behavior
 
             const difficulty = button.dataset.difficulty;
@@ -42,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add active state to clicked button
             button.classList.add('active');
+
+           // location.reload(false);
         });
     });
 });

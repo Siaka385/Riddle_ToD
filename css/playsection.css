@@ -7,26 +7,30 @@
     --text-glow: rgba(139, 0, 0, 0.7);
 }
 
-body{
+/* Base Styles */
+body {
     padding: 0;
-    margin:15%;
-    margin-top: 4%;
+    margin: 0;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/dark\ forest\ picture.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Merriweather', serif;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Game Container */
 .game-container {
-    width: 75vw;
-    height: auto;
+    width: 95%;
+    max-width: 800px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
-    padding: 30px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,117 +38,124 @@ body{
     text-align: center;
     backdrop-filter: blur(10px);
     border: 2px solid var(--blood-red);
+    margin: 10px;
+    box-sizing: border-box;
 }
 
+/* Game Header */
 .game-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: white;
-    font-family: 'Merriweather', serif;
 }
 
-.riddle-info, .level-indicator, .mode-display {
+.riddle-info, .level-indicator, .mode-display, .score, .timer {
     background: rgba(139, 0, 0, 0.3);
-    padding: 5px 10px;
+    padding: 8px 5px;
     border-radius: 10px;
     font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .current-riddle, .total-riddles, .current-level, .current-mode {
     color: #ff4500;
 }
 
-
+/* Riddle Section */
 .riddle {
-    margin-bottom: 30px;
-    font-family: 'Merriweather', serif;
-    color: white;
+    margin: 15px 0;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .riddle h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     line-height: 1.6;
+    margin: 0;
 }
 
+/* Hint Section */
 .hint {
     background: rgba(139, 0, 0, 0.3);
-    color: white;
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    font-family: 'Merriweather', serif;
+    margin: 10px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Answer Section */
+.answer-section {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .answer-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 12px;
     width: 100%;
+    margin: 15px auto;
 }
 
-.game-footer {
+.custom-answer-container {
+    width: 100%;
+    margin: 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+}
+
+.custom-answer-input {
     width: 100%;
-}
-
-.hint-link {
-    color: #ff4500;
-    font-family: 'Merriweather', serif;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.hint-link:hover {
-    color: #ff6347;
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
-    transform: scale(1.05);
-}
-
-.feedback {
-    margin-top: 20px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--blood-red);
+    border-radius: 10px;
     color: white;
     font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .game-container {
-        width: 90vw;
-        padding: 20px;
-    }
-
-    .riddle h2 {
-        font-size: 1.2rem;
-    }
+.custom-answer-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-/* Button Styles (matching starterbootstrap.css) */
+/* Button Styles */
 .btn {
-    padding: 15px 25px;
     width: 250px;
+    padding: 12px 20px;
     border: none;
     border-radius: 10px;
     background-image: linear-gradient(to right, var(--blood-red), #5D1E1E);
     color: white;
     font-family: 'Nosifer', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+    min-height: 44px;
+    box-sizing: border-box;
 }
 
 .btn:before {
@@ -167,51 +178,173 @@ body{
     box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
 }
 
-/* Previous CSS remains the same... */
-
-.custom-answer-container {
+/* Footer Styles */
+.game-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
     width: 100%;
-    margin-top: 20px;
-    gap: 20px;
-}
-
-.custom-answer-input {
-    width: 250px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid var(--blood-red);
-    border-radius: 10px;
-    color: white;
-    font-family: 'Merriweather', serif;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-.custom-answer-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.custom-answer-link {
+.hint-link, .multiple-choice-link {
     color: #ff4500;
     font-family: 'Merriweather', serif;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin-top: 15px;
     font-weight: bold;
+    padding: 8px;
 }
 
-.custom-answer-link:hover {
+.hint-link:hover, .multiple-choice-link:hover {
     color: #ff6347;
     text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
     transform: scale(1.05);
 }
 
-.custom-answer-submit {
-    margin-top: 10px;
-    width: 200px;
+.feedback {
+    margin-top: 15px;
+    color: white;
+    font-family: 'Merriweather', serif;
 }
 
-/* Rest of the previous CSS remains the same */
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal {
+    background: var(--dark-bg);
+    border: 2px solid var(--blood-red);
+    border-radius: 15px;
+    padding: 20px 15px;
+    width: 95%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.7);
+    animation: modalAppear 0.3s ease-out;
+    box-sizing: border-box;
+}
+
+@keyframes modalAppear {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-title {
+    color: var(--blood-red);
+    font-family: 'Nosifer', sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-cancel {
+    background-image: linear-gradient(to right, #2d2d2d, #1a1a1a);
+}
+
+.warning-text {
+    color: #ff4500;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Media Queries */
+@media (min-width: 480px) {
+    .modal {
+        padding: 25px;
+    }
+    
+    .modal-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .modal-buttons .btn {
+        width: auto;
+        min-width: 150px;
+    }
+    
+    .btn {
+        font-size: 16px;
+    }
+    
+    .warning-text {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .game-container {
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    .game-header {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .riddle-info, .level-indicator, .mode-display, .score, .timer {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .hint {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .btn,
+    .hint-link,
+    .multiple-choice-link {
+        cursor: default;
+    }
+    
+    .hint-link:hover,
+    .multiple-choice-link:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}

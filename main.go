@@ -65,7 +65,7 @@ func main() {
 	r.HandleFunc("/playsection", Serverside.Playsection).Methods("GET")
 	//r.HandleFunc("/difficultySetting", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("soloPlayer/difficult.html", w) }).Methods("GET")
 	r.HandleFunc("/difficultysetting", func(w http.ResponseWriter, r *http.Request) {
-		difficulty.DifficultHandler(w, r, Store)
+		difficulty.DifficultHandler(w, r, Store, db)
 	}).Methods("GET")
 	r.HandleFunc("/setdifficult", func(w http.ResponseWriter, r *http.Request) { difficulty.SetPlayerDifficulty(w, r, db, Store) }).Methods("POST")
 

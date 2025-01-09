@@ -3,6 +3,8 @@ package Serverside
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 type RiddleCategoteries struct {
@@ -15,11 +17,12 @@ type RiddleCategoteries struct {
 func Selectmode(w http.ResponseWriter, r *http.Request) {
 	Filehandler("soloPlayer/GameMode.html", w)
 
-	path := r.URL.Query().Get("category")
-	if path == "" {
-		http.Error(w, "Bad request", http.StatusBadRequest)
-		return
-	}
+	 vars:=mux.Vars(r)
+	 path:=vars["category"]
+	// if path == "" {
+	// 	http.Error(w, "Bad request", http.StatusBadRequest)
+	// 	return
+	// }
 
 	selectedcategory := RiddleCategoteries{}
 

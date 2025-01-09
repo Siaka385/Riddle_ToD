@@ -61,7 +61,7 @@ func main() {
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { Serverside.CheckUserSession(w, r, Store, db) }).Methods("GET")
 
 	// Gameplay Routes
-	r.HandleFunc("/gameplaymode", Serverside.Selectmode).Methods("GET")
+	r.HandleFunc("/gameplaymode/{category}", Serverside.Selectmode).Methods("GET")
 	r.HandleFunc("/playsection", Serverside.Playsection).Methods("GET")
 	//r.HandleFunc("/difficultySetting", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("soloPlayer/difficult.html", w) }).Methods("GET")
 	r.HandleFunc("/difficultysetting", func(w http.ResponseWriter, r *http.Request) {

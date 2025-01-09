@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const difficultyButtons = document.querySelectorAll('.difficulty-btn');
     const difficultyInfo = document.getElementById('difficulty-info');
        const diff=document.getElementById("playprefferedDifficulty").value;
+       document.getElementById("back").onclick=()=>{
+        history.go(-1)
+       }
        
     const difficultyMap = {
         easy: "Easy",

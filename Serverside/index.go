@@ -26,7 +26,7 @@ type UserLevelInfo struct {
 	LevelAlias   string
 }
 
-func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, sessionn *sessions.CookieStore) {
+func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, sessionn *sessions.CookieStore, category string) {
 	templateFile, err := template.ParseFiles("UserDashboard.html")
 	if err != nil {
 		//http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
@@ -39,7 +39,6 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 	//username := session.Values["Username"]
 	userId := session.Values["User_ID"]
 
-	category := request.URL.Query().Get("selectcategory")
 	pageContent := IndexContent{}
 	userlevel, err := FetchUserLevel(db, userId)
 	if err != nil {

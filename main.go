@@ -59,6 +59,8 @@ func main() {
 	}).Methods("GET")
 	r.HandleFunc("/help", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("help/help.html", w) }).Methods("GET")
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { Serverside.CheckUserSession(w, r, Store, db) }).Methods("GET")
+	r.HandleFunc("/Dashboard", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store,"") }).Methods("GET")
+	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store,"category") }).Methods("GET")
 
 	// Gameplay Routes
 	r.HandleFunc("/gameplaymode/{category}", Serverside.Selectmode).Methods("GET")

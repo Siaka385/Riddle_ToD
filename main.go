@@ -35,7 +35,6 @@ func InitilizeDatabase() {
 }
 
 func main() {
-	//mux := http.NewServeMux()
 
 	InitilizeDatabase()
 
@@ -46,7 +45,7 @@ func main() {
 	r.HandleFunc("/registerpage", Serverside.RenderAuthPage).Methods("GET")
 	r.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) { auth.Login(db, w, r, Store) }).Methods("POST")
 	r.HandleFunc("/register", func(w http.ResponseWriter, r *http.Request) { auth.Register(w, r, db) }).Methods("POST")
-	r.HandleFunc("/logout", func(w http.ResponseWriter, r *http.Request) { auth.Logout(w, r, Store) }).Methods("POST")
+	r.HandleFunc("/logout", func(w http.ResponseWriter, r *http.Request) { auth.Logout(w, r, Store) }).Methods("GET")
 
 	// Profile Management Routes
 	r.HandleFunc("/editprofile", func(w http.ResponseWriter, r *http.Request) { prof.ProfileHandler(w, r, Store, db) }).Methods("GET")
@@ -59,8 +58,8 @@ func main() {
 	}).Methods("GET")
 	r.HandleFunc("/help", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("help/help.html", w) }).Methods("GET")
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { Serverside.CheckUserSession(w, r, Store, db) }).Methods("GET")
-	r.HandleFunc("/Dashboard", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store,"") }).Methods("GET")
-	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store,"category") }).Methods("GET")
+	r.HandleFunc("/Dashboard", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store, "") }).Methods("GET")
+	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store, "category") }).Methods("GET")
 
 	// Gameplay Routes
 	r.HandleFunc("/gameplaymode/{category}", Serverside.Selectmode).Methods("GET")

@@ -44,16 +44,19 @@ window.onload = () => {
 
 //proceed to gamemode
   function ChooseGameMode(){
-    var btn=document.getElementById("home")
-    btn.classList.add("d-none")
-    document.getElementById("selectriddlecategory").classList.remove("d-none")
+    // var btn=document.getElementById("home")
+    // btn.classList.add("d-none")
+    // document.getElementById("selectriddlecategory").classList.remove("d-none")
+    console.log("hello")
+    window.location.href="/selectriddlecategory"
   }
 
   //proceed to home
   function backtohome(){
-    let back=document.getElementById("home")
-    back.classList.remove("d-none")
-    document.getElementById("selectriddlecategory").classList.add("d-none")
+    // let back=document.getElementById("home")
+    // back.classList.remove("d-none")
+    // document.getElementById("selectriddlecategory").classList.add("d-none")
+    window.location.href="/Dashboard"
   }
 
  

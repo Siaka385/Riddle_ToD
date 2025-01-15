@@ -17,26 +17,29 @@ type Player struct {
 }
 type PlayerLevel struct {
 	Level              int `gorm:"not null"`
-	PreferedDifficulty string 
+	PreferedDifficulty string
+	AnsweredRiddles    string
 	User_ID            string `gorm:"not null"`                              // Foreign key referring to Player.User_ID
 	Player             Player `gorm:"foreignKey:User_ID;references:User_ID"` // Foreign key constraint on User_ID
 }
 
 type Riddle struct {
-	ID         uint     `gorm:"primaryKey"`
-	Question   string   `gorm:"not null"`
-	Answer     string   `gorm:"not null"`
-	Category   string   `gorm:"not null"`            // Category like "Logic", "Mathematics"
-	Difficulty string   `gorm:"not null"`            // Difficulty level like "Easy"
-	Points     int      `gorm:"default:0"`           // Points for solving
-	Choices    []Choice `gorm:"foreignKey:RiddleID"` // Relation to Choices
-	Hints      []Hint   `gorm:"foreignKey:RiddleID"` // Relation to Hints
+	ID          uint     `gorm:"primaryKey"`
+	Question    string   `gorm:"not null"`
+	Answer      string   `gorm:"not null"`
+	Explanation string   `gorm:"not null"`
+	Category    string   `gorm:"not null"`            // Category like "Logic", "Mathematics"
+	Difficulty  string   `gorm:"not null"`            // Difficulty level like "Easy"
+	Points      int      `gorm:"default:0"`           // Points for solving
+	Choices     []Choice `gorm:"foreignKey:RiddleID"` // Relation to Choices
+	Hints       []Hint   `gorm:"foreignKey:RiddleID"` // Relation to Hints
 }
 type Choice struct {
 	ID       uint   `gorm:"primaryKey"`
 	RiddleID uint   `gorm:"not null"` // Foreign key to Riddle
 	Text     string `gorm:"not null"` // Choice text
 }
+
 type Hint struct {
 	ID       uint   `gorm:"primaryKey"`
 	RiddleID uint   `gorm:"not null"` // Foreign key to Riddle

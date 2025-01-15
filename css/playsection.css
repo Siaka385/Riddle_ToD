@@ -177,6 +177,109 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(139, 0, 0, 0.7);
 }
+/* Updated Media Queries */
+@media (max-width: 480px) {
+    .boxcontainer {
+        padding: 10px;
+        margin: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .game-container {
+        margin: 0;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .game-header {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .riddle-info, .level-indicator, .mode-display, .score, .timer {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .riddle h2 {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .hint {
+        margin: 5px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .boxcontainer {
+        padding: 15px;
+        margin: 5px auto;
+    }
+
+    .game-container {
+        margin: 5px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .boxcontainer {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .game-container {
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    .game-header {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .riddle-info, .level-indicator, .mode-display, .score, .timer {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .hint {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .btn,
+    .hint-link,
+    .multiple-choice-link {
+        cursor: default;
+    }
+    
+    .hint-link:hover,
+    .multiple-choice-link:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+
+
+
+
+
 
 /* Footer Styles */
 .game-footer {

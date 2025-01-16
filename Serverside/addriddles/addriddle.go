@@ -13,22 +13,21 @@ func Addriddle(db *gorm.DB) {
 
 	riddles := []database.Riddle{
 		{
-			ID:          1,
-			Question:    "What has to be broken before you can use it?",
-			Answer:      "An egg",
-			Explanation: "An egg is something that must be broken before it can be used for cooking.",
-			Category:    "Logic",
-			Difficulty:  "Easy",
-			Points:      5,
+			ID:          195,
+			Question:    "What is one thing that all people, regardless of their politics or religion, have to agree is between heaven and earth?",
+			Answer:      "The word 'and.'",
+			Explanation: "The word 'and' is literally between 'heaven' and 'earth.'",
+			Category:    "Wordplay",
+			Difficulty:  "Medium",
+			Points:      10,
 			Choices: []database.Choice{
-				{ID: 1, RiddleID: 1, Text: "A coconut"},
-				{ID: 2, RiddleID: 1, Text: "An egg"},
-				{ID: 3, RiddleID: 1, Text: "A glass bottle"},
-				{ID: 4, RiddleID: 1, Text: "A lock"},
+				{ID: 662, RiddleID: 195, Text: "The word 'and'"},
+				{ID: 663, RiddleID: 195, Text: "Air"},
+				{ID: 664, RiddleID: 195, Text: "Clouds"},
+				{ID: 665, RiddleID: 195, Text: "Atmosphere"},
 			},
 			Hints: []database.Hint{
-				{ID: 1, RiddleID: 1, Text: "It’s often part of breakfast."},
-				{ID: 2, RiddleID: 1, Text: "It has a shell."},
+				{ID: 232, RiddleID: 195, Text: "It's a linguistic answer."},
 			},
 		},
 	}

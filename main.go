@@ -11,6 +11,7 @@ import (
 	"gorm.io/gorm"
 
 	"Riddle_ToD/Serverside"
+	//	rid "Riddle_ToD/Serverside/addriddles"
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
 	difficulty "Riddle_ToD/Serverside/difficult"

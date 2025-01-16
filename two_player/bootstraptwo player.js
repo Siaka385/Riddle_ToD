@@ -9,6 +9,7 @@ var riddle1 = [
   "Which is heavier a kilo of stone or a kilo of featther",
   "What is at the end of rainbow",
 ];
+
 var riddle2 = [
   "What three letter changes a girl to a woman?",
   "What can you easily break but you can never touch it?",
@@ -39,6 +40,7 @@ var riddle4 = [
   "you see a boat filled with people.It has not sunk,but when you look again you don't see a single person on the boat.Why?",
   "Mr.Taylor has four daoughters and each has a brother.In total,how many children does Mr.Taylor have?",
 ];
+/////////////////////////////////////////////////////////////////////z
 var riddle5 = [
   "What can run but never walk,have a mouth but never talk,have a head that never weeps,and a bed that nevers sleeps?",
   "If an electric train is moving north at 55mph and the winds blowing eastt at 70mph,which way does the smoke blow?",
@@ -83,6 +85,7 @@ var riddle10 = [
   "What is always on its way but never arrives?",
   "What word in the English language fulfils all the following criteria: The first two letters signify a male, the first three letters signify a female, the first four letters signify a great person, while the entire word signifies a great woman. ",
 ];
+
 var riddle11 = [
   "What English word retains the same pronunciation, even after you take away four of its five letters?",
   "When John was six years old he hammered a nail into his favorite tree to mark his height. Ten years later at age sixteen, John returned to see how much higher the nail was. If the tree grew by five centimeters each year, how much higher would the nail be?",
@@ -91,6 +94,7 @@ var riddle11 = [
   "I am something people love or hate. I change people  appearances and thoughts. If a person takes care of themself, I will go up even higher. To some people, I will fool them. To others, I am a mystery. Some people might want to try and hide me, but I will show. No matter how hard people try, I will never go down. What am I?",
   "If you have me, you want to share me. If you share me, you don't have me.",
 ];
+
 var riddle12 = [
   " How can you drop a raw egg from a height onto a concrete floor without cracking it?",
   "What tastes better than it smells?",
@@ -102,6 +106,7 @@ var riddle12 = [
   ' What do the letter "t" and an island have in common?',
   " What kind of ship has two mates but no captain?",
 ];
+
 var riddle13 = [
   " If you throw a blue stone into the Red Sea, what will it become?",
   "What gets shorter as it grows older?",
@@ -114,6 +119,7 @@ var riddle13 = [
   "What 5-letter word typed in all capital letters can be read the same upside down?",
   "What do you bury when it's alive and dig up when it's dead?",
 ];
+
 var riddle14 = [
   "What is it that we burry and it comes back to life?",
   'When I say,"You are staggering my son,"which animals am I talking about?',

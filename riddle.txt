@@ -3342,4 +3342,1917 @@ No body: An echo is a sound that reflects back to where it came from, so it has 
 				{ID: 232, RiddleID: 195, Text: "It's a linguistic answer."},
 			},
 		},
+		{
+			ID:          196,
+			Question:    "The shorter I am, the bigger I am. What am I?",
+			Answer:      "A temper.",
+			Explanation: "As tempers shorten, they intensify and become bigger.",
+			Category:    "Logic",
+			Difficulty:  "Easy",
+			Points:      5,
+			Choices: []database.Choice{
+				{ID: 666, RiddleID: 196, Text: "A temper"},
+				{ID: 667, RiddleID: 196, Text: "A shadow"},
+				{ID: 668, RiddleID: 196, Text: "A fuse"},
+				{ID: 669, RiddleID: 196, Text: "A pencil"},
+			},
+			Hints: []database.Hint{
+				{ID: 233, RiddleID: 196, Text: "It's related to emotions."},
+			},
+		},
+		{
+			ID:          197,
+			Question:    "What is bought by the yard but is worn by the foot?",
+			Answer:      "Carpet.",
+			Explanation: "Carpet is typically sold by the yard but used to cover floors, walked on with feet.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 670, RiddleID: 197, Text: "Carpet"},
+				{ID: 671, RiddleID: 197, Text: "Shoes"},
+				{ID: 672, RiddleID: 197, Text: "Socks"},
+				{ID: 673, RiddleID: 197, Text: "Laces"},
+			},
+			Hints: []database.Hint{
+				{ID: 234, RiddleID: 197, Text: "Think of flooring materials."},
+			},
+		},
+		{
+			ID:          198,
+			Question:    "With pointed fangs it sits in wait, With piercing force it doles out fate, Over bloodless victims proclaiming its might, Eternally joining in a single bite, What is it?",
+			Answer:      "A stapler.",
+			Explanation: "A stapler joins paper together with a single piercing bite, binding them eternally.",
+			Category:    "Word",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 674, RiddleID: 198, Text: "A stapler"},
+				{ID: 675, RiddleID: 198, Text: "A vampire"},
+				{ID: 676, RiddleID: 198, Text: "A snake"},
+				{ID: 677, RiddleID: 198, Text: "A needle"},
+			},
+			Hints: []database.Hint{
+				{ID: 235, RiddleID: 198, Text: "It's an office tool."},
+			},
+		},
+		{
+			ID:          199,
+			Question:    "What has a foot but no leg?",
+			Answer:      "A ruler.",
+			Explanation: "A ruler has a measurement called a foot but lacks any legs.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 678, RiddleID: 199, Text: "A ruler"},
+				{ID: 679, RiddleID: 199, Text: "A bed"},
+				{ID: 680, RiddleID: 199, Text: "A snail"},
+				{ID: 681, RiddleID: 199, Text: "A sock"},
+			},
+			Hints: []database.Hint{
+				{ID: 236, RiddleID: 199, Text: "It's a measuring tool."},
+			},
+		},
+		{
+			ID:          200,
+			Question:    "What stinks when living and smells good when dead?",
+			Answer:      "Bacon.",
+			Explanation: "Pigs can have an unpleasant smell, but bacon is highly aromatic when cooked.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 682, RiddleID: 200, Text: "Bacon"},
+				{ID: 683, RiddleID: 200, Text: "Garlic"},
+				{ID: 684, RiddleID: 200, Text: "Onions"},
+				{ID: 685, RiddleID: 200, Text: "Fish"},
+			},
+			Hints: []database.Hint{
+				{ID: 237, RiddleID: 200, Text: "It's a common breakfast food."},
+			},
+		},
+		{
+			ID:          201,
+			Question:    "What takes hours to pull off, Is most satisfying when it's done And requires consent from the person you're doing it to?",
+			Answer:      "Hypnotism.",
+			Explanation: "Hypnotism requires time, leaves the subject in a satisfying state, and involves their consent.",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 686, RiddleID: 201, Text: "Hypnotism"},
+				{ID: 687, RiddleID: 201, Text: "A surgery"},
+				{ID: 688, RiddleID: 201, Text: "A prank"},
+				{ID: 689, RiddleID: 201, Text: "A makeover"},
+			},
+			Hints: []database.Hint{
+				{ID: 238, RiddleID: 201, Text: "It's related to the mind."},
+			},
+		},
+		{
+			ID:          202,
+			Question:    "What has a big mouth, yet never speaks?",
+			Answer:      "A Jar.",
+			Explanation: "A jar has a mouth but it never speaks.",
+			Category:    "General",
+			Difficulty:  "Easy",
+			Points:      5,
+			Choices: []database.Choice{
+				{ID: 690, RiddleID: 202, Text: "A jar"},
+				{ID: 691, RiddleID: 202, Text: "A cave"},
+				{ID: 692, RiddleID: 202, Text: "A volcano"},
+				{ID: 693, RiddleID: 202, Text: "A bag"},
+			},
+			Hints: []database.Hint{
+				{ID: 239, RiddleID: 202, Text: "It is used to hold something."},
+			},
+		},
+		{
+			ID:          203,
+			Question:    "The virgin gave birth to a child and threw away the blanket.",
+			Answer:      "A banana.",
+			Explanation: "The banana represents the child, and the peel represents the blanket.",
+			Category:    "Word",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 694, RiddleID: 203, Text: "A banana"},
+				{ID: 695, RiddleID: 203, Text: "An egg"},
+				{ID: 696, RiddleID: 203, Text: "A coconut"},
+				{ID: 697, RiddleID: 203, Text: "A baby"},
+			},
+			Hints: []database.Hint{
+				{ID: 240, RiddleID: 203, Text: "Think of a fruit."},
+			},
+		},
+		{
+			ID:          204,
+			Question:    "There is a creature of God whose body is hard; it does not wish to eat unless you strike its head.",
+			Answer:      "A chisel.",
+			Explanation: "A chisel requires a hammer strike on its head to perform its task.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 698, RiddleID: 204, Text: "A chisel"},
+				{ID: 699, RiddleID: 204, Text: "A nail"},
+				{ID: 700, RiddleID: 204, Text: "A screw"},
+				{ID: 701, RiddleID: 204, Text: "A drill"},
+			},
+			Hints: []database.Hint{
+				{ID: 241, RiddleID: 204, Text: "It's a tool."},
+			},
+		},
+		{
+			ID:          205,
+			Question:    "I have three hundred cattle, with a single nose cord.",
+			Answer:      "Beads.",
+			Explanation: "The beads symbolize cattle, and the string holding them together is the nose cord.",
+			Category:    "Word",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 702, RiddleID: 205, Text: "Beads"},
+				{ID: 703, RiddleID: 205, Text: "Grain"},
+				{ID: 704, RiddleID: 205, Text: "Seeds"},
+				{ID: 705, RiddleID: 205, Text: "Pebbles"},
+			},
+			Hints: []database.Hint{
+				{ID: 242, RiddleID: 205, Text: "Think of jewelry."},
+			},
+		},
+		{
+			ID:          206,
+			Question:    "What do you have when you're sitting down that you don't have when you're standing up?",
+			Answer:      "A lap.",
+			Explanation: "A lap forms when you sit down, but it disappears when you stand up.",
+			Category:    "Logic",
+			Difficulty:  "Easy",
+			Points:      5,
+			Choices: []database.Choice{
+				{ID: 706, RiddleID: 206, Text: "A lap"},
+				{ID: 707, RiddleID: 206, Text: "Comfort"},
+				{ID: 708, RiddleID: 206, Text: "Balance"},
+				{ID: 709, RiddleID: 206, Text: "Energy"},
+			},
+			Hints: []database.Hint{
+				{ID: 243, RiddleID: 206, Text: "It's a body-related answer."},
+			},
+		},
+		{
+			ID:          207,
+			Question:    "First you see me in the grass dressed ....................",
+			Answer:      "A dandelion.",
+			Explanation: "A dandelion is a flower that is commonly found in grassy areas.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 710, RiddleID: 207, Text: "A dandelion"},
+				{ID: 711, RiddleID: 207, Text: "A lily"},
+				{ID: 712, RiddleID: 207, Text: "A daisy"},
+				{ID: 713, RiddleID: 207, Text: "A tulip"},
+			},
+			Hints: []database.Hint{
+				{ID: 244, RiddleID: 207, Text: "It's a type of flower."},
+			},
+		},
+		{
+			ID:          208,
+			Question:    "Born of sorrow, grows with age. You need a lot to be a sage. What is it?",
+			Answer:      "Wisdom",
+			Explanation: "Wisdom often comes through experience and enduring life's challenges.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 714, RiddleID: 208, Text: "Wisdom"},
+				{ID: 715, RiddleID: 208, Text: "Strength"},
+				{ID: 716, RiddleID: 208, Text: "Knowledge"},
+				{ID: 717, RiddleID: 208, Text: "Happiness"},
+			},
+			Hints: []database.Hint{
+				{ID: 245, RiddleID: 208, Text: "It comes with age."},
+			},
+		},
+
+		{
+			ID:          209,
+			Question:    "Patch upon patch, without any stitches, if you tell me this riddle, I'll give you my breeches.",
+			Answer:      "Cabbage",
+			Explanation: "A cabbage has many layers or patches, and its leaves are often seen as 'patches'.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 718, RiddleID: 209, Text: "Cabbage"},
+				{ID: 719, RiddleID: 209, Text: "Lettuce"},
+				{ID: 720, RiddleID: 209, Text: "Onion"},
+				{ID: 721, RiddleID: 209, Text: "Carrot"},
+			},
+			Hints: []database.Hint{
+				{ID: 246, RiddleID: 209, Text: "It is a leafy vegetable."},
+			},
+		},
+
+		{
+			ID:          210,
+			Question:    "Some are quick to take it. Others must be coaxed. Those who choose to take it gain and lose the most.",
+			Answer:      "Risk",
+			Explanation: "Risk involves uncertainty, with the possibility of both gain and loss.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 722, RiddleID: 210, Text: "Risk"},
+				{ID: 723, RiddleID: 210, Text: "Courage"},
+				{ID: 724, RiddleID: 210, Text: "Opportunity"},
+				{ID: 725, RiddleID: 210, Text: "Challenge"},
+			},
+			Hints: []database.Hint{
+				{ID: 247, RiddleID: 210, Text: "It involves uncertainty and potential reward."},
+			},
+		},
+
+		{
+			ID:          211,
+			Question:    "I go in dry and come out wet, The longer I'm in, the stronger I get. What am I?",
+			Answer:      "Tea bag",
+			Explanation: "A tea bag is dry when placed in water and becomes wet the longer it's left in, releasing its flavor.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 726, RiddleID: 211, Text: "Tea bag"},
+				{ID: 727, RiddleID: 211, Text: "Sponge"},
+				{ID: 728, RiddleID: 211, Text: "Towel"},
+				{ID: 729, RiddleID: 211, Text: "Paper"},
+			},
+			Hints: []database.Hint{
+				{ID: 248, RiddleID: 211, Text: "It is often used to make a hot beverage."},
+			},
+		},
+
+		{
+			ID:          212,
+			Question:    "No thicker than your finger when it folds. As thick as what it's holding when it holds.",
+			Answer:      "Sack",
+			Explanation: "A sack is thin when folded and becomes thick when it holds something heavy.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 730, RiddleID: 212, Text: "Sack"},
+				{ID: 731, RiddleID: 212, Text: "Bag"},
+				{ID: 732, RiddleID: 212, Text: "Cloth"},
+				{ID: 733, RiddleID: 212, Text: "Envelope"},
+			},
+			Hints: []database.Hint{
+				{ID: 249, RiddleID: 212, Text: "It is used to carry items."},
+			},
+		},
+
+		{
+			ID:          213,
+			Question:    "I work hard most every day, Not much time to dance and play, If I could reach what I desire, all like me would now retire. What am I?",
+			Answer:      "Doctor",
+			Explanation: "A doctor works tirelessly and often wishes for rest or retirement after achieving their goal of helping people.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 734, RiddleID: 213, Text: "Doctor"},
+				{ID: 735, RiddleID: 213, Text: "Teacher"},
+				{ID: 736, RiddleID: 213, Text: "Nurse"},
+				{ID: 737, RiddleID: 213, Text: "Engineer"},
+			},
+			Hints: []database.Hint{
+				{ID: 250, RiddleID: 213, Text: "They care for people's health."},
+			},
+		},
+		{
+			ID:          214,
+			Question:    "Begotten, and born, and dying with noise, The terror of women, and pleasure of boys, Like the fiction of poets concerning the wind, I'm chiefly unruly, when strongest confined.",
+			Answer:      "Cannon",
+			Explanation: "A cannon produces a loud noise when fired, and its power is unpredictable when confined.",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 738, RiddleID: 214, Text: "Cannon"},
+				{ID: 739, RiddleID: 214, Text: "Gun"},
+				{ID: 740, RiddleID: 214, Text: "Tornado"},
+				{ID: 741, RiddleID: 214, Text: "Earthquake"},
+			},
+			Hints: []database.Hint{
+				{ID: 251, RiddleID: 214, Text: "It makes a loud noise when fired."},
+			},
+		},
+
+		{
+			ID:          215,
+			Question:    "They can be harbored, but few hold water, You can nurse them, but only by holding them against someone else, You can carry them, but not with your arms, You can bury them, but not in the earth.",
+			Answer:      "Grudge",
+			Explanation: "A grudge can be kept and carried emotionally but not physically, and it can be buried, meaning let go of, but not in the literal earth.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 742, RiddleID: 215, Text: "Grudge"},
+				{ID: 743, RiddleID: 215, Text: "Hatred"},
+				{ID: 744, RiddleID: 215, Text: "Guilt"},
+				{ID: 745, RiddleID: 215, Text: "Love"},
+			},
+			Hints: []database.Hint{
+				{ID: 252, RiddleID: 215, Text: "It's a negative emotion you can hold on to."},
+			},
+		},
+
+		{
+			ID:          216,
+			Question:    "Full of dark, filled with everything Both on my skin they color With my pack, I am always Afraid of the cat. What am I?",
+			Answer:      "Zebra",
+			Explanation: "A zebra is often black and white and is often associated with a fear of predators like big cats (lions).",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 746, RiddleID: 216, Text: "Zebra"},
+				{ID: 747, RiddleID: 216, Text: "Panda"},
+				{ID: 748, RiddleID: 216, Text: "Giraffe"},
+				{ID: 749, RiddleID: 216, Text: "Lion"},
+			},
+			Hints: []database.Hint{
+				{ID: 253, RiddleID: 216, Text: "It has black and white stripes."},
+			},
+		},
+
+		{
+			ID:          217,
+			Question:    "What goes up, but at the same time goes down? Up toward the sky, and down toward the ground. Its present tense and past tense too, come for a ride, just you and me!",
+			Answer:      "Seesaw",
+			Explanation: "A seesaw goes up and down with each movement, and this action is both in the present and past tense as people ride it.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 750, RiddleID: 217, Text: "Seesaw"},
+				{ID: 751, RiddleID: 217, Text: "Elevator"},
+				{ID: 752, RiddleID: 217, Text: "Stairs"},
+				{ID: 753, RiddleID: 217, Text: "Escalator"},
+			},
+			Hints: []database.Hint{
+				{ID: 254, RiddleID: 217, Text: "It's a playground equipment."},
+			},
+		},
+		{
+			ID:          218,
+			Question:    "We travel much, yet prisoners are, and close confined to boot. Yet with any horse, we will keep the pace, and will always go on foot. What are they?",
+			Answer:      "Spurs",
+			Explanation: "Spurs are used by riders to urge horses forward, but they themselves remain fixed in place, like prisoners.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 754, RiddleID: 218, Text: "Spurs"},
+				{ID: 755, RiddleID: 218, Text: "Bridle"},
+				{ID: 756, RiddleID: 218, Text: "Saddle"},
+				{ID: 757, RiddleID: 218, Text: "Reins"},
+			},
+			Hints: []database.Hint{
+				{ID: 255, RiddleID: 218, Text: "Used by riders to direct their horse."},
+			},
+		},
+
+		{
+			ID:          219,
+			Question:    "I bubble and laugh And spit water in your face. I am no lady, And I don't wear lace.",
+			Answer:      "Fountain",
+			Explanation: "A fountain bubbles and splashes water, sometimes playfully, like laughter, and is not a lady nor does it wear lace.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 758, RiddleID: 219, Text: "Fountain"},
+				{ID: 759, RiddleID: 219, Text: "Well"},
+				{ID: 760, RiddleID: 219, Text: "Waterfall"},
+				{ID: 761, RiddleID: 219, Text: "Pond"},
+			},
+			Hints: []database.Hint{
+				{ID: 256, RiddleID: 219, Text: "It splashes water."},
+			},
+		},
+
+		{
+			ID:          220,
+			Question:    "When the creeper passes, all the grass kneels.",
+			Answer:      "Plow",
+			Explanation: "A plow is used to till the earth, and when it passes over the grass, it forces it to bend or kneel.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 762, RiddleID: 220, Text: "Plow"},
+				{ID: 763, RiddleID: 220, Text: "Mower"},
+				{ID: 764, RiddleID: 220, Text: "Harvester"},
+				{ID: 765, RiddleID: 220, Text: "Tractor"},
+			},
+			Hints: []database.Hint{
+				{ID: 257, RiddleID: 220, Text: "It is used in farming."},
+			},
+		},
+
+		{
+			ID:          221,
+			Question:    "What goes in the water black and comes out red?",
+			Answer:      "Lobster",
+			Explanation: "Lobsters are black when raw, but turn red when cooked.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 766, RiddleID: 221, Text: "Lobster"},
+				{ID: 767, RiddleID: 221, Text: "Crab"},
+				{ID: 768, RiddleID: 221, Text: "Shrimp"},
+				{ID: 769, RiddleID: 221, Text: "Fish"},
+			},
+			Hints: []database.Hint{
+				{ID: 258, RiddleID: 221, Text: "It is a type of seafood."},
+			},
+		},
+
+		{
+			ID:          222,
+			Question:    "Iron roof, glass walls, burns and burns and never falls.",
+			Answer:      "Lantern",
+			Explanation: "A lantern has a metal (iron) roof and glass walls, and it burns steadily without falling over.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 770, RiddleID: 222, Text: "Lantern"},
+				{ID: 771, RiddleID: 222, Text: "Candle"},
+				{ID: 772, RiddleID: 222, Text: "Lamp"},
+				{ID: 773, RiddleID: 222, Text: "Torch"},
+			},
+			Hints: []database.Hint{
+				{ID: 259, RiddleID: 222, Text: "It provides light."},
+			},
+		},
+
+		{
+			ID:          223,
+			Question:    "You can only have it once you have given it.",
+			Answer:      "Respect",
+			Explanation: "Respect must be given in order to receive it from others.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 774, RiddleID: 223, Text: "Respect"},
+				{ID: 775, RiddleID: 223, Text: "Love"},
+				{ID: 776, RiddleID: 223, Text: "Trust"},
+				{ID: 777, RiddleID: 223, Text: "Gratitude"},
+			},
+			Hints: []database.Hint{
+				{ID: 260, RiddleID: 223, Text: "It is earned by showing consideration for others."},
+			},
+		},
+
+		{
+			ID:          224,
+			Question:    "What can you fold but not crease?",
+			Answer:      "Poker hand",
+			Explanation: "In poker, a hand can be 'folded' (discarded), but it cannot be physically creased.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 778, RiddleID: 224, Text: "Poker hand"},
+				{ID: 779, RiddleID: 224, Text: "Paper"},
+				{ID: 780, RiddleID: 224, Text: "Cloth"},
+				{ID: 781, RiddleID: 224, Text: "Letter"},
+			},
+			Hints: []database.Hint{
+				{ID: 261, RiddleID: 224, Text: "It's part of a card game."},
+			},
+		},
+		{
+			ID:          225,
+			Question:    "I bind it and it walks. I loose it and it stops.",
+			Answer:      "Sandal",
+			Explanation: "A sandal allows you to walk when fastened, and when it is loose, you cannot walk properly.",
+			Category:    "General",
+			Difficulty:  "Easy",
+			Points:      5,
+			Choices: []database.Choice{
+				{ID: 782, RiddleID: 225, Text: "Sandal"},
+				{ID: 783, RiddleID: 225, Text: "Shoe"},
+				{ID: 784, RiddleID: 225, Text: "Boot"},
+				{ID: 785, RiddleID: 225, Text: "Slipper"},
+			},
+			Hints: []database.Hint{
+				{ID: 262, RiddleID: 225, Text: "It's a type of footwear."},
+			},
+		},
+
+		{
+			ID:          226,
+			Question:    "I have a tongue but cannot taste. I have a soul but cannot feel. What am I?",
+			Answer:      "Shoe",
+			Explanation: "A shoe has a tongue and a sole (soul), but it cannot taste or feel.",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 786, RiddleID: 226, Text: "Shoe"},
+				{ID: 787, RiddleID: 226, Text: "Bell"},
+				{ID: 788, RiddleID: 226, Text: "Hat"},
+				{ID: 789, RiddleID: 226, Text: "Glove"},
+			},
+			Hints: []database.Hint{
+				{ID: 263, RiddleID: 226, Text: "It covers your feet."},
+			},
+		},
+
+		{
+			ID:          227,
+			Question:    "We are five little objects of an everyday sort, You will find us all in a tennis court.",
+			Answer:      "Vowels",
+			Explanation: "The vowels (A, E, I, O, U) are present in the phrase 'a tennis court.'",
+			Category:    "General",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 790, RiddleID: 227, Text: "Vowels"},
+				{ID: 791, RiddleID: 227, Text: "Tennis balls"},
+				{ID: 792, RiddleID: 227, Text: "Nets"},
+				{ID: 793, RiddleID: 227, Text: "Rackets"},
+			},
+			Hints: []database.Hint{
+				{ID: 264, RiddleID: 227, Text: "They are letters in the alphabet."},
+			},
+		},
+
+		{
+			ID:          228,
+			Question:    "To unravel me, you need a key. No key that was made by locksmith's hand, but a key that only I will understand. What am I?",
+			Answer:      "Cipher",
+			Explanation: "A cipher is a code that requires a specific key to decode it.",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 794, RiddleID: 228, Text: "Cipher"},
+				{ID: 795, RiddleID: 228, Text: "Lock"},
+				{ID: 796, RiddleID: 228, Text: "Riddle"},
+				{ID: 797, RiddleID: 228, Text: "Puzzle"},
+			},
+			Hints: []database.Hint{
+				{ID: 265, RiddleID: 228, Text: "It's a form of code."},
+			},
+		},
+
+		{
+			ID:          229,
+			Question:    "I can always go up, never down, I can always turn left, never right, I am always hot when I'm cold.",
+			Answer:      "Ski lift",
+			Explanation: "A ski lift only goes up the mountain, turns left in its circular path, and is hot (in demand) during cold seasons.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 798, RiddleID: 229, Text: "Ski lift"},
+				{ID: 799, RiddleID: 229, Text: "Helicopter"},
+				{ID: 800, RiddleID: 229, Text: "Chairlift"},
+				{ID: 801, RiddleID: 229, Text: "Hot air balloon"},
+			},
+			Hints: []database.Hint{
+				{ID: 266, RiddleID: 229, Text: "It's used in skiing areas."},
+			},
+		},
+
+		{
+			ID:          230,
+			Question:    "I don't exist unless you cut me, but if you stab me I won't bleed. I hate no one yet am abhorred by all. What am I?",
+			Answer:      "Fart",
+			Explanation: "A fart is produced when cut (let out), does not bleed if stabbed, and is universally disliked despite its neutrality.",
+			Category:    "Logic",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 802, RiddleID: 230, Text: "Fart"},
+				{ID: 803, RiddleID: 230, Text: "Shadow"},
+				{ID: 804, RiddleID: 230, Text: "Air"},
+				{ID: 805, RiddleID: 230, Text: "Smoke"},
+			},
+			Hints: []database.Hint{
+				{ID: 267, RiddleID: 230, Text: "It's an involuntary bodily function."},
+			},
+		},
+
+		{
+			ID:          231,
+			Question:    "I do not listen to reason, but I hear every siren's song and will try to steer us towards the rocks if you let me take the wheel. Who am I?",
+			Answer:      "Ego",
+			Explanation: "The ego can be irrational, lured by temptations (siren's song), and can lead to ruin if unchecked.",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 806, RiddleID: 231, Text: "Ego"},
+				{ID: 807, RiddleID: 231, Text: "Consciousness"},
+				{ID: 808, RiddleID: 231, Text: "Heart"},
+				{ID: 809, RiddleID: 231, Text: "Mind"},
+			},
+			Hints: []database.Hint{
+				{ID: 268, RiddleID: 231, Text: "It's a part of the self."},
+			},
+		},
+		{
+			ID:          232,
+			Question:    "I am something all men have but all men deny. Man created me but no man can hold me. What am I?",
+			Answer:      "Fear",
+			Explanation: "Fear is an emotion that everyone experiences but often denies, and while it is created by the mind, it cannot be physically held.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 810, RiddleID: 232, Text: "Fear"},
+				{ID: 811, RiddleID: 232, Text: "Anger"},
+				{ID: 812, RiddleID: 232, Text: "Regret"},
+				{ID: 813, RiddleID: 232, Text: "Doubt"},
+			},
+			Hints: []database.Hint{
+				{ID: 269, RiddleID: 232, Text: "It's an emotion everyone feels."},
+			},
+		},
+		{
+			ID:          233,
+			Question:    "I cannot be other than what I am, Until the man who made me dies. Power and glory will fall to me finally, Only when he last closes his eyes.",
+			Answer:      "Prince",
+			Explanation: "A prince remains a prince until the king (his maker) dies, at which point he becomes king.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 814, RiddleID: 233, Text: "Prince"},
+				{ID: 815, RiddleID: 233, Text: "Servant"},
+				{ID: 816, RiddleID: 233, Text: "Heir"},
+				{ID: 817, RiddleID: 233, Text: "Knight"},
+			},
+			Hints: []database.Hint{
+				{ID: 270, RiddleID: 233, Text: "He ascends only after his maker's death."},
+			},
+		},
+
+		{
+			ID:          234,
+			Question:    "I saw a man in white, he looked quite a sight. He was not old, but he stood in the cold. And when he felt the sun, he started to run. Who could he be? Please answer me.",
+			Answer:      "Snowman",
+			Explanation: "A snowman is made of snow, stands in the cold, and starts to melt (run) when exposed to the sun.",
+			Category:    "General",
+			Difficulty:  "Easy",
+			Points:      5,
+			Choices: []database.Choice{
+				{ID: 818, RiddleID: 234, Text: "Snowman"},
+				{ID: 819, RiddleID: 234, Text: "Iceberg"},
+				{ID: 820, RiddleID: 234, Text: "Polar bear"},
+				{ID: 821, RiddleID: 234, Text: "Icicle"},
+			},
+			Hints: []database.Hint{
+				{ID: 271, RiddleID: 234, Text: "He's made of snow."},
+			},
+		},
+
+		{
+			ID:          235,
+			Question:    "A hundred brothers lie next to each other; Each white and fine - they've only one spine. I am the tongue that lies between two. Remove me to gather their wisdom to you.",
+			Answer:      "Bookmark",
+			Explanation: "A bookmark lies between the pages (white and fine) of a book, which has one spine.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 822, RiddleID: 235, Text: "Bookmark"},
+				{ID: 823, RiddleID: 235, Text: "Page"},
+				{ID: 824, RiddleID: 235, Text: "Pen"},
+				{ID: 825, RiddleID: 235, Text: "Notebook"},
+			},
+			Hints: []database.Hint{
+				{ID: 272, RiddleID: 235, Text: "It's used to mark your place in a book."},
+			},
+		},
+
+		{
+			ID:          236,
+			Question:    "For our ambrosia we were blessed, By Jupiter, with a sting of death. Though our might, to some is jest, We have quelled the dragon's breath. Who are we?",
+			Answer:      "Bees",
+			Explanation: "Bees produce honey (ambrosia), have stings, and their wax has been used to extinguish fires ('quell the dragon's breath').",
+			Category:    "Logic",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 826, RiddleID: 236, Text: "Bees"},
+				{ID: 827, RiddleID: 236, Text: "Wizards"},
+				{ID: 828, RiddleID: 236, Text: "Dragons"},
+				{ID: 829, RiddleID: 236, Text: "Alchemists"},
+			},
+			Hints: []database.Hint{
+				{ID: 273, RiddleID: 236, Text: "They make honey."},
+			},
+		},
+
+		{
+			ID:          237,
+			Question:    "What must be in the oven yet cannot be baked? Grows in the heat yet shuns the light of day? What sinks in water but rises with air? Looks like skin, but is fine as hair?",
+			Answer:      "Yeast",
+			Explanation: "Yeast grows in the warmth of an oven (but isn't baked), ferments in darkness, sinks in water, and rises with air bubbles.",
+			Category:    "Logic",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 830, RiddleID: 237, Text: "Yeast"},
+				{ID: 831, RiddleID: 237, Text: "Dough"},
+				{ID: 832, RiddleID: 237, Text: "Bubble"},
+				{ID: 833, RiddleID: 237, Text: "Skin"},
+			},
+			Hints: []database.Hint{
+				{ID: 274, RiddleID: 237, Text: "It's used in baking."},
+			},
+		},
+
+		{
+			ID:          238,
+			Question:    "I dig out tiny caves, and store gold and silver in them. I also build bridges of silver and make crowns of gold. They are the smallest you could imagine. Sooner or later everybody needs my help, yet many people are afraid to let me help them. Who am I?",
+			Answer:      "Dentist",
+			Explanation: "A dentist works on teeth (gold and silver fillings, crowns), and though feared by many, their help is essential.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 834, RiddleID: 238, Text: "Dentist"},
+				{ID: 835, RiddleID: 238, Text: "Jeweler"},
+				{ID: 836, RiddleID: 238, Text: "Miner"},
+				{ID: 837, RiddleID: 238, Text: "Doctor"},
+			},
+			Hints: []database.Hint{
+				{ID: 275, RiddleID: 238, Text: "They take care of your teeth."},
+			},
+		},
+		{
+			ID:          239,
+			Question:    "What is put on a table, cut, but never eaten?",
+			Answer:      "Cards",
+			Explanation: "Playing cards are placed on a table, cut (shuffled), but they are not food.",
+			Category:    "General",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 838, RiddleID: 239, Text: "Cards"},
+				{ID: 839, RiddleID: 239, Text: "Paper"},
+				{ID: 840, RiddleID: 239, Text: "Wood"},
+				{ID: 841, RiddleID: 239, Text: "Fabric"},
+			},
+			Hints: []database.Hint{
+				{ID: 276, RiddleID: 239, Text: "It's part of a deck."},
+			},
+		},
+
+		{
+			ID:          240,
+			Question:    "Slayer of regrets, old and new, sought by many, found by few.",
+			Answer:      "Redemption",
+			Explanation: "Redemption refers to overcoming past mistakes or regrets and is often deeply sought after.",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 842, RiddleID: 240, Text: "Redemption"},
+				{ID: 843, RiddleID: 240, Text: "Forgiveness"},
+				{ID: 844, RiddleID: 240, Text: "Justice"},
+				{ID: 845, RiddleID: 240, Text: "Salvation"},
+			},
+			Hints: []database.Hint{
+				{ID: 277, RiddleID: 240, Text: "It's about overcoming regrets."},
+			},
+		},
+
+		{
+			ID:          241,
+			Question:    "I ate one and threw away two.",
+			Answer:      "Oyster",
+			Explanation: "When eating an oyster, you consume the meat inside and discard the two shell halves.",
+			Category:    "Logic",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 846, RiddleID: 241, Text: "Oyster"},
+				{ID: 847, RiddleID: 241, Text: "Banana"},
+				{ID: 848, RiddleID: 241, Text: "Peanut"},
+				{ID: 849, RiddleID: 241, Text: "Egg"},
+			},
+			Hints: []database.Hint{
+				{ID: 278, RiddleID: 241, Text: "It's found in the sea and has a shell."},
+			},
+		},
+
+		{
+			ID:          242,
+			Question:    "Kills the bad ones and the sad ones. Tightens to fit, so one size fits all.",
+			Answer:      "Noose",
+			Explanation: "A noose can be adjusted to fit any size, and it is associated with death (killing the bad or sad ones).",
+			Category:    "General",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 850, RiddleID: 242, Text: "Noose"},
+				{ID: 851, RiddleID: 242, Text: "Necklace"},
+				{ID: 852, RiddleID: 242, Text: "Belt"},
+				{ID: 853, RiddleID: 242, Text: "Rope"},
+			},
+			Hints: []database.Hint{
+				{ID: 279, RiddleID: 242, Text: "It's a loop used in execution."},
+			},
+		},
+		{
+			ID:          239,
+			Question:    "What is put on a table, cut, but never eaten?",
+			Answer:      "Cards",
+			Explanation: "Playing cards are placed on a table, cut (shuffled), but they are not food.",
+			Category:    "Games",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 838, RiddleID: 239, Text: "Cards"},
+				{ID: 839, RiddleID: 239, Text: "Paper"},
+				{ID: 840, RiddleID: 239, Text: "Wood"},
+				{ID: 841, RiddleID: 239, Text: "Fabric"},
+			},
+			Hints: []database.Hint{
+				{ID: 276, RiddleID: 239, Text: "It's part of a deck."},
+			},
+		},
+
+		{
+			ID:          240,
+			Question:    "Slayer of regrets, old and new, sought by many, found by few.",
+			Answer:      "Redemption",
+			Explanation: "Redemption refers to overcoming past mistakes or regrets and is often deeply sought after.",
+			Category:    "Philosophy",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 842, RiddleID: 240, Text: "Redemption"},
+				{ID: 843, RiddleID: 240, Text: "Forgiveness"},
+				{ID: 844, RiddleID: 240, Text: "Justice"},
+				{ID: 845, RiddleID: 240, Text: "Salvation"},
+			},
+			Hints: []database.Hint{
+				{ID: 277, RiddleID: 240, Text: "It's about overcoming regrets."},
+			},
+		},
+
+		{
+			ID:          241,
+			Question:    "I ate one and threw away two.",
+			Answer:      "Oyster",
+			Explanation: "When eating an oyster, you consume the meat inside and discard the two shell halves.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 846, RiddleID: 241, Text: "Oyster"},
+				{ID: 847, RiddleID: 241, Text: "Banana"},
+				{ID: 848, RiddleID: 241, Text: "Peanut"},
+				{ID: 849, RiddleID: 241, Text: "Egg"},
+			},
+			Hints: []database.Hint{
+				{ID: 278, RiddleID: 241, Text: "It's found in the sea and has a shell."},
+			},
+		},
+
+		{
+			ID:          242,
+			Question:    "Kills the bad ones and the sad ones. Tightens to fit, so one size fits all.",
+			Answer:      "Noose",
+			Explanation: "A noose can be adjusted to fit any size, and it is associated with death (killing the bad or sad ones).",
+			Category:    "Dark",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 850, RiddleID: 242, Text: "Noose"},
+				{ID: 851, RiddleID: 242, Text: "Necklace"},
+				{ID: 852, RiddleID: 242, Text: "Belt"},
+				{ID: 853, RiddleID: 242, Text: "Rope"},
+			},
+			Hints: []database.Hint{
+				{ID: 279, RiddleID: 242, Text: "It's a loop used in execution."},
+			},
+		},
+		{
+			ID:          243,
+			Question:    "Break it and it is better, immediately set and harder to break again.",
+			Answer:      "Record",
+			Explanation: "When a record is broken (as in an achievement), a new record is set, which is harder to surpass.",
+			Category:    "Achievements",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 854, RiddleID: 243, Text: "Record"},
+				{ID: 855, RiddleID: 243, Text: "Promise"},
+				{ID: 856, RiddleID: 243, Text: "Glass"},
+				{ID: 857, RiddleID: 243, Text: "Heart"},
+			},
+			Hints: []database.Hint{
+				{ID: 280, RiddleID: 243, Text: "It's associated with achievements."},
+			},
+		},
+
+		{
+			ID:          244,
+			Question:    "An open-ended barrel, it is shaped like a hive. It is filled with the flesh, and the flesh is alive!",
+			Answer:      "Thimble",
+			Explanation: "A thimble is barrel-shaped, has an open end, and is used to protect the finger during sewing (the 'flesh' inside it).",
+			Category:    "Objects",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 858, RiddleID: 244, Text: "Thimble"},
+				{ID: 859, RiddleID: 244, Text: "Barrel"},
+				{ID: 860, RiddleID: 244, Text: "Hive"},
+				{ID: 861, RiddleID: 244, Text: "Cocoon"},
+			},
+			Hints: []database.Hint{
+				{ID: 281, RiddleID: 244, Text: "It's used in sewing."},
+			},
+		},
+
+		{
+			ID:          245,
+			Question:    "Two legs I have, and this will confound, only at rest do they touch the ground. What am I?",
+			Answer:      "Wheelbarrow",
+			Explanation: "A wheelbarrow has two legs that touch the ground when at rest but are lifted when in motion.",
+			Category:    "Tools",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 862, RiddleID: 245, Text: "Wheelbarrow"},
+				{ID: 863, RiddleID: 245, Text: "Bird"},
+				{ID: 864, RiddleID: 245, Text: "Table"},
+				{ID: 865, RiddleID: 245, Text: "Bicycle"},
+			},
+			Hints: []database.Hint{
+				{ID: 282, RiddleID: 245, Text: "It's a tool used to carry items."},
+			},
+		},
+
+		{
+			ID:          246,
+			Question:    "A deep well full of knives.",
+			Answer:      "Mouth",
+			Explanation: "The mouth is a 'deep well' containing teeth that resemble knives for cutting food.",
+			Category:    "Anatomy",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 866, RiddleID: 246, Text: "Mouth"},
+				{ID: 867, RiddleID: 246, Text: "Throat"},
+				{ID: 868, RiddleID: 246, Text: "Pit"},
+				{ID: 869, RiddleID: 246, Text: "Stomach"},
+			},
+			Hints: []database.Hint{
+				{ID: 283, RiddleID: 246, Text: "It's part of the body."},
+			},
+		},
+
+		{
+			ID:          247,
+			Question:    "We hurt without moving. We poison without touching. We bear the truth and the lies. We are not to be judged by our size. What are we?",
+			Answer:      "Words",
+			Explanation: "Words can hurt or heal without physical interaction, and their impact is unrelated to their length.",
+			Category:    "Philosophy",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 870, RiddleID: 247, Text: "Words"},
+				{ID: 871, RiddleID: 247, Text: "Thoughts"},
+				{ID: 872, RiddleID: 247, Text: "Actions"},
+				{ID: 873, RiddleID: 247, Text: "Ideas"},
+			},
+			Hints: []database.Hint{
+				{ID: 284, RiddleID: 247, Text: "They can be spoken or written."},
+			},
+		},
+
+		{
+			ID:          248,
+			Question:    "The strangest creature you'll ever find: Two eyes in front and many many more behind.",
+			Answer:      "Peacock",
+			Explanation: "A peacock has two eyes on its face and many 'eye-like' patterns on its feathers.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 874, RiddleID: 248, Text: "Peacock"},
+				{ID: 875, RiddleID: 248, Text: "Butterfly"},
+				{ID: 876, RiddleID: 248, Text: "Owl"},
+				{ID: 877, RiddleID: 248, Text: "Dragonfly"},
+			},
+			Hints: []database.Hint{
+				{ID: 285, RiddleID: 248, Text: "It's a bird with colorful feathers."},
+			},
+		},
+
+		{
+			ID:          249,
+			Question:    "I cover what is real and hide what is true, But sometimes I bring out the courage in you. What am I?",
+			Answer:      "Makeup",
+			Explanation: "Makeup is used to cover imperfections and change appearance, and it can boost confidence.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 878, RiddleID: 249, Text: "Makeup"},
+				{ID: 879, RiddleID: 249, Text: "Mask"},
+				{ID: 880, RiddleID: 249, Text: "Costume"},
+				{ID: 881, RiddleID: 249, Text: "Mirror"},
+			},
+			Hints: []database.Hint{
+				{ID: 286, RiddleID: 249, Text: "It's often applied to the face."},
+			},
+		},
+
+		{
+			ID:          250,
+			Question:    "I'm so simple I only point, Yet I guide people all over the world. What am I?",
+			Answer:      "Compass",
+			Explanation: "A compass is a simple device that points north and guides navigation.",
+			Category:    "Navigation",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 882, RiddleID: 250, Text: "Compass"},
+				{ID: 883, RiddleID: 250, Text: "Arrow"},
+				{ID: 884, RiddleID: 250, Text: "Signpost"},
+				{ID: 885, RiddleID: 250, Text: "GPS"},
+			},
+			Hints: []database.Hint{
+				{ID: 287, RiddleID: 250, Text: "It's used for navigation."},
+			},
+		},
+
+		{
+			ID:          251,
+			Question:    "Goes over all the hills and hollows, Bites hard, but never swallows.",
+			Answer:      "Frost",
+			Explanation: "Frost covers surfaces in cold weather, resembling biting, but it doesn't consume anything.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 886, RiddleID: 251, Text: "Frost"},
+				{ID: 887, RiddleID: 251, Text: "Wind"},
+				{ID: 888, RiddleID: 251, Text: "Snow"},
+				{ID: 889, RiddleID: 251, Text: "Ice"},
+			},
+			Hints: []database.Hint{
+				{ID: 288, RiddleID: 251, Text: "It appears on cold mornings."},
+			},
+		},
+
+		{
+			ID:          252,
+			Question:    "What is that which goes with a carriage, comes with a carriage, is of no use to a carriage, and yet the carriage cannot go without it?",
+			Answer:      "Noise",
+			Explanation: "The noise accompanies a carriage, but it's not part of its function.",
+			Category:    "Objects",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 890, RiddleID: 252, Text: "Noise"},
+				{ID: 891, RiddleID: 252, Text: "Shadow"},
+				{ID: 892, RiddleID: 252, Text: "Driver"},
+				{ID: 893, RiddleID: 252, Text: "Horse"},
+			},
+			Hints: []database.Hint{
+				{ID: 289, RiddleID: 252, Text: "It's something you hear, not see."},
+			},
+		},
+
+		{
+			ID:          253,
+			Question:    "Thousands lay up gold within this house, But no man made it. Spears past counting guard this house, But no man wards it.",
+			Answer:      "Beehive",
+			Explanation: "A beehive is home to thousands of bees ('lay up gold'), protected by their stingers ('spears').",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 894, RiddleID: 253, Text: "Beehive"},
+				{ID: 895, RiddleID: 253, Text: "Treasure Chest"},
+				{ID: 896, RiddleID: 253, Text: "Fort"},
+				{ID: 897, RiddleID: 253, Text: "Cave"},
+			},
+			Hints: []database.Hint{
+				{ID: 290, RiddleID: 253, Text: "It's created by insects."},
+			},
+		},
+		{
+			ID:          254,
+			Question:    "I cut through evil like a double-edged sword, and chaos flees at my approach. Balance I single-handedly upraise, through battles fought with heart and mind, instead of with my gaze. What am I?",
+			Answer:      "Justice",
+			Explanation: "Justice is often depicted as a double-edged sword that cuts through evil and brings balance.",
+			Category:    "Philosophy",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 898, RiddleID: 254, Text: "Justice"},
+				{ID: 899, RiddleID: 254, Text: "Wisdom"},
+				{ID: 900, RiddleID: 254, Text: "Courage"},
+				{ID: 901, RiddleID: 254, Text: "Peace"},
+			},
+			Hints: []database.Hint{
+				{ID: 291, RiddleID: 254, Text: "It's a concept tied to fairness and law."},
+			},
+		},
+
+		{
+			ID:          255,
+			Question:    "No head has he but he wears a hat. No feet has he but he stands up straight. On him perhaps a fairy sat, weaving a spell one evening late! What is he?",
+			Answer:      "Toadstool",
+			Explanation: "A toadstool (mushroom) has no head or feet but looks like it wears a cap and stands upright.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 902, RiddleID: 255, Text: "Toadstool"},
+				{ID: 903, RiddleID: 255, Text: "Tree"},
+				{ID: 904, RiddleID: 255, Text: "Lamp"},
+				{ID: 905, RiddleID: 255, Text: "Flower"},
+			},
+			Hints: []database.Hint{
+				{ID: 292, RiddleID: 255, Text: "It's a type of mushroom."},
+			},
+		},
+
+		{
+			ID:          256,
+			Question:    "What has everything inside it? Everything you can imagine: even god, wind, world, sky, heaven, earth, and everything that comes to your mind?",
+			Answer:      "Alphabet",
+			Explanation: "The alphabet contains the letters to form every word imaginable.",
+			Category:    "Language",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 906, RiddleID: 256, Text: "Alphabet"},
+				{ID: 907, RiddleID: 256, Text: "Book"},
+				{ID: 908, RiddleID: 256, Text: "Mind"},
+				{ID: 909, RiddleID: 256, Text: "Dictionary"},
+			},
+			Hints: []database.Hint{
+				{ID: 293, RiddleID: 256, Text: "It consists of letters."},
+			},
+		},
+
+		{
+			ID:          257,
+			Question:    "Above the kingdom I reign, spotted, speckled, with a mane. I travel in packs, and if you're lucky, you'd ride me. What am I?",
+			Answer:      "Giraffe",
+			Explanation: "The giraffe is a spotted animal with a mane, seen in groups, and often admired in safaris.",
+			Category:    "Animals",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 910, RiddleID: 257, Text: "Giraffe"},
+				{ID: 911, RiddleID: 257, Text: "Lion"},
+				{ID: 912, RiddleID: 257, Text: "Zebra"},
+				{ID: 913, RiddleID: 257, Text: "Tiger"},
+			},
+			Hints: []database.Hint{
+				{ID: 294, RiddleID: 257, Text: "It's the tallest land animal."},
+			},
+		},
+
+		{
+			ID:          258,
+			Question:    "I am made from an animal, although you nickname me after a different one. You can't eat me; you can only hold me, and once a year a festival is erected in my honor. What am I?",
+			Answer:      "Football",
+			Explanation: "A football is traditionally made from animal hide but nicknamed 'pigskin,' and major festivals (like the Super Bowl) celebrate it.",
+			Category:    "Sports",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 914, RiddleID: 258, Text: "Football"},
+				{ID: 915, RiddleID: 258, Text: "Basketball"},
+				{ID: 916, RiddleID: 258, Text: "Baseball"},
+				{ID: 917, RiddleID: 258, Text: "Rugby Ball"},
+			},
+			Hints: []database.Hint{
+				{ID: 295, RiddleID: 258, Text: "It's associated with a famous sport."},
+			},
+		},
+
+		{
+			ID:          259,
+			Question:    "What grows in winter, dies in summer, and grows roots upward?",
+			Answer:      "Icicle",
+			Explanation: "Icicles grow in winter, melt in summer, and their pointed ends appear to 'grow' upward.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 918, RiddleID: 259, Text: "Icicle"},
+				{ID: 919, RiddleID: 259, Text: "Frost"},
+				{ID: 920, RiddleID: 259, Text: "Tree"},
+				{ID: 921, RiddleID: 259, Text: "Snowflake"},
+			},
+			Hints: []database.Hint{
+				{ID: 296, RiddleID: 259, Text: "It's made of ice."},
+			},
+		},
+
+		{
+			ID:          260,
+			Question:    "Downward grows the root. Outward grows the skin. Upward grows the shoot. What way blows the wind?",
+			Answer:      "Wayward",
+			Explanation: "The answer plays on the natural directions of growth and the unpredictable nature of the wind.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 922, RiddleID: 260, Text: "Wayward"},
+				{ID: 923, RiddleID: 260, Text: "Random"},
+				{ID: 924, RiddleID: 260, Text: "Northward"},
+				{ID: 925, RiddleID: 260, Text: "Southward"},
+			},
+			Hints: []database.Hint{
+				{ID: 297, RiddleID: 260, Text: "Think about unpredictable movement."},
+			},
+		},
+
+		{
+			ID:          261,
+			Question:    "Shorter than my four siblings, but easily the strongest. Sometimes I wear a funny hat. What am I?",
+			Answer:      "Thumb",
+			Explanation: "The thumb is shorter than the fingers, strong, and sometimes covered (e.g., with a thimble).",
+			Category:    "Anatomy",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 926, RiddleID: 261, Text: "Thumb"},
+				{ID: 927, RiddleID: 261, Text: "Index Finger"},
+				{ID: 928, RiddleID: 261, Text: "Toe"},
+				{ID: 929, RiddleID: 261, Text: "Little Finger"},
+			},
+			Hints: []database.Hint{
+				{ID: 298, RiddleID: 261, Text: "It's part of the hand."},
+			},
+		},
+
+		{
+			ID:          262,
+			Question:    "With head without hair. With mouth without tooth. What am I?",
+			Answer:      "Bottle",
+			Explanation: "A bottle has a 'head' (top) and a 'mouth' (opening), but no hair or teeth.",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 930, RiddleID: 262, Text: "Bottle"},
+				{ID: 931, RiddleID: 262, Text: "Jar"},
+				{ID: 932, RiddleID: 262, Text: "Vase"},
+				{ID: 933, RiddleID: 262, Text: "Cup"},
+			},
+			Hints: []database.Hint{
+				{ID: 299, RiddleID: 262, Text: "It's used to hold liquids."},
+			},
+		},
+
+		{
+			ID:          263,
+			Question:    "What flies around all day but never goes anywhere?",
+			Answer:      "Flag",
+			Explanation: "A flag waves in the wind ('flies') but stays in the same spot.",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 934, RiddleID: 263, Text: "Flag"},
+				{ID: 935, RiddleID: 263, Text: "Bird"},
+				{ID: 936, RiddleID: 263, Text: "Kite"},
+				{ID: 937, RiddleID: 263, Text: "Plane"},
+			},
+			Hints: []database.Hint{
+				{ID: 300, RiddleID: 263, Text: "It's often found on poles."},
+			},
+		},
+
+		{
+			ID:          264,
+			Question:    "What's as small as a mouse but guards a house like a lion?",
+			Answer:      "Lock",
+			Explanation: "A lock is small but secures a home like a lion guards its territory.",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 938, RiddleID: 264, Text: "Lock"},
+				{ID: 939, RiddleID: 264, Text: "Cat"},
+				{ID: 940, RiddleID: 264, Text: "Dog"},
+				{ID: 941, RiddleID: 264, Text: "Guard"},
+			},
+			Hints: []database.Hint{
+				{ID: 301, RiddleID: 264, Text: "It secures doors."},
+			},
+		},
+		{
+			ID:          265,
+			Question:    "What gets whiter the dirtier that it gets?",
+			Answer:      "Chalkboard",
+			Explanation: "A chalkboard appears whiter as more chalk is applied, making it 'dirtier.'",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 942, RiddleID: 265, Text: "Chalkboard"},
+				{ID: 943, RiddleID: 265, Text: "Snow"},
+				{ID: 944, RiddleID: 265, Text: "Paper"},
+				{ID: 945, RiddleID: 265, Text: "Mirror"},
+			},
+			Hints: []database.Hint{
+				{ID: 302, RiddleID: 265, Text: "It's used in classrooms."},
+			},
+		},
+
+		{
+			ID:          266,
+			Question:    "On the wall, in the air, you just want me out of your hair. Try to catch me, but you cannot, for my vision is thousand-fold. What am I?",
+			Answer:      "Fly",
+			Explanation: "Flies are hard to catch and are known for their compound eyes, giving them a 'thousand-fold' vision.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 946, RiddleID: 266, Text: "Fly"},
+				{ID: 947, RiddleID: 266, Text: "Mosquito"},
+				{ID: 948, RiddleID: 266, Text: "Bee"},
+				{ID: 949, RiddleID: 266, Text: "Butterfly"},
+			},
+			Hints: []database.Hint{
+				{ID: 303, RiddleID: 266, Text: "It's a common pest."},
+			},
+		},
+
+		{
+			ID:          267,
+			Question:    "I am born in fear, raised in truth, and I come to my own in deed. When comes a time that I'm called forth, I come to serve the cause of need. What am I?",
+			Answer:      "Courage",
+			Explanation: "Courage often arises from fear, matures in truth, and is demonstrated in actions of need.",
+			Category:    "Philosophy",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 950, RiddleID: 267, Text: "Courage"},
+				{ID: 951, RiddleID: 267, Text: "Hope"},
+				{ID: 952, RiddleID: 267, Text: "Honor"},
+				{ID: 953, RiddleID: 267, Text: "Strength"},
+			},
+			Hints: []database.Hint{
+				{ID: 304, RiddleID: 267, Text: "It involves bravery."},
+			},
+		},
+
+		{
+			ID:          268,
+			Question:    "I am slim and tall. Many find me desirable and appealing. They touch me and I give a false good feeling. Once I shine in splendor, but only once and then no more. For many, I am to die for. What am I?",
+			Answer:      "Cigarette",
+			Explanation: "A cigarette is slim and appealing to some but offers a harmful and fleeting pleasure.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 954, RiddleID: 268, Text: "Cigarette"},
+				{ID: 955, RiddleID: 268, Text: "Perfume"},
+				{ID: 956, RiddleID: 268, Text: "Candle"},
+				{ID: 957, RiddleID: 268, Text: "Wine Glass"},
+			},
+			Hints: []database.Hint{
+				{ID: 305, RiddleID: 268, Text: "It's smoked."},
+			},
+		},
+
+		{
+			ID:          269,
+			Question:    "A little pool with two layers of wall around it. One white and soft and the other dark and hard, amidst a light brown grassy lawn with an outline of a green grass. What am I?",
+			Answer:      "Coconut",
+			Explanation: "A coconut has a hard outer shell, a softer inner layer, and grows surrounded by fibers resembling grass.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 958, RiddleID: 269, Text: "Coconut"},
+				{ID: 959, RiddleID: 269, Text: "Nutmeg"},
+				{ID: 960, RiddleID: 269, Text: "Palm Fruit"},
+				{ID: 961, RiddleID: 269, Text: "Egg"},
+			},
+			Hints: []database.Hint{
+				{ID: 306, RiddleID: 269, Text: "It's a tropical fruit."},
+			},
+		},
+
+		{
+			ID:          270,
+			Question:    "Looks like water, but it's heat. Sits on sand, lays on concrete. People have been known to follow it everywhere, but it gets them no place, and all they can do is stare. What am I?",
+			Answer:      "Mirage",
+			Explanation: "A mirage appears like water on hot surfaces but is just an illusion created by heat.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 962, RiddleID: 270, Text: "Mirage"},
+				{ID: 963, RiddleID: 270, Text: "Reflection"},
+				{ID: 964, RiddleID: 270, Text: "Shadow"},
+				{ID: 965, RiddleID: 270, Text: "Fog"},
+			},
+			Hints: []database.Hint{
+				{ID: 307, RiddleID: 270, Text: "It's an optical illusion."},
+			},
+		},
+
+		{
+			ID:          271,
+			Question:    "You use me for multiple reasons, I am many-colored, and many-shaped. I may or may not also tell you your sexual preference. What am I?",
+			Answer:      "Scarf",
+			Explanation: "A scarf comes in various colors and shapes and is sometimes used as a symbol of identity.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 966, RiddleID: 271, Text: "Scarf"},
+				{ID: 967, RiddleID: 271, Text: "Flag"},
+				{ID: 968, RiddleID: 271, Text: "Hat"},
+				{ID: 969, RiddleID: 271, Text: "Necklace"},
+			},
+			Hints: []database.Hint{
+				{ID: 308, RiddleID: 271, Text: "It's worn around the neck."},
+			},
+		},
+
+		{
+			ID:          272,
+			Question:    "My thunder comes before my lightning. My lightning comes before my rain. And my rain dries all the ground it touches. What am I?",
+			Answer:      "Volcano",
+			Explanation: "A volcano erupts with a 'thunderous' explosion, followed by molten lava ('lightning') that solidifies ('rain').",
+			Category:    "Nature",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 970, RiddleID: 272, Text: "Volcano"},
+				{ID: 971, RiddleID: 272, Text: "Earthquake"},
+				{ID: 972, RiddleID: 272, Text: "Tornado"},
+				{ID: 973, RiddleID: 272, Text: "Storm"},
+			},
+			Hints: []database.Hint{
+				{ID: 309, RiddleID: 272, Text: "It involves lava."},
+			},
+		},
+
+		{
+			ID:          273,
+			Question:    "I come when the weather is at its prime, though it might be wise to leave nothing on the street. But in the wintertime, my name is obsolete. What am I?",
+			Answer:      "Hail",
+			Explanation: "Hail falls during storms when the weather fluctuates but rarely during winter.",
+			Category:    "Weather",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 974, RiddleID: 273, Text: "Hail"},
+				{ID: 975, RiddleID: 273, Text: "Rain"},
+				{ID: 976, RiddleID: 273, Text: "Frost"},
+				{ID: 977, RiddleID: 273, Text: "Snow"},
+			},
+			Hints: []database.Hint{
+				{ID: 310, RiddleID: 273, Text: "It's a type of precipitation."},
+			},
+		},
+
+		{
+			ID:          274,
+			Question:    "Useful tool for who in darkness dwell. Within you, corrupting like a deadly spell. What am I?",
+			Answer:      "Poison",
+			Explanation: "Poison can be a metaphorical 'darkness' and is corruptive and harmful.",
+			Category:    "Abstract",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 978, RiddleID: 274, Text: "Poison"},
+				{ID: 979, RiddleID: 274, Text: "Venom"},
+				{ID: 980, RiddleID: 274, Text: "Disease"},
+				{ID: 981, RiddleID: 274, Text: "Shadow"},
+			},
+			Hints: []database.Hint{
+				{ID: 311, RiddleID: 274, Text: "It's toxic."},
+			},
+		},
+		{
+			ID:          275,
+			Question:    "A leathery snake, with a stinging bite, I'll stay coiled up, unless I must fight. What am I?",
+			Answer:      "Whip",
+			Explanation: "A whip is often coiled, and its 'stinging bite' refers to its crack when used.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 982, RiddleID: 275, Text: "Whip"},
+				{ID: 983, RiddleID: 275, Text: "Rope"},
+				{ID: 984, RiddleID: 275, Text: "Snake"},
+				{ID: 985, RiddleID: 275, Text: "Lasso"},
+			},
+			Hints: []database.Hint{
+				{ID: 312, RiddleID: 275, Text: "It's used in rodeos or by circus performers."},
+			},
+		},
+
+		{
+			ID:          276,
+			Question:    "I'm a bearer of darkness. I'm feared and often hated. I'm a symbol of the unwanted, an omen that leaves you jaded. Some people can predict my coming, but then you'll forever see things lurking around corners. Are you sure that it was me?",
+			Answer:      "Grim",
+			Explanation: "The Grim Reaper symbolizes darkness and fear and is often associated with death.",
+			Category:    "Abstract",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 986, RiddleID: 276, Text: "Grim"},
+				{ID: 987, RiddleID: 276, Text: "Shadow"},
+				{ID: 988, RiddleID: 276, Text: "Omen"},
+				{ID: 989, RiddleID: 276, Text: "Death"},
+			},
+			Hints: []database.Hint{
+				{ID: 313, RiddleID: 276, Text: "Often linked to death or foreboding."},
+			},
+		},
+
+		{
+			ID:          277,
+			Question:    "Black we are and much admired, men seek us if they are tired. We tire the horse, comfort man, guess this riddle if you can.",
+			Answer:      "Coal",
+			Explanation: "Coal is black, used for fuel (comforting humans) but tiring horses in mining.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 990, RiddleID: 277, Text: "Coal"},
+				{ID: 991, RiddleID: 277, Text: "Charcoal"},
+				{ID: 992, RiddleID: 277, Text: "Ash"},
+				{ID: 993, RiddleID: 277, Text: "Oil"},
+			},
+			Hints: []database.Hint{
+				{ID: 314, RiddleID: 277, Text: "It's a source of energy and heat."},
+			},
+		},
+
+		{
+			ID:          278,
+			Question:    "My step is slow, the snow's my breath. I give the ground, a grinding death. My marching makes an end of me, slain by sun or drowned in sea. What am I?",
+			Answer:      "Glacier",
+			Explanation: "A glacier moves slowly, grinds the ground, and melts under the sun or in the sea.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 994, RiddleID: 278, Text: "Glacier"},
+				{ID: 995, RiddleID: 278, Text: "Avalanche"},
+				{ID: 996, RiddleID: 278, Text: "Snowdrift"},
+				{ID: 997, RiddleID: 278, Text: "Iceberg"},
+			},
+			Hints: []database.Hint{
+				{ID: 315, RiddleID: 278, Text: "It's a large mass of ice."},
+			},
+		},
+
+		{
+			ID:          279,
+			Question:    "If your life is cut short, I am not the one to blame. You signed up, and your death was not my aim. Enter our doors; there is so much to see, we just happen to hold the key to adventure abound and fun to be found. Step in our door and see what is in store. What am I?",
+			Answer:      "Terror Tours",
+			Explanation: "Terror tours provide thrilling experiences, not intended to harm but to entertain.",
+			Category:    "Abstract",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 998, RiddleID: 279, Text: "Terror Tours"},
+				{ID: 999, RiddleID: 279, Text: "Adventure Parks"},
+				{ID: 1000, RiddleID: 279, Text: "Haunted Houses"},
+				{ID: 1001, RiddleID: 279, Text: "Circus"},
+			},
+			Hints: []database.Hint{
+				{ID: 316, RiddleID: 279, Text: "It's meant for thrill seekers."},
+			},
+		},
+
+		{
+			ID:          280,
+			Question:    "What has roots that nobody sees, is taller than trees, up, up it goes, yet it never grows?",
+			Answer:      "Mountain",
+			Explanation: "Mountains appear to have 'roots' in the earth, are taller than trees, and do not grow.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1002, RiddleID: 280, Text: "Mountain"},
+				{ID: 1003, RiddleID: 280, Text: "Hill"},
+				{ID: 1004, RiddleID: 280, Text: "Tree"},
+				{ID: 1005, RiddleID: 280, Text: "Rock"},
+			},
+			Hints: []database.Hint{
+				{ID: 317, RiddleID: 280, Text: "It's part of a landscape."},
+			},
+		},
+
+		{
+			ID:          281,
+			Question:    "A natural state, I'm sought by all. Go with me and you shall fall. You do me when you spend, and you use me when you eat to no end. What am I?",
+			Answer:      "Balance",
+			Explanation: "Balance is a natural state; losing it causes a fall, and it's metaphorically used in spending and eating.",
+			Category:    "Abstract",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1006, RiddleID: 281, Text: "Balance"},
+				{ID: 1007, RiddleID: 281, Text: "Wealth"},
+				{ID: 1008, RiddleID: 281, Text: "Control"},
+				{ID: 1009, RiddleID: 281, Text: "Hunger"},
+			},
+			Hints: []database.Hint{
+				{ID: 318, RiddleID: 281, Text: "It's important in both life and finances."},
+			},
+		},
+
+		{
+			ID:          282,
+			Question:    "At the sound of me, men may dream or stamp their feet. At the sound of me, women may laugh or sometimes weep. What am I?",
+			Answer:      "Music",
+			Explanation: "Music evokes different emotions such as joy, sadness, or inspiration.",
+			Category:    "Art",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1010, RiddleID: 282, Text: "Music"},
+				{ID: 1011, RiddleID: 282, Text: "Song"},
+				{ID: 1012, RiddleID: 282, Text: "Poetry"},
+				{ID: 1013, RiddleID: 282, Text: "Melody"},
+			},
+			Hints: []database.Hint{
+				{ID: 319, RiddleID: 282, Text: "It's made of sound."},
+			},
+		},
+
+		{
+			ID:          283,
+			Question:    "When set loose, I fly away, never so cursed, as when I go astray. What am I?",
+			Answer:      "Raft",
+			Explanation: "A raft floats away when not anchored and is a problem if it drifts astray.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1014, RiddleID: 283, Text: "Raft"},
+				{ID: 1015, RiddleID: 283, Text: "Kite"},
+				{ID: 1016, RiddleID: 283, Text: "Boat"},
+				{ID: 1017, RiddleID: 283, Text: "Balloon"},
+			},
+			Hints: []database.Hint{
+				{ID: 320, RiddleID: 283, Text: "It's used on water."},
+			},
+		},
+
+		{
+			ID:          284,
+			Question:    "Early ages the iron boot tread, with Europe at her command. Through time power slipped and fled, 'til the creation of new holy land. Who am I?",
+			Answer:      "Rome",
+			Explanation: "Rome was a dominant empire in Europe and later influenced the creation of the Vatican as a holy land.",
+			Category:    "History",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 1018, RiddleID: 284, Text: "Rome"},
+				{ID: 1019, RiddleID: 284, Text: "Greece"},
+				{ID: 1020, RiddleID: 284, Text: "Vatican"},
+				{ID: 1021, RiddleID: 284, Text: "Byzantium"},
+			},
+			Hints: []database.Hint{
+				{ID: 321, RiddleID: 284, Text: "It was a great European empire."},
+			},
+		},
+		{
+			ID:          285,
+			Question:    "Armless, legless, I crawl around when I'm young. Then the time of changing sleep will come. I will awake like a newborn, flying beast, 'till then on the remains of the dead I feast. What am I?",
+			Answer:      "Maggot",
+			Explanation: "Maggots are legless larvae that feed on decaying matter and eventually transform into flies.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1022, RiddleID: 285, Text: "Maggot"},
+				{ID: 1023, RiddleID: 285, Text: "Caterpillar"},
+				{ID: 1024, RiddleID: 285, Text: "Worm"},
+				{ID: 1025, RiddleID: 285, Text: "Larvae"},
+			},
+			Hints: []database.Hint{
+				{ID: 322, RiddleID: 285, Text: "It's a larval stage of a fly."},
+			},
+		},
+
+		{
+			ID:          286,
+			Question:    "With my pair I should be, but I am usually alone you see, for a monster always eats me. Do you know what I must be?",
+			Answer:      "Socks",
+			Explanation: "Socks come in pairs, but losing one is common, as if a 'monster' eats them.",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1026, RiddleID: 286, Text: "Socks"},
+				{ID: 1027, RiddleID: 286, Text: "Shoes"},
+				{ID: 1028, RiddleID: 286, Text: "Gloves"},
+				{ID: 1029, RiddleID: 286, Text: "Slippers"},
+			},
+			Hints: []database.Hint{
+				{ID: 323, RiddleID: 286, Text: "It's a clothing item for your feet."},
+			},
+		},
+
+		{
+			ID:          287,
+			Question:    "Shifting, shifting, drifting deep. Below me great and mighty cities sleep. Swirling, scurrying, all around. I'm only where no water will be found. What am I?",
+			Answer:      "Desert",
+			Explanation: "Deserts have shifting sands and no water, and ancient cities can lie buried beneath them.",
+			Category:    "Nature",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1030, RiddleID: 287, Text: "Desert"},
+				{ID: 1031, RiddleID: 287, Text: "Ocean"},
+				{ID: 1032, RiddleID: 287, Text: "Volcano"},
+				{ID: 1033, RiddleID: 287, Text: "Canyon"},
+			},
+			Hints: []database.Hint{
+				{ID: 324, RiddleID: 287, Text: "It's characterized by sand and dryness."},
+			},
+		},
+
+		{
+			ID:          288,
+			Question:    "We are emeralds and diamonds, lost by the moon; found by the sun, and picked up soon. What are we?",
+			Answer:      "Dew",
+			Explanation: "Dew forms as moisture on surfaces at night and disappears when the sun rises.",
+			Category:    "Nature",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1034, RiddleID: 288, Text: "Dew"},
+				{ID: 1035, RiddleID: 288, Text: "Rain"},
+				{ID: 1036, RiddleID: 288, Text: "Frost"},
+				{ID: 1037, RiddleID: 288, Text: "Hail"},
+			},
+			Hints: []database.Hint{
+				{ID: 325, RiddleID: 288, Text: "It appears in the morning."},
+			},
+		},
+
+		{
+			ID:          289,
+			Question:    "What is red and nailed to a wall?",
+			Answer:      "Herring",
+			Explanation: "This riddle refers to the idiom 'red herring,' which is something misleading, metaphorically 'nailed to a wall.'",
+			Category:    "Abstract",
+			Difficulty:  "Hard",
+			Points:      15,
+			Choices: []database.Choice{
+				{ID: 1038, RiddleID: 289, Text: "Herring"},
+				{ID: 1039, RiddleID: 289, Text: "Fish"},
+				{ID: 1040, RiddleID: 289, Text: "Blood"},
+				{ID: 1041, RiddleID: 289, Text: "Tomato"},
+			},
+			Hints: []database.Hint{
+				{ID: 326, RiddleID: 289, Text: "It's a type of fish."},
+			},
+		},
+
+		{
+			ID:          290,
+			Question:    "What has 3 feet but cannot walk?",
+			Answer:      "Yardstick",
+			Explanation: "A yardstick measures three feet but cannot walk as it's an inanimate object.",
+			Category:    "Objects",
+			Difficulty:  "Easy",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1042, RiddleID: 290, Text: "Yardstick"},
+				{ID: 1043, RiddleID: 290, Text: "Tripod"},
+				{ID: 1044, RiddleID: 290, Text: "Ruler"},
+				{ID: 1045, RiddleID: 290, Text: "Table"},
+			},
+			Hints: []database.Hint{
+				{ID: 327, RiddleID: 290, Text: "It's used for measuring."},
+			},
+		},
+
+		{
+			ID:          291,
+			Question:    "What can an elephant and a shrimp both be?",
+			Answer:      "Jumbo",
+			Explanation: "The term 'jumbo' applies to large things like elephants, but it's ironically used for large shrimp.",
+			Category:    "Wordplay",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1046, RiddleID: 291, Text: "Jumbo"},
+				{ID: 1047, RiddleID: 291, Text: "Giant"},
+				{ID: 1048, RiddleID: 291, Text: "Big"},
+				{ID: 1049, RiddleID: 291, Text: "Large"},
+			},
+			Hints: []database.Hint{
+				{ID: 328, RiddleID: 291, Text: "It's a term often used for large objects or animals."},
+			},
+		},
+
+		{
+			ID:          292,
+			Question:    "What is given but kept by the giver?",
+			Answer:      "Birth",
+			Explanation: "Birth is given by a mother but remains part of her life as an event and memory.",
+			Category:    "Abstract",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1050, RiddleID: 292, Text: "Birth"},
+				{ID: 1051, RiddleID: 292, Text: "Gift"},
+				{ID: 1052, RiddleID: 292, Text: "Name"},
+				{ID: 1053, RiddleID: 292, Text: "Advice"},
+			},
+			Hints: []database.Hint{
+				{ID: 329, RiddleID: 292, Text: "It involves the beginning of life."},
+			},
+		},
+
+		{
+			ID:          293,
+			Question:    "The stack just might be sent all over. Full of what's new, yet it's nearly obsolete. What am I?",
+			Answer:      "Newspapers",
+			Explanation: "Newspapers, once a primary source for news, are now less common due to digital media.",
+			Category:    "Objects",
+			Difficulty:  "Medium",
+			Points:      10,
+			Choices: []database.Choice{
+				{ID: 1054, RiddleID: 293, Text: "Newspapers"},
+				{ID: 1055, RiddleID: 293, Text: "Magazines"},
+				{ID: 1056, RiddleID: 293, Text: "Letters"},
+				{ID: 1057, RiddleID: 293, Text: "Packages"},
+			},
+			Hints: []database.Hint{
+				{ID: 330, RiddleID: 293, Text: "It's a source of daily information."},
+			},
+		},
 	}

@@ -2,6 +2,7 @@ package addriddles
 
 import (
 	"fmt"
+	"strings"
 	"time"
 
 	"gorm.io/gorm"
@@ -13,33 +14,53 @@ func Addriddle(db *gorm.DB) {
 
 	riddles := []database.Riddle{
 		{
-			ID:          195,
-			Question:    "What is one thing that all people, regardless of their politics or religion, have to agree is between heaven and earth?",
-			Answer:      "The word 'and.'",
-			Explanation: "The word 'and' is literally between 'heaven' and 'earth.'",
-			Category:    "Wordplay",
+			ID:          293,
+			Question:    "The stack just might be sent all over. Full of what's new, yet it's nearly obsolete. What am I?",
+			Answer:      "Newspapers",
+			Explanation: "Newspapers, once a primary source for news, are now less common due to digital media.",
+			Category:    "Objects",
 			Difficulty:  "Medium",
 			Points:      10,
 			Choices: []database.Choice{
-				{ID: 662, RiddleID: 195, Text: "The word 'and'"},
-				{ID: 663, RiddleID: 195, Text: "Air"},
-				{ID: 664, RiddleID: 195, Text: "Clouds"},
-				{ID: 665, RiddleID: 195, Text: "Atmosphere"},
+				{ID: 1054, RiddleID: 293, Text: "Newspapers"},
+				{ID: 1055, RiddleID: 293, Text: "Magazines"},
+				{ID: 1056, RiddleID: 293, Text: "Letters"},
+				{ID: 1057, RiddleID: 293, Text: "Packages"},
 			},
 			Hints: []database.Hint{
-				{ID: 232, RiddleID: 195, Text: "It's a linguistic answer."},
+				{ID: 330, RiddleID: 293, Text: "It's a source of daily information."},
 			},
 		},
 	}
 	fmt.Println(len(riddles))
+	count := 0
 	for i := 0; i < len(riddles); i++ {
+
+		if riddles[i].Category != "Logic" || riddles[i].Category != "General" || !strings.Contains(riddles[i].Category, "Word") {
+			count++
+			if count < 30 {
+				riddles[i].Category = "Logic"
+			} else {
+				riddles[i].Category = "General"
+			}
+		}
+		if riddles[i].Difficulty == "Easy" {
+			riddles[i].Points = 5
+		}
+		if riddles[i].Difficulty == "Medium" {
+			riddles[i].Points = 10
+		}
+		if riddles[i].Difficulty == "Hard" {
+			riddles[i].Points = 15
+		}
+
 		err := db.Create(&riddles[i]).Error
 		if err != nil {
 			// Log the error and stop processing further
 			fmt.Printf("Failed to create riddle at index %d: %v\n", i, err)
 			break
 		}
-		time.Sleep(time.Second * 5)
+		time.Sleep(time.Second * 3)
 	}
 
 }

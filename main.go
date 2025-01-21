@@ -40,7 +40,7 @@ func main() {
 	InitilizeDatabase()
 
 	r := mux.NewRouter()
-	//rid.Addriddle(db)
+	//	rid.Addriddle(db)
 	// Authentication and Registration Routes
 	r.HandleFunc("/loginpage", Serverside.RenderAuthPage).Methods("GET")
 	r.HandleFunc("/registerpage", Serverside.RenderAuthPage).Methods("GET")

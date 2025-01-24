@@ -15,6 +15,7 @@ import (
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
 	difficulty "Riddle_ToD/Serverside/difficult"
+	loadriddle "Riddle_ToD/Serverside/riddleloader"
 	prof "Riddle_ToD/Serverside/updateprofile"
 	utils "Riddle_ToD/Serverside/utils"
 )
@@ -63,7 +64,7 @@ func main() {
 	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store, "category") }).Methods("GET")
 
 	// Gameplay Routes
-	r.HandleFunc("/gameplaymode/{category}", Serverside.Selectmode).Methods("GET")
+	r.HandleFunc("/gameplaymode/{category}", func(w http.ResponseWriter, r *http.Request) { loadriddle.Selectmode(w, r, db, Store) }).Methods("GET")
 	r.HandleFunc("/playsection", Serverside.Playsection).Methods("GET")
 	//r.HandleFunc("/difficultySetting", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("soloPlayer/difficult.html", w) }).Methods("GET")
 	r.HandleFunc("/difficultysetting", func(w http.ResponseWriter, r *http.Request) {

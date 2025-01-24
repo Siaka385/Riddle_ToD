@@ -16,7 +16,6 @@ type PlayerDifficultys struct{
 
 func DifficultHandler(w http.ResponseWriter, r *http.Request, store *sessions.CookieStore,db *gorm.DB) {
 
-	fmt.Println("Hello")
 	session, _ := store.Get(r, "session-name")
 
 	username := session.Values["Username"]

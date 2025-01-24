@@ -93,8 +93,6 @@ func ValidateLoginCredentials(loginDetails PlayerLogin, db *gorm.DB) bool {
 	if err != nil {
 		log.Println("Error retrieving password:", err)
 		return false
-	} else {
-		fmt.Println("Password found:", storedPassword)
 	}
 
 	// Compare the provided password with the stored password
@@ -115,8 +113,6 @@ func FindUserId(loginDetails PlayerLogin, db *gorm.DB) string {
 	if err != nil {
 		log.Println("Error retrieving userId:", err)
 		os.Exit(1)
-	} else {
-		fmt.Println("userId found:", UserId)
 	}
 
 	return UserId

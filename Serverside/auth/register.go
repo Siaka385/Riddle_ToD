@@ -54,7 +54,6 @@ func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 
 	var playerInput PlayerInput
 	json.Unmarshal(body, &playerInput)
-	fmt.Println(playerInput)
 
 	var apiResponse APIResponse
 	apiResponse = APIResponse{"ok"}
@@ -172,9 +171,7 @@ func LoadExistingUsers(db *gorm.DB) {
 
 	if err := db.Model(&playerRecord).Select("username", "email", "User_ID").Find(&ExistingUsers).Error; err != nil {
 		log.Println("Error retrieving usernames,emails and User_ID:", err)
-	} else {
-		fmt.Println("Existing users:", ExistingUsers)
-	}
+	} 
 }
 
 func HashPassword(password string) string {

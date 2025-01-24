@@ -1,146 +1,2585 @@
 [
   {
-    "question": "",
+    "id": 1,
+    "question": "What has to be broken before you can use it?",
+    "answer": "An egg",
+    "explanation": "An egg is something that must be broken before it can be used for cooking.",
     "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 1
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 1
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
     "difficulty": "Easy",
-    "level": 1
+    "points": 5
   },
   {
-    "question": "",
+    "id": 2,
+    "question": "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+    "answer": "A candle",
+    "explanation": "A candle is tall when it's new because it's made of wax, but it gets shorter as it burns and the wax melts away.",
     "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 1
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Hard",
-    "level": 3
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 2
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 2
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 2
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Medium",
-    "level": 2
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Hard",
-    "level": 3
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
-    "difficulty": "Hard",
-    "level": 3
-  },
-  {
-    "question": "",
-    "category": "Logic",
-    "choices": [
-      "Envelope",
-      "Eagle",
-      "Edge",
-      "Eel"
-    ],
     "difficulty": "Easy",
-    "level": 1
+    "points": 5
+  },
+  {
+    "id": 7,
+    "question": "The more you take, the more you leave behind. What am I?",
+    "answer": "Footsteps",
+    "explanation": "The more you take, the more you leave behind. What am I?",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 9,
+    "question": "I’m light as a feather, yet the strongest person can’t hold me for more than a minute. What am I?",
+    "answer": "Your breath",
+    "explanation": "A breath is indeed as light as a feather and even the strongest man can typically not hold his breath for more than a few minutes.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 10,
+    "question": "I’m always on my way but never arrive. What am I?",
+    "answer": "Tomorrow",
+    "explanation": "You are always approaching the next day (i.e. tomorrow) but when it arrives it is no longer 'tomorrow' but instead it is 'today'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 11,
+    "question": "What gets wetter the more it dries?",
+    "answer": "A towel",
+    "explanation": "he towel is a fabric absorbent used to wipe the wet surface. Hence the more we wipe the damp surface from the towel, the moisture it will get. It is a logical answer to find as it absorbs more water, it becomes wet.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 14,
+    "question": "I have branches, but no fruit, trunk, or leaves. What am I?",
+    "answer": "A bank",
+    "explanation": "A Bank\" have branches, but no fruit, trunk, or leaves",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 15,
+    "question": "The more you take away from me, the bigger I get. What am I?",
+    "answer": "A hole",
+    "explanation": "A hole is created by removing something that was previously there",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 17,
+    "question": "I’m not alive, but I can grow. I don’t have lungs, but I need air. What am I?",
+    "answer": "Fire",
+    "explanation": "A fire is not alive, but it can grow, move, consume resources, and reproduce itself",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 18,
+    "question": "The more you have of me, the less you see. What am I?",
+    "answer": "Darkness",
+    "explanation": "The more darkness there is, the less you can see",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 20,
+    "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+    "answer": "An echo",
+    "explanation": "No mouth: An echo is a reflection of your voice, so it speaks without a mouth. \nNo ears: An echo is a reflection of your voice, so it hears without ears. \nNo body: An echo is a sound that reflects back to where it came from, so it has no body",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 55,
+    "question": "Abir has a box of ornaments that he uses to decorate his tree on Christmas each year. All of them are blue (except for six), all of them are green (except for six), and all of them are red (except for six). How many ornaments are there of each color?",
+    "answer": "2 blue, 2 green, and 2 red",
+    "explanation": "2 blue, 2 green, and 2 red ornaments.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 56,
+    "question": "People usually come see me almost every single day and often many times a day. Despite this, people often consider me to be very dirty. Even though I will never speak to anyone, people will always show me a part of themselves that they rarely show to anyone else. What am I?",
+    "answer": "A toilet",
+    "explanation": "A toilet is something people use frequently in private and is often considered unclean despite its importance.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 67,
+    "question": "A limo driver is going the wrong way down a one-way street. He goes past four police officers along the way, yet none of them stop him. One even smiled and waved. Why didn’t the police stop him?",
+    "answer": "He was walking, not driving.",
+    "explanation": "The riddle tricks you into thinking the limo driver is driving, but the key is that he's walking, and police wouldn’t stop a pedestrian going the wrong way down a one-way street.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 72,
+    "question": "If pentagons have five sides, octagons have 8 sides, decagons have 10 sides and hexagons have 6. How many sides does a family of 3 have on their dining table?",
+    "answer": "hat depends on how many side dishes are being served.",
+    "explanation": "This is a trick question; the family of 3 refers to the number of people sitting at the table, and each person has 1 side of the table.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 90,
+    "question": "How many months have 28 days?",
+    "answer": "All 12 months",
+    "explanation": "Every month has at least 28 days, though February is the only one with exactly 28 (in non-leap years).",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 95,
+    "question": "Which is heavier, a kilo of stones or a kilo of feathers?",
+    "answer": "Neither, they weigh the same",
+    "explanation": "Both weigh one kilogram, so they are equal in weight.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 99,
+    "question": "What question can you ask where you can get different answers every time but all the answers being correct?",
+    "answer": "What time is it?",
+    "explanation": "The time changes constantly, so answers vary but remain correct.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 102,
+    "question": "When can you add 2 to 11 and get 1 as the answer?",
+    "answer": "On a clock",
+    "explanation": "Adding 2 hours to 11 o'clock gives you 1 o'clock.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 105,
+    "question": "What can you hold in your right hand but never in your left hand?",
+    "answer": "Your left hand",
+    "explanation": "You can't physically hold your own left hand with your left hand.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 106,
+    "question": "What can be larger than you without weighing anything?",
+    "answer": "Your shadow",
+    "explanation": "A shadow can be larger than you, yet it has no weight.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 110,
+    "question": "What does everyone know how to open but not how to close?",
+    "answer": "An egg",
+    "explanation": "Once you break an egg `open egg` you can't close it",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 115,
+    "question": "You measure my life in hours, and I serve you by expiring. I am quick when I am thin and slow when I am fat. The wind is my enemy. What am I?",
+    "answer": "A candle",
+    "explanation": "A candle burns and melts as it serves its purpose, and wind can extinguish it.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 116,
+    "question": "Three different doctors said that Paul is their brother, yet Paul claims he has no brothers. Who is lying?",
+    "answer": "No one, the doctors are Paul's sisters",
+    "explanation": "The doctors are Paul's sisters, so no one is lying.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 119,
+    "question": "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?",
+    "answer": "A map",
+    "explanation": "A map represents cities, mountains, and water but doesn't contain any physical elements.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 120,
+    "question": "You see a boat filled with people. It has not sunk, but when you look again, you don't see a single person on the boat. Why?",
+    "answer": "All the people were married",
+    "explanation": "The riddle plays on the word 'single,' meaning unmarried. Everyone on the boat is married.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 121,
+    "question": "Mr. Taylor has four daughters, and each has a brother. In total, how many children does Mr. Taylor have?",
+    "answer": "Five children",
+    "explanation": "Each daughter shares the same brother, so there are four daughters and one son, totaling five children.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 122,
+    "question": "What can run but never walk, have a mouth but never talk, have a head that never weeps, and a bed that never sleeps?",
+    "answer": "A river",
+    "explanation": "A river flows (runs) without walking, has a mouth and head as features, and a bed where it flows.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 123,
+    "question": "If an electric train is moving north at 55 mph and the wind is blowing east at 70 mph, which way does the smoke blow?",
+    "answer": "Electric trains don't produce smoke",
+    "explanation": "Electric trains run on electricity and do not emit smoke.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 124,
+    "question": "There are 6 sisters. Each sister has 1 brother. How many brothers are in the sister's family?",
+    "answer": "1 brother",
+    "explanation": "All the sisters share the same one brother.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 125,
+    "question": "Two fathers and two sons come home from the mall. Yet when they arrive home, only three people get out of the car. How is this possible?",
+    "answer": "They are a grandfather, father, and son",
+    "explanation": "The group consists of a grandfather, his son (the father), and his grandson. This makes three people but includes two fathers and two sons.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 126,
+    "question": "A murderer is condemned to death and has the option to die in one of the following three rooms: a room full of raging fire, a room full of assassins with loaded guns, and a room full of lions who haven't eaten in years. Which room should he choose?",
+    "answer": "The room full of lions who haven't eaten in years",
+    "explanation": "Lions that haven't eaten in years would be dead, making the room safe.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 128,
+    "question": "Steve was murdered on Saturday afternoon. His wife said she was reading. The doorman said he was in the shower. The chef said he was making breakfast. The gardener was pruning hedges. From the information given, who committed the murder?",
+    "answer": "The chef",
+    "explanation": "The chef claimed to be making breakfast in the afternoon, which doesn’t add up.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 10
+  },
+  {
+    "id": 134,
+    "question": "What is more useful when it is broken?",
+    "answer": "Egg",
+    "explanation": "An egg becomes useful when it is broken for cooking or eating.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 136,
+    "question": "What goes up, but never comes down?",
+    "answer": "Age",
+    "explanation": "As time passes, age increases but never decreases.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 140,
+    "question": "A Woman is sitting in her hotel room when someone knocks at the door. She opened the door to find a man she's never seen before. He says, 'Oh I am sorry, I made a mistake and thought this was my room.' He then ran away and got into an elevator so the woman shut her door and phoned security. What made the woman so suspicious?",
+    "answer": "He knocked on the door instead of trying to open it with a key.",
+    "explanation": "A guest in a hotel would usually have a key to their own room and would not knock on their own door.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 143,
+    "question": "Two girls were born to the same mother, on the same day, at the same time, in the same month and year, and yet they're not twins. How can this be?",
+    "answer": "They are triplets.",
+    "explanation": "If two girls are born as part of a set of triplets, they are not considered twins.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 145,
+    "question": "Who has married many women but was never married?",
+    "answer": "A priest",
+    "explanation": "A priest officiates weddings and marries people, but he himself is not married.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 150,
+    "question": "What goes through cities and fields, but never moves?",
+    "answer": "A road",
+    "explanation": "Roads stretch through cities and fields but remain stationary.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 155,
+    "question": "When John was six years old, he hammered a nail into his favorite tree to mark his height. Ten years later at age sixteen, John returned to see how much higher the nail was. If the tree grew by five centimeters each year, how much higher would the nail be?",
+    "answer": "The nail would remain at the same height.",
+    "explanation": "Trees grow from their tops, not from the base, so the nail stays at the same height.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 5
+  },
+  {
+    "id": 157,
+    "question": "Lily is a lilypad in a small pond. Lily doubles her size each day. On the 20th day, she covers the whole pond. On what day was Lily half the size of the pond?",
+    "answer": "On the 19th day.",
+    "explanation": "If Lily doubles in size each day, she would have been half the size of the pond the day before it was fully covered.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 159,
+    "question": "If you have me, you want to share me. If you share me, you don't have me.",
+    "answer": "A secret",
+    "explanation": "A secret is something you lose once it's shared.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 160,
+    "question": "How can you drop a raw egg from a height onto a concrete floor without cracking it?",
+    "answer": "The egg won't crack the concrete floor.",
+    "explanation": "Concrete floors are hard and won't crack from the impact of a raw egg.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 165,
+    "question": "Where is the only place where today comes before yesterday?",
+    "answer": "The dictionary.",
+    "explanation": "In the dictionary, words are arranged alphabetically, so 'today' comes before 'yesterday.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 169,
+    "question": "If you throw a blue stone into the Red Sea, what will it become?",
+    "answer": "wet.'",
+    "explanation": "it becomes wet.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 170,
+    "question": "What gets shorter as it grows older?",
+    "answer": "A candle.",
+    "explanation": "As a candle burns, it becomes shorter over time.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 172,
+    "question": "What is always found on the ground but never gets dirty?",
+    "answer": "Your shadow.",
+    "explanation": "A shadow always appears on the ground but it never gets dirty.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 173,
+    "question": "What has a head and a tail but no body?",
+    "answer": "A coin.",
+    "explanation": "A coin has a head and a tail but no body.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 10
+  },
+  {
+    "id": 175,
+    "question": "What has one head, one foot, and four legs?",
+    "answer": "A bed.",
+    "explanation": "A bed has one head (headboard), one foot (footboard), and four legs (the supports).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 176,
+    "question": "What gets smaller every time it takes a bath?",
+    "answer": "Soap.",
+    "explanation": "Soap gets smaller as it is used during a bath.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 178,
+    "question": "What do you bury when it's alive and dig up when it's dead?",
+    "answer": "A plant.",
+    "explanation": "You plant a seed (bury it alive) and dig it up when it’s fully grown (when it’s dead).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 181,
+    "question": "What is taken before you can get it?",
+    "answer": "A picture.",
+    "explanation": "You take a picture before you can get it printed or displayed.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 182,
+    "question": "What belongs to you but is used by everyone you meet?",
+    "answer": "Your name.",
+    "explanation": "Your name belongs to you, but everyone you meet uses it.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 183,
+    "question": "What is lighter than a feather but impossible to hold for much more than a minute?",
+    "answer": "Your breath.",
+    "explanation": "Your breath is lighter than a feather but cannot be held for much longer than a minute.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 185,
+    "question": "If your uncle's sister is not your aunt, then who is she to you?",
+    "answer": "Your mother.",
+    "explanation": "Your uncle's sister is your mother, as she is the sister of your uncle.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 186,
+    "question": "Two people are born at the same moment, but they don't have the same birthdays. How?",
+    "answer": "They were born in different time zones.",
+    "explanation": "People born at the same moment in different time zones may have different birthdays depending on the time difference.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 187,
+    "question": "The person who made it does not need it. The person who bought it does not want it. The person who needs it does not know it. What is it?",
+    "answer": "A coffin.",
+    "explanation": "A coffin is made for someone who has passed away, purchased by others, and not needed by the deceased themselves.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 188,
+    "question": "A man goes outside in the rain without an umbrella or hat but doesn't get a single hair on his head wet. How?",
+    "answer": "He is bald.",
+    "explanation": "The man has no hair on his head, so there is nothing to get wet.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 189,
+    "question": "If you are running a race and pass the person in second, then what place are you in?",
+    "answer": "Second place.",
+    "explanation": "If you pass the person in second, you take their place, which is second.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 190,
+    "question": "You enter a room that contains a match, kerosene lamp, candle, and fireplace. What should you light first?",
+    "answer": "The match.",
+    "explanation": "You need to light the match first to use it for lighting other things.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 191,
+    "question": "A mother and father have four daughters, and each daughter has one brother. How many people are in the family?",
+    "answer": "Seven.",
+    "explanation": "There are four daughters, one brother, and two parents, making a total of seven.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 192,
+    "question": "If the day before yesterday was the 23rd, then what will be the day after tomorrow?",
+    "answer": "The 27th.",
+    "explanation": "If the day before yesterday was the 23rd, today is the 25th, so the day after tomorrow is the 27th.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 194,
+    "question": "A is B's father but B isn't A's son. How?",
+    "answer": "B is A's daughter.",
+    "explanation": "B is not A's son but A's daughter, as A is B's father.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 196,
+    "question": "The shorter I am, the bigger I am. What am I?",
+    "answer": "A temper.",
+    "explanation": "As tempers shorten, they intensify and become bigger.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 197,
+    "question": "What is bought by the yard but is worn by the foot?",
+    "answer": "Carpet.",
+    "explanation": "Carpet is typically sold by the yard but used to cover floors, walked on with feet.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 198,
+    "question": "With pointed fangs it sits in wait, With piercing force it doles out fate, Over bloodless victims proclaiming its might, Eternally joining in a single bite, What is it?",
+    "answer": "A stapler.",
+    "explanation": "A stapler joins paper together with a single piercing bite, binding them eternally.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 199,
+    "question": "What has a foot but no leg?",
+    "answer": "A ruler.",
+    "explanation": "A ruler has a measurement called a foot but lacks any legs.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 200,
+    "question": "What stinks when living and smells good when dead?",
+    "answer": "Bacon.",
+    "explanation": "Pigs can have an unpleasant smell, but bacon is highly aromatic when cooked.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 201,
+    "question": "What takes hours to pull off, Is most satisfying when it's done And requires consent from the person you're doing it to?",
+    "answer": "Hypnotism.",
+    "explanation": "Hypnotism requires time, leaves the subject in a satisfying state, and involves their consent.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 202,
+    "question": "What has a big mouth, yet never speaks?",
+    "answer": "A Jar.",
+    "explanation": "A jar has a mouth but it never speaks.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 203,
+    "question": "The virgin gave birth to a child and threw away the blanket.",
+    "answer": "A banana.",
+    "explanation": "The banana represents the child, and the peel represents the blanket.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 204,
+    "question": "There is a creature of God whose body is hard; it does not wish to eat unless you strike its head.",
+    "answer": "A chisel.",
+    "explanation": "A chisel requires a hammer strike on its head to perform its task.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 205,
+    "question": "I have three hundred cattle, with a single nose cord.",
+    "answer": "Beads.",
+    "explanation": "The beads symbolize cattle, and the string holding them together is the nose cord.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 206,
+    "question": "What do you have when you're sitting down that you don't have when you're standing up?",
+    "answer": "A lap.",
+    "explanation": "A lap forms when you sit down, but it disappears when you stand up.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 207,
+    "question": "First you see me in the grass dressed ....................",
+    "answer": "A dandelion.",
+    "explanation": "A dandelion is a flower that is commonly found in grassy areas.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 208,
+    "question": "Born of sorrow, grows with age. You need a lot to be a sage. What is it?",
+    "answer": "Wisdom",
+    "explanation": "Wisdom often comes through experience and enduring life's challenges.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 209,
+    "question": "Patch upon patch, without any stitches, if you tell me this riddle, I'll give you my breeches.",
+    "answer": "Cabbage",
+    "explanation": "A cabbage has many layers or patches, and its leaves are often seen as 'patches'.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 210,
+    "question": "Some are quick to take it. Others must be coaxed. Those who choose to take it gain and lose the most.",
+    "answer": "Risk",
+    "explanation": "Risk involves uncertainty, with the possibility of both gain and loss.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 211,
+    "question": "I go in dry and come out wet, The longer I'm in, the stronger I get. What am I?",
+    "answer": "Tea bag",
+    "explanation": "A tea bag is dry when placed in water and becomes wet the longer it's left in, releasing its flavor.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 212,
+    "question": "No thicker than your finger when it folds. As thick as what it's holding when it holds.",
+    "answer": "Sack",
+    "explanation": "A sack is thin when folded and becomes thick when it holds something heavy.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 213,
+    "question": "I work hard most every day, Not much time to dance and play, If I could reach what I desire, all like me would now retire. What am I?",
+    "answer": "Doctor",
+    "explanation": "A doctor works tirelessly and often wishes for rest or retirement after achieving their goal of helping people.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 214,
+    "question": "Begotten, and born, and dying with noise, The terror of women, and pleasure of boys, Like the fiction of poets concerning the wind, I'm chiefly unruly, when strongest confined.",
+    "answer": "Cannon",
+    "explanation": "A cannon produces a loud noise when fired, and its power is unpredictable when confined.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 215,
+    "question": "They can be harbored, but few hold water, You can nurse them, but only by holding them against someone else, You can carry them, but not with your arms, You can bury them, but not in the earth.",
+    "answer": "Grudge",
+    "explanation": "A grudge can be kept and carried emotionally but not physically, and it can be buried, meaning let go of, but not in the literal earth.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 216,
+    "question": "Full of dark, filled with everything Both on my skin they color With my pack, I am always Afraid of the cat. What am I?",
+    "answer": "Zebra",
+    "explanation": "A zebra is often black and white and is often associated with a fear of predators like big cats (lions).",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 217,
+    "question": "What goes up, but at the same time goes down? Up toward the sky, and down toward the ground. Its present tense and past tense too, come for a ride, just you and me!",
+    "answer": "Seesaw",
+    "explanation": "A seesaw goes up and down with each movement, and this action is both in the present and past tense as people ride it.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 218,
+    "question": "We travel much, yet prisoners are, and close confined to boot. Yet with any horse, we will keep the pace, and will always go on foot. What are they?",
+    "answer": "Spurs",
+    "explanation": "Spurs are used by riders to urge horses forward, but they themselves remain fixed in place, like prisoners.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 219,
+    "question": "I bubble and laugh And spit water in your face. I am no lady, And I don't wear lace.",
+    "answer": "Fountain",
+    "explanation": "A fountain bubbles and splashes water, sometimes playfully, like laughter, and is not a lady nor does it wear lace.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 220,
+    "question": "When the creeper passes, all the grass kneels.",
+    "answer": "Plow",
+    "explanation": "A plow is used to till the earth, and when it passes over the grass, it forces it to bend or kneel.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 221,
+    "question": "What goes in the water black and comes out red?",
+    "answer": "Lobster",
+    "explanation": "Lobsters are black when raw, but turn red when cooked.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 222,
+    "question": "Iron roof, glass walls, burns and burns and never falls.",
+    "answer": "Lantern",
+    "explanation": "A lantern has a metal (iron) roof and glass walls, and it burns steadily without falling over.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 223,
+    "question": "You can only have it once you have given it.",
+    "answer": "Respect",
+    "explanation": "Respect must be given in order to receive it from others.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 224,
+    "question": "What can you fold but not crease?",
+    "answer": "Poker hand",
+    "explanation": "In poker, a hand can be 'folded' (discarded), but it cannot be physically creased.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 295,
+    "question": "I come in many colors, some are blue and white. While some people annoy me, I am not much for the fight. I live where people rarely tread, but you will find me close to bed. What am I?",
+    "answer": "Whales",
+    "explanation": "Whales are often found near the seabed and come in different colors. They are non-aggressive creatures.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 296,
+    "question": "Sometimes I am light, sometimes I am dark. What am I?",
+    "answer": "Chocolate",
+    "explanation": "Chocolate can vary in type and appearance, from milk chocolate (light) to dark chocolate.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 297,
+    "question": "I have no life, but I can die. What am I?",
+    "answer": "Battery",
+    "explanation": "A battery is not alive but can 'die' when it runs out of charge.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 298,
+    "question": "I have a hundred legs but cannot stand, a long neck but no head; I eat the maid's life. What am I?",
+    "answer": "Broom",
+    "explanation": "A broom has many bristles (legs), a long handle (neck), and is used by maids to sweep.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 299,
+    "question": "I can sizzle like bacon, I am made with an egg, I have plenty of backbone, but lack a good leg. I peel layers like onions, but still remain whole. I can be long like a flagpole, yet fit in a hole. What am I?",
+    "answer": "Snake",
+    "explanation": "A snake fits all the descriptions: it sizzles, is vertebrate (backbone), and sheds its skin (peels layers).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 300,
+    "question": "I build up castles. I tear down mountains. I make some men blind, I help others to see. What am I?",
+    "answer": "Sand",
+    "explanation": "Sand is used in building, erodes mountains, and can blind or clarify vision (like in hourglasses).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 301,
+    "question": "I have a tongue, but cannot speak. I have a bed but cannot sleep. I have four legs but cannot walk. Yet I move as you do. What am I?",
+    "answer": "Wagon",
+    "explanation": "A wagon fits the description perfectly.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 302,
+    "question": "A hill full, a hole full; yet you cannot catch a bowl full. What is it?",
+    "answer": "Mist",
+    "explanation": "Mist fills spaces but cannot be collected into a bowl.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 303,
+    "question": "Big as a biscuit, deep as a cup, but even a river can't fill it up. What is it?",
+    "answer": "Strainer",
+    "explanation": "A strainer fits the description; it can't hold water.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 304,
+    "question": "What is something that you always have but you always leave behind?",
+    "answer": "Fingerprints",
+    "explanation": "Fingerprints are unique to each person and are left behind wherever you touch.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 305,
+    "question": "What is it that makes tears without sorrow and takes its journey to heaven?",
+    "answer": "Smoke",
+    "explanation": "Smoke causes tears when it irritates the eyes and rises upwards, symbolizing a journey to heaven.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 306,
+    "question": "Round like a dishpan and smaller than a bathtub. But the ocean can't fill it. What is it?",
+    "answer": "Sieve",
+    "explanation": "A sieve is round with holes, preventing it from holding water even if filled by the ocean.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 307,
+    "question": "A mile from end to end, yet as close to as a friend. A precious commodity, freely given. Seen on the dead and on the living. Found on the rich, poor, short and tall, but shared among children most of all. What is it?",
+    "answer": "Smile",
+    "explanation": "A smile can span great distances emotionally, is priceless, and is common to all people.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 308,
+    "question": "Born at the same time as the world, destined to live as long as the world, and yet never five weeks old. What is it?",
+    "answer": "Moon",
+    "explanation": "The moon has been around since Earth's formation, and its phases repeat every 29.5 days, never exceeding five weeks.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 309,
+    "question": "What has wings, but cannot fly? Is enclosed, but can outside also lie? Can open itself up, or close itself away. Is the place of kings and queens, and doggerel of every means. What is it upon which I stand? Which can lead us to different lands.",
+    "answer": "Stage",
+    "explanation": "A stage is the setting for performances by kings and queens (in theater), has curtains (wings), and leads audiences to new worlds.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 310,
+    "question": "A mother had five boys: Marco, Tucker, Webster, and Thomas. Was the fifth boy's name Frank, Evan, or Alex?",
+    "answer": "Frank",
+    "explanation": "Each boy’s name starts with the same letter as the days of the week: Monday, Tuesday, Wednesday, Thursday, and Friday (Frank).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 311,
+    "question": "A pet shop owner had a parrot with a sign on its cage that said 'Parrot repeats everything it hears.' A young man bought the parrot and for two weeks he spoke to it, but it didn’t say a word. He returned the parrot, but the shopkeeper said he never lied about the parrot. How can this be?",
+    "answer": "The parrot was deaf.",
+    "explanation": "The parrot could not hear anything, so it could not repeat what it didn’t hear.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 312,
+    "question": "In the land of the green glass door there are riddles but no answers, sheets but no blankets, and books but no words. Name something found in the land of the green glass door.",
+    "answer": "Any word with two letters next to each other, like 'letters.'",
+    "explanation": "In the land of the green glass door, only words with double letters are allowed.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 313,
+    "question": "There is a clothing store in Bartlesville. The owner has devised his own method of pricing items. A vest costs $20, socks cost $25, a tie costs $15, and a blouse costs $30. Using the method, how much would a pair of underwear cost?",
+    "answer": "$45",
+    "explanation": "The pricing method charges $5 per letter in the item's name (e.g., 'underwear' has 9 letters).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 314,
+    "question": "If you're 8 feet away from a door and with each move you advance half the distance to the door, how many moves will it take to reach the door?",
+    "answer": "You will never reach the door.",
+    "explanation": "With each move covering half the remaining distance, you will always get closer but never fully reach the door.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 315,
+    "question": "I never was, am always to be, No one ever saw me, nor ever will, And yet I am the confidence of all, To live and breathe on this terrestrial ball. Who am I?",
+    "answer": "Tomorrow",
+    "explanation": "Tomorrow is always in the future, never seen, and represents hope and confidence in the future.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 316,
+    "question": "It's been around for millions of years, but is never more than a month old. What is it?",
+    "answer": "The Moon",
+    "explanation": "The moon has been present for eons, but its phases make it appear 'new' every month.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 317,
+    "question": "What can you keep after giving it to someone?",
+    "answer": "Your word",
+    "explanation": "When you give someone your word (a promise), you still keep it as a commitment.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 318,
+    "question": "There was a little heart inside a little white house, which was inside a little yellow house, which was inside a little brown house, which was inside a little green house. What is it?",
+    "answer": "Walnut",
+    "explanation": "A walnut has a kernel (heart) inside several layers of shells (white, yellow, brown, and green).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 319,
+    "question": "I cannot be bought, cannot be sold, even if I'm sometimes made of gold. What am I?",
+    "answer": "Heart",
+    "explanation": "The heart symbolizes emotions, love, and compassion, which cannot be traded, even if represented as gold.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 320,
+    "question": "Although glory but not at my best. Power will fall to me finally, when the man made me is dead. What am I?",
+    "answer": "Prince",
+    "explanation": "A prince becomes a king when the reigning monarch dies, symbolizing a transfer of power.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 321,
+    "question": "I am an English word with 3 consecutive double letters. What am I?",
+    "answer": "Bookkeeper",
+    "explanation": "The word 'bookkeeper' has three consecutive double letters: 'oo,' 'kk,' and 'ee.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 322,
+    "question": "It stands on one leg with its heart in its head. What is it?",
+    "answer": "Cabbage",
+    "explanation": "A cabbage stands on a single stalk (leg) and its core (heart) is located at the top (head).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 323,
+    "question": "As your ideas grow, I shrink. What am I?",
+    "answer": "Pencil",
+    "explanation": "A pencil becomes shorter as it is used to write or draw new ideas.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 324,
+    "question": "What's higher than the king?",
+    "answer": "Crown",
+    "explanation": "The crown is physically placed on top of the king's head, symbolizing authority above him.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 325,
+    "question": "To unravel me you need a simple key, no key that was made by locksmith's hand. But a key that only I will understand. What am I?",
+    "answer": "Riddle",
+    "explanation": "A riddle requires a metaphorical key—understanding or insight—to be solved.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 326,
+    "question": "Toss me out of the window. You'll find a grieving wife. Pull me back but through the door, and watch someone give life. What am I?",
+    "answer": "N",
+    "explanation": "Removing 'N' from 'window' makes 'widow' (grieving wife). Adding 'N' to 'door' makes 'donor' (giver of life).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 327,
+    "question": "My back and belly is wood, and my ribs is lined with leather. I've a hole in my nose and one in my breast, and I'm mostly used in cold weather. What am I?",
+    "answer": "Bellows",
+    "explanation": "Bellows are made of wood and leather, have openings (holes), and are used to blow air, often for fires in cold weather.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 328,
+    "question": "I can honk without using a horn. What am I?",
+    "answer": "Goose",
+    "explanation": "A goose honks naturally without the use of a horn.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 329,
+    "question": "I have two hands but cannot clap. What am I?",
+    "answer": "Clock",
+    "explanation": "A clock has two 'hands' (hour and minute hands), but they cannot clap.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 330,
+    "question": "A precious fluid, thicker than water. What am I?",
+    "answer": "Blood",
+    "explanation": "Blood is considered precious for life and is thicker than water in both a literal and metaphorical sense.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 331,
+    "question": "I am a mother from a family of eight. Spins around all day despite my weight. Had a ninth sibling before finding out its fake. What am I?",
+    "answer": "Earth",
+    "explanation": "The Earth is one of eight planets, spins on its axis, and Pluto was once considered the ninth planet but is now classified as a dwarf planet.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 332,
+    "question": "Where do sailors take their baths?",
+    "answer": "Tubmarine",
+    "explanation": "This is a pun on the word 'submarine,' suggesting a bathtub for sailors.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 333,
+    "question": "What is made of wood but can't be sawed?",
+    "answer": "Sawdust",
+    "explanation": "Sawdust is a byproduct of sawing wood and cannot be sawed itself.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 334,
+    "question": "A young lady walked through the meadow and scattered her glass pearls. The Moon saw this, yet didn't tell her. The Sun woke up and gathered the pearls. What is it?",
+    "answer": "Dew",
+    "explanation": "The 'glass pearls' are dewdrops formed at night and evaporated by the sun during the day.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 335,
+    "question": "Gets rid of bad ones, short and tall. Tightens when used, one size fits all. What am I?",
+    "answer": "Noose",
+    "explanation": "A noose tightens when used and fits any size. It's associated with executions to get rid of 'bad ones.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 336,
+    "question": "Inside a great blue castle lives a shy young maid. She blushes in the morning and comes not out at night. What am I?",
+    "answer": "Sun",
+    "explanation": "The 'great blue castle' refers to the sky, and the 'shy young maid' is the sun, which rises (blushes) in the morning and sets at night.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 337,
+    "question": "I stand up tall and made of steel, with baguettes and garlic at my heel. I love the colours red, white and blue, but obviously not as much as you. I am a marvel for all to see, though to some I am a monstrosity! What am I?",
+    "answer": "Eiffel Tower",
+    "explanation": "The riddle describes the Eiffel Tower in Paris, which is made of steel and is a symbol of France, represented by baguettes, garlic, and the French flag.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 338,
+    "question": "Where do cows go to dance?",
+    "answer": "Meatball",
+    "explanation": "This is a pun; 'meatball' sounds like 'meet ball,' a place where cows could 'dance.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 339,
+    "question": "It's a game played by serious people that takes place on a global scale. What is it?",
+    "answer": "Politics",
+    "explanation": "Politics is often referred to as a serious and global 'game' of power and governance.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 340,
+    "question": "The more you take of me, the more you leave behind. What am I?",
+    "answer": "Footsteps",
+    "explanation": "When you take more steps (footsteps), you leave more behind as you move forward.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 341,
+    "question": "A dagger thrust at my own heart, dictates the way I'm swayed. Left I stand, and right I yield, to the twisting of the blade. What am I?",
+    "answer": "Lock",
+    "explanation": "A lock 'yields' or opens depending on the direction the key (the 'dagger') is turned.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 342,
+    "question": "Bury deep, pile on stones, my mind will always dig up them bones. What am I?",
+    "answer": "Memories",
+    "explanation": "Memories are buried in the mind but resurface even when you try to suppress or forget them.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 343,
+    "question": "It hisses but it's not a snake. It holds water but it's not a lake. When it's done you hear it scream. Pour from it and add some cream. What am I?",
+    "answer": "Teapot",
+    "explanation": "A teapot hisses as it boils water, screams (whistles) when done, and is used for pouring tea, often with cream added.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 344,
+    "question": "This small creature kills even the largest one. What am I?",
+    "answer": "Bacteria",
+    "explanation": "Bacteria, though microscopic, can cause diseases that kill even the largest creatures.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 345,
+    "question": "Never resting, never still. Moving silently from hill to hill. It does not walk, run or trot. All is cool where it is not. What am I?",
+    "answer": "Sunshine",
+    "explanation": "Sunshine moves across hills silently and warms everything it touches, leaving areas cool where it is absent.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 346,
+    "question": "Its tail is round and hollow, seems to get chewed a bit, but you'll rarely see this thing unless the other end is lit. What am I?",
+    "answer": "Pipe",
+    "explanation": "A smoking pipe has a hollow tail (the mouthpiece) that looks chewed, and is only seen in use when lit.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 347,
+    "question": "Whoever makes it, tells it not. Whoever takes it, knows it not. Whoever knows it, wants it not. What am I?",
+    "answer": "Poison",
+    "explanation": "Poison is kept secret by the maker, unknowingly taken by the victim, and unwanted by those who recognize it.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 348,
+    "question": "I am weightless, but you can see me. Put me in a bucket, and I'll make it lighter. What am I?",
+    "answer": "Hole",
+    "explanation": "A hole is weightless, and when added to a bucket, it makes the bucket 'lighter' by letting things out.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 349,
+    "question": "I'm the start of eternity and the end of space. There are two of me in heaven and one in hell. What am I?",
+    "answer": "E",
+    "explanation": "The letter 'E' is the first letter in 'eternity,' the last letter in 'space,' appears twice in 'heaven,' and once in 'hell.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 350,
+    "question": "What liquid can contain the soul?",
+    "answer": "Ink",
+    "explanation": "Ink is metaphorically said to contain the soul through writing, which conveys thoughts and emotions.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 351,
+    "question": "I'm an old relative whose hands can't hold anything and eyes can't see anything. What am I?",
+    "answer": "Grandfather clock",
+    "explanation": "A grandfather clock is called 'grandfather' and has 'hands' (clock hands) and 'eyes' (decorative features) that don't function like human ones.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 352,
+    "question": "It speaks without a tongue, and listens without ears. What am I?",
+    "answer": "Phone",
+    "explanation": "A phone allows people to 'speak' and 'listen' through it, without having its own tongue or ears.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 353,
+    "question": "You need a key to receive an answer from me. The answer you'll find is straight from your mind. What is it?",
+    "answer": "Code",
+    "explanation": "A code requires a 'key' (password) to unlock answers stored within it.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 354,
+    "question": "I am everywhere but cannot be seen, captured or held, only heard. What am I?",
+    "answer": "Voice",
+    "explanation": "A voice is present wherever people are speaking. It can't be seen, touched, or captured physically.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 355,
+    "question": "What gets beaten, and whipped, but never cries?",
+    "answer": "Egg",
+    "explanation": "Eggs are 'beaten' and 'whipped' in cooking, but they don't have emotions to cry.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 356,
+    "question": "Sitting down you have it, Standing up you don't. What is it?",
+    "answer": "Lap",
+    "explanation": "Your lap forms when you sit, but it disappears when you stand.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 357,
+    "question": "I hold two people together but touch only one. What am I?",
+    "answer": "Wedding ring",
+    "explanation": "A wedding ring symbolizes the bond between two people but is worn by one.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 358,
+    "question": "I am a window, I am a lamp, I am clouded, I am shining, I am colored and set in white, I fill with water and overflow. I say much, but I have no words.",
+    "answer": "Eye",
+    "explanation": "The eye can be seen as a window, shining and clouded, and it can fill with tears (water). It conveys much emotion and thought without words.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 359,
+    "question": "This is your stomach's way of letting you know you've neglected it.",
+    "answer": "Grumble",
+    "explanation": "A grumbling stomach is a sign that it is hungry or neglected, often making noise.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 360,
+    "question": "Though it be cold, I wear no clothes, the frost and snow I never fear; I value neither shoes nor hose, And yet I wander far and near: My diet is forever good, I drink no cider, port, nor sack, what Providence doth send for food, I neither buy, nor sell, nor lack.",
+    "answer": "Fish",
+    "explanation": "Fish live in cold water without fear of the cold, wander far and wide, and rely on what they find in nature for food.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 361,
+    "question": "I tremble at each breath of air, and yet can heaviest burdens bear.",
+    "answer": "Water",
+    "explanation": "Water trembles with each breeze or ripple, but is essential in carrying heavy loads like in rivers or transport.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 362,
+    "question": "What covers its face with its hands, speaks no language, yet most known what it's saying?",
+    "answer": "Clock",
+    "explanation": "A clock covers its face with its hands (hour and minute hands) and, though it doesn't speak, its time is understood universally.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 363,
+    "question": "I give life for my own, have a beginning, but my end is unknown. What am I?",
+    "answer": "Sun",
+    "explanation": "The sun gives life to the earth, has a known beginning each day, but its end (sunset) is uncertain and ever-changing.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 364,
+    "question": "I make you weak at the worst of all times. I keep you safe, I keep you fine. I make your hands sweat. And your heart grow cold. I visit the weak, but seldom the bold.",
+    "answer": "Fear",
+    "explanation": "Fear makes people weak and vulnerable, especially in challenging or dangerous situations, and it affects physical symptoms like sweating and coldness.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 365,
+    "question": "Soldiers line up spaced with pride. Two long rows lined side by side. One sole unit can decide, if the rows will unite or divide.",
+    "answer": "Zipper",
+    "explanation": "A zipper consists of two rows of teeth that are united or divided by a single pull unit, the zipper pull.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 366,
+    "question": "Has no feet, but travels far. Is literate, but not a scholar. Has no mouth, yet clearly speaks.",
+    "answer": "Letter",
+    "explanation": "A letter travels far through the mail, is a form of literacy, and conveys messages without speaking.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 367,
+    "question": "Comes in bits and pieces, put together forms a whole. It's athletics for the mind, the more you think the more you find. Sometimes it can be a grind, but then, that is the goal.",
+    "answer": "Puzzle",
+    "explanation": "A puzzle is made of pieces that fit together to form a complete picture, and it requires thinking to solve.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 368,
+    "question": "I am the ultimate killing machine, used not once but TWICE, I can be made by humans. What am I?",
+    "answer": "War",
+    "explanation": "War has devastating consequences and is often repeated, leading to massive loss of life, sometimes even multiple times in different conflicts.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 369,
+    "question": "A muttered rumble was heard from the pen, and I, in my walking stopped to look in. What was this I saw? A massive beast, hoofed, and jawed. With spikes upon its mighty brow, I watched as he struck the turf and prowled. And yet for all of his magnificence, he couldn't get out of that wooden fence.",
+    "answer": "Bull",
+    "explanation": "The riddle describes a powerful bull, which is often seen in pens and has horns, but is confined within the boundaries of a wooden fence.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 370,
+    "question": "Men seize it from its home, tear apart its flesh, drink the sweet blood, then cast its skin aside.",
+    "answer": "Orange",
+    "explanation": "An orange is peeled and its juice (or 'sweet blood') is consumed, with the peel (skin) discarded afterward.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 371,
+    "question": "One of the few times it's encouraged to lock lips with a stranger.",
+    "answer": "CPR",
+    "explanation": "CPR (Cardiopulmonary Resuscitation) sometimes involves mouth-to-mouth resuscitation, where it is encouraged to lock lips with someone to save their life.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 372,
+    "question": "Though it is not an ox, it has horns; Though it is not a donkey, it has packed-saddle; And wherever it goes it leaves silver behind.",
+    "answer": "Snail",
+    "explanation": "A snail has horns (antennae) and a packed-saddle (the spiral shell), and as it moves, it leaves a trail of silver-like slime behind.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 373,
+    "question": "What animal has feet on the head?",
+    "answer": "Lice",
+    "explanation": "Lice are small parasitic insects that live on the scalp, and metaphorically, they can be said to have feet on the head as they attach to hair follicles.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 374,
+    "question": "A house full, a yard full, a chimney full, no one can get a spoonful.",
+    "answer": "Smoke",
+    "explanation": "Smoke can fill a house, yard, and chimney, but it cannot be eaten or spooned.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 375,
+    "question": "What is between heaven and earth?",
+    "answer": "And",
+    "explanation": "The word 'and' literally appears between 'heaven' and 'earth' in the sentence, making it the answer.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 376,
+    "question": "A thousand colored folds stretch toward the sky. Atop a tender strand, rising from the land, until killed by maiden's hand. Perhaps a token of love, perhaps to say goodbye.",
+    "answer": "Flower",
+    "explanation": "A flower blooms with many petals (colored folds), and it is often picked by hand as a symbol of love or farewell.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 377,
+    "question": "To give me to someone I don't belong to is cowardly, but to take me is noble. I can be a game, but there are no winners. What am I?",
+    "answer": "Blame",
+    "explanation": "Blame is often given when it doesn’t belong to someone, but taking responsibility for blame is considered noble.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 378,
+    "question": "What has two spines and a lot of ribs, and carries much but never moves?",
+    "answer": "Train tracks",
+    "explanation": "Train tracks have two metal rails (spines) and are often surrounded by cross ties (ribs). They carry trains but do not move themselves.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 379,
+    "question": "When I get closer my tail grows longer, but when I go away my tail leads the way.",
+    "answer": "Comet",
+    "explanation": "A comet’s tail becomes longer as it approaches the Sun and shorter as it moves away, always trailing behind it.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 380,
+    "question": "Fighting technique taken from rams.",
+    "answer": "Head-butt",
+    "explanation": "Rams are known for their headbutting technique, which is where the fighting technique comes from.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 381,
+    "question": "Stealthy as a shadow in the dead of night, cunning but affectionate if given a bite. Never owned but often loved. At my sport considered cruel, but that's because you never know me at all.",
+    "answer": "Cat",
+    "explanation": "Cats are often stealthy and affectionate, and people often love them, despite some considering their hunting nature as cruel.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 382,
+    "question": "Crooked as a rainbow, and slick as a plate, Ten thousand horses can't pull it straight.",
+    "answer": "River",
+    "explanation": "Rivers are often winding (crooked) and slick due to the water’s flow, and no force can straighten them completely.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 383,
+    "question": "Currency that flirted with a British spy.",
+    "answer": "Miss Moneypenny",
+    "explanation": "Miss Moneypenny is a character from the James Bond series, and the name 'Moneypenny' links to the idea of currency.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 384,
+    "question": "Has feathers but can't fly. Rests on legs but can't walk.",
+    "answer": "Mattress",
+    "explanation": "A mattress has feathers (in some cases) but cannot fly or walk, though it rests on legs (bed frame).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 385,
+    "question": "What is deep within you, never dies or gets worn out, and only needs some fire from time to time?",
+    "answer": "Soul",
+    "explanation": "The soul is often considered an eternal and unchanging part of a person, requiring 'fire' (passion or spirit) to be alive.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 386,
+    "question": "Locked up inside you and yet they can steal it from you.",
+    "answer": "Heart",
+    "explanation": "The heart is often metaphorically locked up inside a person, but someone can 'steal' your heart (fall in love with you).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 387,
+    "question": "This is the tallest peak in the happiest place on earth.",
+    "answer": "Matterhorn",
+    "explanation": "The Matterhorn is the tallest mountain in the Disneyland theme park, often referred to as the 'happiest place on earth.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 388,
+    "question": "My parents are singers, and while my father has red hair I am pale and completely bald.",
+    "answer": "Egg",
+    "explanation": "The 'singers' refer to chickens (often symbolized in stories), with the red hair symbolizing the rooster. The egg is pale and bald.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 389,
+    "question": "I may be made of metal, bone, or wood and have many teeth. My bite hurts no one and the ladies love me. What am I?",
+    "answer": "Comb",
+    "explanation": "A comb is often made from metal, bone, or wood, has many teeth, and is used to style hair, something many people (especially women) enjoy using.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 390,
+    "question": "Green arrows grow out of my sides. I go from yellow to white. My babies fly in the wind. What am I?",
+    "answer": "Dandelion",
+    "explanation": "Dandelions grow with green leaves and turn from yellow to white as they mature. Their seeds fly in the wind.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 391,
+    "question": "I have no voice but I can teach you all there is to know. I have spines and hinges but I am not a door. Once I've told you all, I cannot tell you more. What am I?",
+    "answer": "Book",
+    "explanation": "A book has no voice but can teach, with spines and hinges (bookbinding), and once you’ve read it, it can't tell you more.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 392,
+    "question": "Sharp and long, flag of the world. What is it?",
+    "answer": "Tower",
+    "explanation": "The word 'tower' can be associated with a sharp, long shape, and many flags around the world feature tower-like designs.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 393,
+    "question": "I cannot be felt or moved, but as you come closer, I get more distant. What am I?",
+    "answer": "Horizon",
+    "explanation": "The horizon appears to move farther away as you approach it, and it's not something you can physically touch or move.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 394,
+    "question": "With no hammer or any kind of tool I build my house so quickly. What am I?",
+    "answer": "Spider",
+    "explanation": "Spiders create webs without any tools, using only their silk-producing ability.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 395,
+    "question": "Some live in me, some live on. And some shave me to stride upon. I rarely leave my native land. Until my death I always stand. High and low I may be found. Both above and below ground.",
+    "answer": "Tree",
+    "explanation": "Trees are habitats for many creatures, provide shade, are often rooted to the land, and can live both above and below ground in terms of roots and leaves.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 396,
+    "question": "It is greater than God and more evil than the devil. The poor have it, the rich need it, and if you eat it you'll die.",
+    "answer": "Nothing",
+    "explanation": "Nothing is greater than God, more evil than the devil, the poor have nothing, the rich need nothing, and if you eat nothing, you die.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 397,
+    "question": "Ripped from my mother's womb. Beaten and burned, I become a bloodthirsty killer. What am I?",
+    "answer": "Iron ore",
+    "explanation": "Iron ore is extracted (ripped from the earth), smelted (beaten and burned), and turned into steel, which can be used in weapons (bloodthirsty killer).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 398,
+    "question": "Face with a tree, skin like the sea. A great beast I am. Yet vermin frightens me.",
+    "answer": "Elephant",
+    "explanation": "Elephants are massive (great beast), with skin that resembles the sea (gray and textured), and they are frightened by small creatures (vermin).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 399,
+    "question": "What is round on both ends and hi in the middle?",
+    "answer": "Ohio",
+    "explanation": "The word 'Ohio' is round on both ends (O’s) and 'hi' in the middle.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 400,
+    "question": "Everybody has some. You can lose some, you can gain some. But you cannot live without it. What am I?",
+    "answer": "Blood",
+    "explanation": "Everyone has blood, it can be lost or gained (through transfusions), and it is essential for life.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 410,
+    "question": "I don't think or eat or slumber. Or move around or fear thunder. Just like you I look the same but I can't harm you or be your bane.",
+    "answer": "Doll",
+    "explanation": "A doll looks like a person but doesn’t have the ability to think, eat, or harm.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 411,
+    "question": "If you agree give me one of these.",
+    "answer": "Amen",
+    "explanation": "When people agree or confirm something, especially in prayer, they say 'Amen'.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 412,
+    "question": "The more you look at it, The less you see.",
+    "answer": "Sun",
+    "explanation": "The sun is so bright that the more you try to look at it, the less you can actually see.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 413,
+    "question": "What fruit is of great use in history?",
+    "answer": "Date",
+    "explanation": "Dates are one of the oldest cultivated fruits in history, often mentioned in historical texts.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 414,
+    "question": "All about the house, with his lady he dances, yet he always works, and never romances.",
+    "answer": "Broom",
+    "explanation": "The broom sweeps around the house and works constantly, but doesn't engage in romance or other distractions.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 415,
+    "question": "I may seem real but it always turns out. I was never there in the first place... You only see me during a certain resting stage. What am I?",
+    "answer": "Dream",
+    "explanation": "Dreams often feel real but aren't actually happening; they are experienced during sleep, a resting stage.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 416,
+    "question": "He died for people's entertainment.",
+    "answer": "Gladiator",
+    "explanation": "Gladiators fought and often died for the entertainment of the Roman public in ancient times.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 417,
+    "question": "Covered in stone and sun. It's home to many but also none. What is it?",
+    "answer": "Cemetery",
+    "explanation": "A cemetery is covered in stone (gravestones) and exposed to the sun. It’s home to many people, but no one lives there.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 418,
+    "question": "I encourage people to run home and steal. What am I?",
+    "answer": "Baseball",
+    "explanation": "In baseball, players 'run home' as part of the game. The stealing refers to stealing bases.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 419,
+    "question": "What is that which, though black itself, enlightens the world without burning?",
+    "answer": "Ink",
+    "explanation": "Ink is black, but it’s used to write and communicate, which spreads knowledge without burning.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 420,
+    "question": "It is a part of us, and then replaced. It escapes our bodies, to a better place. The world becomes its sizeable home. Its passions unrestrained, the planet it roams.",
+    "answer": "Water",
+    "explanation": "Water is essential to life, it leaves our bodies (through sweat, tears, etc.), and it’s found all around the planet.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 421,
+    "question": "You may have to assure your date's dad that you have these kind of intentions.",
+    "answer": "Honorable",
+    "explanation": "When meeting someone's parents, especially a date's father, you may need to reassure him that your intentions are honorable.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 422,
+    "question": "Has its teeth on your head but doesn't bite.",
+    "answer": "Comb",
+    "explanation": "A comb has 'teeth' that are used for grooming hair but doesn’t bite.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 423,
+    "question": "Both guys and women enhance their visual organs with this item.",
+    "answer": "Eyeliner",
+    "explanation": "Eyeliner is used by both men and women to enhance their eyes.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 424,
+    "question": "You can spin, wheel and twist, but this thing can turn without moving. What is it?",
+    "answer": "Milk",
+    "explanation": "Milk turns into butter when churned, even though the milk itself doesn’t move, only the churning mechanism does.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 425,
+    "question": "Four legs in front, two behind; Its steely armor scratched and dented by rocks and sticks; still it toils as it helps feed the hungry.",
+    "answer": "Plow",
+    "explanation": "A plow has four legs at the front, two behind (its handles), and is used to till the soil to help grow crops, despite being scratched by rocks.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 426,
+    "question": "My tines be long, my tines be short. My tines end ere, my first report. What am I?",
+    "answer": "Lightning",
+    "explanation": "Lightning has long and short tines (the branches of the bolt), and it ends before it reports (thunder comes after the lightning).",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 427,
+    "question": "Sometimes dark and sometimes bright, I make my way among twinkling lights. Seas and oceans obey my call, yet mountains I cannot move at all. My face is marred and gray, but I'm majestic anyway. What am I?",
+    "answer": "Moon",
+    "explanation": "The moon can be dark or bright, influences the tides of the oceans, and has a gray surface but is still majestic in the sky.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 428,
+    "question": "A great mysterious place that the bold have been known to journey into.",
+    "answer": "Unknown",
+    "explanation": "The unknown is often considered a mysterious place that adventurers or bold individuals venture into.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 429,
+    "question": "What has four wings but cannot fly and uses the wind but does not know why?",
+    "answer": "Windmill",
+    "explanation": "A windmill has four blades (like wings) but doesn’t fly, and it uses the wind to turn, but it doesn’t understand why.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 430,
+    "question": "My uses are changing, but I still remain the same. My interior is quiet, and stories are my game. What am I?",
+    "answer": "Library",
+    "explanation": "A library's purpose may evolve, but it remains a place for quiet and stories. Its function has always been about information and reading.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 431,
+    "question": "Five hundred begins it, five hundred ends it. Five in the middle is seen. First of all figures, the first of all letters. Take up their stations between. Join all together, and then you will bring before you the name of an eminent king.",
+    "answer": "David",
+    "explanation": "This riddle refers to Roman numerals: D (500) at the beginning and end, V (5) in the middle, I (1) as the first letter of 'figures,' and the letter A, leading to the name 'David.'",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 432,
+    "question": "Many foods can make me strong but give me water and I won't last long.",
+    "answer": "Fire",
+    "explanation": "Fire is fueled by many materials, but water extinguishes it quickly.",
+    "category": "Logic",
+    "difficulty": "Hard",
+    "points": 15
+  },
+  {
+    "id": 608,
+    "question": "What devours all and can kill a king. Destroy a town and crushes mountains down?",
+    "answer": "Time",
+    "explanation": "Time erodes everything—kingdoms, towns, and even mountains.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 609,
+    "question": "I have two arms, but fingers none. I have two feet, but cannot run. I carry well, but I have found I carry best with my feet off the ground. What am I?",
+    "answer": "Wheelbarrow",
+    "explanation": "A wheelbarrow has two arms and feet for support but moves best when lifted and rolled.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 610,
+    "question": "Many people own a copy of me. Without me, the world would fall. What am I?",
+    "answer": "Atlas",
+    "explanation": "An atlas contains maps of the world, and without it, navigation and understanding geography would be difficult.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 611,
+    "question": "A prickly house a little host contains; The pointed weapons keep back from pains, So he, unarmed, safe in his fort remains.",
+    "answer": "Hedgehog",
+    "explanation": "A hedgehog is a small creature protected by its sharp spines, resembling a prickly house.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 612,
+    "question": "There she goes over the road, a young mare that is whinnying. A fiery spot on her forehead, with her hindquarters ablaze.",
+    "answer": "Thunder",
+    "explanation": "The riddle describes a storm, with lightning being the fiery spot and thunder being the 'whinnying' sound.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 613,
+    "question": "I heard of a wonder, of words moth-eaten. That is a strange thing, I thought, weird. That a man's song be swallowed by a worm. His blinded sentences, his bedside stand-by rustled in the night - and the robber-guest. Not one wit the wiser. For the words he had mumbled.",
+    "answer": "Bookworm",
+    "explanation": "A bookworm refers to both a person who loves reading and the literal insects that damage books.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 614,
+    "question": "As strong as love, more dangerous than cancer.",
+    "answer": "Hate",
+    "explanation": "Hate is an intense emotion that can lead to destructive outcomes, making it both strong and dangerous.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 615,
+    "question": "I am full of wisdom and knowledge. I get what you want in a blink of an eye. I am known to man as full of endless wisdom. What am I?",
+    "answer": "Computer",
+    "explanation": "A computer is a repository of information and provides access to vast knowledge.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 616,
+    "question": "I twist and turn and leave a loop. What am I?",
+    "answer": "Shoelace",
+    "explanation": "Shoelaces are twisted and tied into loops to secure shoes.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 617,
+    "question": "I come in many shapes and colors. I sing in the breeze but only live 7 months. What am I?",
+    "answer": "Leaf",
+    "explanation": "Leaves have various shapes and colors, rustle in the wind, and often fall within a season.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 618,
+    "question": "Who makes it, has no need of it. Who buys it, has no use for it. Who uses it can neither see nor feel it. What is it?",
+    "answer": "Coffin",
+    "explanation": "A coffin is made by someone who doesn't need it, bought by someone who won’t use it, and used by someone who is no longer alive.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 619,
+    "question": "I fly to any foreign parts, assisted by my spreading wings. My body holds a hundred hearts. Nay, I will tell you stranger things. When I am not in haste I ride, and then I mend my pace anon. I issue fire from my side. You witty youths, this riddle con.",
+    "answer": "Ship",
+    "explanation": "A ship has sails (spreading wings), can carry many people (hearts), and can be powered by fire in steam engines or fuel.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 620,
+    "question": "What do pandas have that no other animal has?",
+    "answer": "Baby pandas",
+    "explanation": "Baby pandas are unique to pandas; no other species can have them.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 621,
+    "question": "The floor's on top, the roof's beneath, and from this place I rarely leave. Yet with the passing of each day, a new horizon greets my gaze.",
+    "answer": "Sailor",
+    "explanation": "A sailor's ship can flip their perception, with the sea as their horizon.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 622,
+    "question": "What is harder to catch the faster you run?",
+    "answer": "Your breath",
+    "explanation": "When running, it becomes harder to catch your breath as you tire.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 623,
+    "question": "This mother comes from a family of eight, supports her children in spite of their weight, turns around without being called, has held you since the time you crawled.",
+    "answer": "Earth",
+    "explanation": "Earth is part of the solar system (family of eight), supports life, rotates (turns), and has always supported humanity.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 624,
+    "question": "They are two brothers. However much they run, they do not reach each other.",
+    "answer": "Wheels",
+    "explanation": "Wheels spin endlessly but never touch each other despite being on the same axle.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 625,
+    "question": "What is it that no man ever saw, which never was, but always will be?",
+    "answer": "Tomorrow",
+    "explanation": "Tomorrow is always in the future, never seen, but always approaching.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 626,
+    "question": "In 1990, a person is 15 years old. In 1995, that same person is 10 years old. How can this be?",
+    "answer": "The person was born in 2005 B.C. (Before Christ). Therefore, they were 5 years old in 2000 B.C, 10 in 1995 B.C, and 15 in 1990 B.C.",
+    "explanation": "This riddle plays on the concept of B.C., where the years count backward.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 627,
+    "question": "What can you lose that will cause other people to lose theirs too?",
+    "answer": "Temper",
+    "explanation": "When someone loses their temper, it often causes others around them to become angry or lose their composure.",
+    "category": "Logic",
+    "difficulty": "Easy",
+    "points": 5
+  },
+  {
+    "id": 628,
+    "question": "When it comes to me, you go on red and stop on green. What am I?",
+    "answer": "Watermelon",
+    "explanation": "In the riddle, the colors refer to the rind (green) and the inside (red) of the watermelon, where you stop eating when you reach the rind.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 629,
+    "question": "I go around and in the house, but never touch the house. What am I?",
+    "answer": "Sun",
+    "explanation": "The sun goes around the Earth and through the sky, but it never physically touches the house.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 630,
+    "question": "It stands upright and can be quite grand. Its secret is not hidden but right at hand. What is it?",
+    "answer": "Piano",
+    "explanation": "A piano stands upright (upright piano), is often grand in appearance, and its keys are easily accessible.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 631,
+    "question": "It cannot be seen, it cannot be felt, Cannot be heard, cannot be smelt, Lies behind stars and under hills, and empty holes it fills. Comes first follows after, Ends life kills laughter.",
+    "answer": "Darkness",
+    "explanation": "Darkness is invisible, intangible, and exists everywhere. It fills empty spaces, comes before light, and can symbolize the end of life or happiness.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 632,
+    "question": "What must take a bow before it can speak?",
+    "answer": "Violin",
+    "explanation": "A violin requires a bow to play, which must be used before it can produce sound.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 633,
+    "question": "I beam, I shine, I sparkle white. I'll brighten the day with a single light. I'll charm and enchant all. I'll bring the best in you all. What am I?",
+    "answer": "Smile",
+    "explanation": "A smile shines brightly, brightens someone's day, and often brings out the best in others.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 634,
+    "question": "What is so delicate that saying its name breaks it?",
+    "answer": "Silence",
+    "explanation": "Saying the word 'silence' breaks the silence itself, making it no longer quiet.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 635,
+    "question": "Lives without a body, hears without ears, speaks without a mouth, to which the air alone gives birth. What is it?",
+    "answer": "Echo",
+    "explanation": "An echo is a sound that bounces back, heard without ears, and produced by the air, despite having no body or mouth of its own.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 636,
+    "question": "What moves across the land but never has to steer? It has delivered our goods year after year. What is it?",
+    "answer": "Train",
+    "explanation": "A train moves across the land along tracks without needing to steer, delivering goods and passengers over long distances.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 637,
+    "question": "I am always in front of you, but you will never see me. What am I?",
+    "answer": "Future",
+    "explanation": "The future is always ahead of us, but we cannot see it because it has not happened yet.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 638,
+    "question": "They try to beat me, they try in vain. And when I win, I end the pain.",
+    "answer": "Death",
+    "explanation": "Death is often something people try to avoid or escape, but in the end, it always wins, and it can end suffering.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 639,
+    "question": "I am rarely touched but often held, and if you are smart you'll use me well. What am I?",
+    "answer": "Tongue",
+    "explanation": "The tongue is often 'held' in a figurative sense when we speak, but it is rarely physically touched. Using the tongue wisely can be a mark of intelligence.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 640,
+    "question": "I am not alive but seem so, because I dance and breathe with no legs or lungs of my own. What am I?",
+    "answer": "Flame",
+    "explanation": "A flame appears to be alive because it moves, flickers, and 'breathes', but it is not a living entity. It doesn't have legs or lungs, but it reacts to the environment.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 641,
+    "question": "Has a tongue, but never talks. Has no legs, but sometimes walks.",
+    "answer": "Shoe",
+    "explanation": "A shoe has a 'tongue' (the part under the laces), but it does not talk. It has no legs but can 'walk' when worn by a person.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 642,
+    "question": "What has green hair, a round red head and a long thin white beard?",
+    "answer": "Radish",
+    "explanation": "A radish has a green leafy top (green hair), a round red root (head), and a white root (beard).",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 643,
+    "question": "I cause involuntary movements in your vehicle. What am I?",
+    "answer": "Tow truck",
+    "explanation": "A tow truck moves vehicles that cannot move on their own, causing involuntary movement of the vehicle it is towing.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 644,
+    "question": "Green but not a lizard, white without being snow, and bearded without being a man.",
+    "answer": "Leek",
+    "explanation": "A leek is green in color, white at the base, and has long leafy green tops that resemble a beard.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 645,
+    "question": "I have two legs, but they only touch the ground while I'm at rest. What am I?",
+    "answer": "Wheelbarrow",
+    "explanation": "A wheelbarrow has two legs (the handles), but they only touch the ground when it is at rest. When it's being used, it is lifted off the ground by its single wheel.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 646,
+    "question": "It's shorter than the rest, but when you're happy, you raise it up like it's the best. What is it?",
+    "answer": "Thumb",
+    "explanation": "The thumb is shorter than the other fingers, and when people are happy or approve of something, they raise their thumb to show it.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 647,
+    "question": "A man lives on the top floor of a hotel. When he is out with a friend or out on a rainy day, he comes back, goes to the elevator, and goes to the top floor. When he goes out alone or on a sunny day, he goes halfway up and walks the rest of the way up. Why?",
+    "answer": "He was using an umbrella or had a tall friend to push the buttons for high floors",
+    "explanation": "On rainy days, he uses an umbrella or has a tall friend to press the elevator button for the top floor, but on sunny days, he can't reach the button for the top floor and thus only goes halfway up and walks the rest.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 648,
+    "question": "What word in the English language does the following: the first two letters signify a male, the first three letters signify a female, the first four letters signify a great, while the entire word signifies a great woman. What is the word?",
+    "answer": "Heroine",
+    "explanation": "The word 'heroine' fits the clues: 'he' signifies a male, 'her' signifies a female, 'hero' signifies greatness, and 'heroine' signifies a great woman.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 649,
+    "question": "I am the reason you run. I am the reason you scream. I am the cause of your pain. I am a cage from which you will never be free. What am I?",
+    "answer": "Your body",
+    "explanation": "Your body is the reason you experience physical pain, run, and scream. It is a cage because you're trapped within it, and you cannot escape from it.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 650,
+    "question": "A prisoner is told: 'If you tell a lie, we will hang you and if you tell the truth, we will shoot you'. What did the prisoner say to save himself?",
+    "answer": "'You will hang me.'",
+    "explanation": "If the prisoner says 'You will hang me,' it creates a paradox: if they shoot him, they would be making his statement true, so they must hang him. But if they hang him, his statement becomes false, so they must shoot him. Therefore, he cannot be executed in either way.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 651,
+    "question": "Born in an instant. I tell all stories. I can be lost. But I never die. What am I?",
+    "answer": "Memories",
+    "explanation": "Memories are born in an instant, they tell stories of the past, they can be lost but never truly die as they can be recalled at any time.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 652,
+    "question": "I am a term used to confirm. But take away my front, my face, I become known as human avarice. What am I?",
+    "answer": "Agreed",
+    "explanation": "The word 'agreed' is used to confirm something, and when you take away the 'A' (the front, or face of the word), you're left with 'greed,' which is human avarice.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 653,
+    "question": "Four golfers named Mr. Black, Mr. White, Mr. Brown, and Mr. Blue were competing in a tournament. The caddy didn't know their names, so he asked them. One of them, Mr. Brown, told a lie. The 1st golfer said 'The 2nd Golfer is Mr. Black.' The 2nd golfer said 'I am not Mr. Blue!' The 3rd golfer said 'Mr. White? That's the 4th golfer.' And the 4th golfer remained silent. Which one of the golfers is Mr. Blue?",
+    "answer": "The 3rd one",
+    "explanation": "Since Mr. Brown lies, the other golfers' statements must be true. The first golfer's statement means Mr. Black is not the second golfer, and the second golfer's statement confirms he is not Mr. Blue. The third golfer’s statement indicates the fourth golfer isn’t Mr. White, and since the fourth golfer says nothing, he must be Mr. Blue.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 654,
+    "question": "From the beginning of eternity to the end of time and space, to the beginning of every end, and the end of every place. What am I?",
+    "answer": "The letter 'E'",
+    "explanation": "The letter 'E' is found in 'eternity,' 'time,' 'space,' 'every end,' and 'every place.'",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 655,
+    "question": "What runs but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?",
+    "answer": "River",
+    "explanation": "A river runs but never walks, has a mouth but doesn't speak, has a head but doesn’t cry, and a bed but doesn't sleep.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 656,
+    "question": "I am the beginning of everything, the end of time and space, the beginning of every end, and the end of every place. What am I?",
+    "answer": "The letter 'E'",
+    "explanation": "The letter 'E' is the first letter of 'everything,' the last letter of 'time,' 'space,' 'end,' and 'place.'",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 657,
+    "question": "What gets bigger the more you take away?",
+    "answer": "Hole",
+    "explanation": "The more you take away from a hole, the larger it becomes.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 658,
+    "question": "What moves across the land but never has to steer? It has delivered our goods year after year. What is it?",
+    "answer": "Train",
+    "explanation": "A train moves across the land, delivers goods, and doesn’t need to steer as it follows the tracks.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 659,
+    "question": "I am always in front of you, but you will never see me. What am I?",
+    "answer": "Future",
+    "explanation": "The future is always ahead of you, but it’s something you can never physically see.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 660,
+    "question": "They try to beat me, they try in vain. And when I win, I end the pain.",
+    "answer": "Death",
+    "explanation": "People may try to avoid or beat death, but ultimately, when it comes, it ends all suffering.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 661,
+    "question": "I am rarely touched but often held, and if you are smart you'll use me well. What am I?",
+    "answer": "Tongue",
+    "explanation": "The tongue is rarely touched but is often held in the mouth, and it should be used wisely.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 662,
+    "question": "There are 500 coffins and 500 men who need them. The undertaker asks the first man to go to every coffin and open them. Then he tells the second man to go to every one and close it. The third one goes to every third coffin and so on. How many are open?",
+    "answer": "22",
+    "explanation": "The coffins that are open are those whose positions are perfect squares (1, 4, 9, 16, 25, etc.). The total count of these positions is 22.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 663,
+    "question": "What has a mouth but can't talk?",
+    "answer": "River",
+    "explanation": "A river has a mouth, but it cannot speak.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 664,
+    "question": "Once I'm 24. Twice I'm 20. Three times I'm inappropriate. What am I?",
+    "answer": "The letter 'X'",
+    "explanation": "The letter 'X' represents 24 in Roman numerals, 20 in Roman numerals when repeated, and can be considered inappropriate as it’s sometimes used to mark something 'adult.'",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 665,
+    "question": "What stays where it is when it goes off?",
+    "answer": "Alarm clock",
+    "explanation": "An alarm clock goes off (starts ringing) but stays in its position.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 666,
+    "question": "You have to travel far before you turn it over. What is it?",
+    "answer": "Odometer",
+    "explanation": "An odometer measures the distance traveled, and you have to travel a significant distance before it 'turns over' (reaches its limit and starts from zero).",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 667,
+    "question": "What does a rich man need that a poor man has?",
+    "answer": "Nothing",
+    "explanation": "A rich man doesn’t need anything, because he already has wealth, while a poor man has nothing.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 668,
+    "question": "How far can a dog run into the woods?",
+    "answer": "Only halfway, after that, he's running out of the woods.",
+    "explanation": "A dog can only run halfway into the woods; after that, it's running out of the woods.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 669,
+    "question": "Turn me on my side and I am everything. Cut me in half and I am nothing. What am I?",
+    "answer": "The number 8",
+    "explanation": "When you turn the number 8 on its side, it becomes the symbol for infinity (everything). If you cut the number 8 in half, you get two zeros (nothing).",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 670,
+    "question": "I can be flipped and broken but I never move. I can be closed, and opened, and sometimes removed. I am sealed by hands. What am I?",
+    "answer": "Deal",
+    "explanation": "A 'deal' can be made (flipped and broken), but it never moves. It can be closed, opened, and sometimes removed, and it is often sealed by a handshake or agreement.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 671,
+    "question": "Which eight-letter word still remains a word after removing each letter from it?",
+    "answer": "Staring",
+    "explanation": "The word 'staring' still forms a valid word after removing each letter: staring, starting, staring, string, sting, sing, sin, in, I.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 675,
+    "question": "What can you hold in your left hand and not in your right?",
+    "answer": "Your right elbow",
+    "explanation": "You can hold your right elbow with your left hand, but not with your right hand.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
+  },
+  {
+    "id": 676,
+    "question": "What is the longest fruit?",
+    "answer": "Longan",
+    "explanation": "Longan is a type of fruit, and it’s known for its long shape, making it the longest fruit.",
+    "category": "Logic",
+    "difficulty": "Medium",
+    "points": 10
   }
 ]

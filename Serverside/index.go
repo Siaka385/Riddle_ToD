@@ -27,17 +27,25 @@ type UserLevelInfo struct {
 }
 
 func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, db *gorm.DB, sessionn *sessions.CookieStore, category string) {
+	
+
+	session, _ := sessionn.Get(request, "session-name")
+
+	//username := session.Values["Username"]
+	userId := session.Values["User_ID"]
+	username := session.Values["Username"]
+	isLogged := session.Values["Authenticated"]
+
+	if username == nil || isLogged == false {
+		http.Redirect(responseWriter, request, "/intro", http.StatusFound)
+		return
+	}
 	templateFile, err := template.ParseFiles("UserDashboard.html")
 	if err != nil {
 		//http.Error(responseWriter, "Server Error", http.StatusInternalServerError)
 		fmt.Println("template error", err)
 		os.Exit(1)
 	}
-
-	session, _ := sessionn.Get(request, "session-name")
-
-	//username := session.Values["Username"]
-	userId := session.Values["User_ID"]
 
 	pageContent := IndexContent{}
 	userlevel, err := FetchUserLevel(db, userId)
@@ -79,7 +87,7 @@ func RenderIndexPage(responseWriter http.ResponseWriter, request *http.Request, 
 
 func FetchUserLevel(db *gorm.DB, userids any) (UserLevelInfo, error) {
 	var userLevel UserLevelInfo
-	fmt.Println(userids)
+
 	// Perform the query
 	if err := db.Model(&database.PlayerLevel{}).
 		Select("Level").
@@ -119,7 +127,6 @@ func FetchAvatarIcon(db *gorm.DB, userids any) (string, error) {
 		return avatarIcon, fmt.Errorf("failed to fetch user level: %w", err)
 	}
 
-	fmt.Println("AVATAR:", avatarIcon)
 	return avatarIcon, nil
 }
 
@@ -133,7 +140,6 @@ func FetchUsername(db *gorm.DB, userids any) (string, error) {
 		Scan(&Username).Error; err != nil {
 		return Username, fmt.Errorf("failed to fetch user level: %w", err)
 	}
-	fmt.Println("username:", Username)
 	return Username, nil
 
 }

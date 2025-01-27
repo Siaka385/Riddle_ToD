@@ -31,99 +31,99 @@ type Hint struct {
 	Text     string `json:"text"`
 }
 
-var SelectedRiddles []Riddle
-var RiddleChoices map[int][]Choice = make(map[int][]Choice)
-var RiddleHint map[int][]Hint = make(map[int][]Hint)
+var FilteredRiddles []Riddle
+var RiddleChoicesMap map[int][]Choice = make(map[int][]Choice)
+var RiddleHintsMap map[int][]Hint = make(map[int][]Hint)
 
-// LoadRiddle loads riddles from a JSON file, filters them based on selected categories, and writes filtered riddles to a new file.
-func LoadRiddle(w http.ResponseWriter, r *http.Request, selectedCategories string, db *gorm.DB) {
-
+// LoadRiddlesFromDB retrieves riddles based on the selected category, generates choices and hints, and writes the riddles to a JSON file.
+func LoadRiddlesFromDB(w http.ResponseWriter, r *http.Request, category string, db *gorm.DB) {
+	// Retrieve riddles from the database
 	err := db.Model(&database.Riddle{}).
-		Select("ID,Question,Answer,Explanation,Category,Difficulty,Points").
-		Where("category = ?", selectedCategories).
-		Find(&SelectedRiddles).Error
+		Select("ID, Question, Answer, Explanation, Category, Difficulty, Points").
+		Where("category = ?", category).
+		Find(&FilteredRiddles).Error
 
 	if err != nil {
 		fmt.Println("Error retrieving riddles:", err)
-	} else {
-		fmt.Println("Retrieved riddles:", SelectedRiddles[0])
+		os.Exit(1)
 	}
+	// Write the filtered riddles to a JSON file
+	WriteRiddlesToFile(w, r)
 
-	// Write filtered riddles to a new file
-	WriteFilteredRiddles(w, r)
-	GenerateChoices(db)
-	fmt.Println(RiddleChoices)
-	GenerateHints(db)
-	fmt.Println(RiddleHint)
+	// Generate choices and hints for the riddles
+	GenerateRiddleChoices(db)
+	//fmt.Println(RiddleChoicesMap)
+	GenerateRiddleHints(db)
+	//fmt.Println(RiddleHintsMap)
 }
 
-// WriteFilteredRiddles writes the filtered riddles to a new JSON file.
-func WriteFilteredRiddles(w http.ResponseWriter, r *http.Request) {
-	if len(SelectedRiddles) == 0 {
-		fmt.Println("No riddles to select")
+// WriteRiddlesToFile writes the filtered riddles to a JSON file.
+func WriteRiddlesToFile(w http.ResponseWriter, r *http.Request) {
+	if len(FilteredRiddles) == 0 {
+		fmt.Println("No riddles to save to file.")
 		os.Exit(1)
 	}
 
 	file, err := os.Create("FilteredRiddles.json")
 	if err != nil {
-		fmt.Println("Error creating the JSON file")
+		fmt.Println("Error creating the JSON file.")
 		os.Exit(1)
 	}
 	defer file.Close()
 
 	// Serialize the riddles to JSON format
-	jsonData, err := json.MarshalIndent(SelectedRiddles, "", "  ")
+	jsonData, err := json.MarshalIndent(FilteredRiddles, "", "  ")
 	if err != nil {
-		fmt.Println("Error converting riddles to JSON")
+		fmt.Println("Error converting riddles to JSON.")
 		os.Exit(1)
 	}
 
 	// Write the JSON data to the file
 	err = os.WriteFile(file.Name(), jsonData, 0o644)
 	if err != nil {
-		fmt.Println("Error writing to JSON file")
+		fmt.Println("Error writing to JSON file.")
 		os.Exit(1)
 	}
 }
 
-func GenerateChoices(db *gorm.DB) {
-	// Loop through the selected riddles
-	for i := 0; i < len(SelectedRiddles); i++ {
-		var riddleChoices []Choice // Reset the slice to avoid appending from previous iterations
+// GenerateRiddleChoices populates the RiddleChoicesMap with choices for each riddle.
+func GenerateRiddleChoices(db *gorm.DB) {
+	for i := 0; i < len(FilteredRiddles); i++ {
+		var choices []Choice // Reset the slice for each riddle
 
-		// Retrieve the choices for the current riddle
+		// Retrieve choices for the current riddle
 		err := db.Model(&database.Choice{}).
 			Select("ID, Text").
-			Where("riddle_id = ?", SelectedRiddles[i].ID). // Note that riddle_id is the foreign key in the database
-			Find(&riddleChoices).Error
-		//	time.Sleep(3 * time.Second)
+			Where("riddle_id = ?", FilteredRiddles[i].ID).
+			Find(&choices).Error
+
 		if err != nil {
-			fmt.Println("ERROR RETRIEVING THE CHOICES:", err)
-			continue // Skip to the next riddle if an error occurs
+			fmt.Println("Error retrieving choices for riddle ID", FilteredRiddles[i].ID, ":", err)
+			continue
 		}
 
-		// Store the retrieved choices in the map
-		RiddleChoices[SelectedRiddles[i].ID] = riddleChoices
+		// Store the choices in the map
+		RiddleChoicesMap[FilteredRiddles[i].ID] = choices
 	}
 }
 
-func GenerateHints(db *gorm.DB) {
-	// Loop through the selected riddles
-	for i := 0; i < len(SelectedRiddles); i++ {
-		var riddleHints []Hint // Reset the slice to avoid appending from previous iterations
+// GenerateRiddleHints populates the RiddleHintsMap with hints for each riddle.
+func GenerateRiddleHints(db *gorm.DB) {
+	for i := 0; i < len(FilteredRiddles); i++ {
+		var hints []Hint // Reset the slice for each riddle
 
-		// Retrieve the hints for the current riddle
-		err := db.Model(&Hint{}).
+		// Retrieve hints for the current riddle
+		err := db.Model(&database.Hint{}).
 			Select("ID, Text").
-			Where("riddle_id = ?", SelectedRiddles[i].ID). // Note that riddle_id is the foreign key in the database
-			Find(&riddleHints).Error
+			Where("riddle_id = ?", FilteredRiddles[i].ID).
+			Find(&hints).Error
 
 		if err != nil {
-			fmt.Println("ERROR RETRIEVING THE HINTS:", err)
-			continue // Skip to the next riddle if an error occurs
+			fmt.Println("Error retrieving hints for riddle ID", FilteredRiddles[i].ID, ":", err)
+			continue
 		}
 
-		// Store the retrieved hints in the map
-		RiddleHint[SelectedRiddles[i].ID] = riddleHints
+		// Store the hints in the map
+		RiddleHintsMap[FilteredRiddles[i].ID] = hints
 	}
 }

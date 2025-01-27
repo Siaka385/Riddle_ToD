@@ -1,7 +1,6 @@
 package Serverside
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
 )
@@ -19,7 +18,6 @@ func Playsection(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Error file", http.StatusInternalServerError)
 		}
 	} else if path == "timeattack" {
-		fmt.Println("helo")
 		temp, err := template.ParseFiles("soloPlayer/timeattack.html")
 		if err != nil {
 			http.Error(w, "Error file", http.StatusInternalServerError)

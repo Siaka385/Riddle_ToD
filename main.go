@@ -11,7 +11,7 @@ import (
 	"gorm.io/gorm"
 
 	"Riddle_ToD/Serverside"
-	//	rid "Riddle_ToD/Serverside/addriddles"
+	//rid "Riddle_ToD/Serverside/addriddles"
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
 	difficulty "Riddle_ToD/Serverside/difficult"
@@ -41,7 +41,7 @@ func main() {
 	InitilizeDatabase()
 
 	r := mux.NewRouter()
-	//	rid.Addriddle(db)
+	//rid.Addriddle(db)
 	// Authentication and Registration Routes
 	r.HandleFunc("/loginpage", Serverside.RenderAuthPage).Methods("GET")
 	r.HandleFunc("/registerpage", Serverside.RenderAuthPage).Methods("GET")
@@ -64,6 +64,7 @@ func main() {
 	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store, "category") }).Methods("GET")
 
 	// Gameplay Routes
+	r.HandleFunc("/gameplaymode/{category}/{mode}", func(w http.ResponseWriter, r *http.Request) { loadriddle.LoadRiddles(w, r, db, Store) }).Methods("GET")
 	r.HandleFunc("/gameplaymode/{category}", func(w http.ResponseWriter, r *http.Request) { loadriddle.Selectmode(w, r, db, Store) }).Methods("GET")
 	r.HandleFunc("/playsection", Serverside.Playsection).Methods("GET")
 	//r.HandleFunc("/difficultySetting", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("soloPlayer/difficult.html", w) }).Methods("GET")
@@ -71,8 +72,8 @@ func main() {
 		difficulty.DifficultHandler(w, r, Store, db)
 	}).Methods("GET")
 	r.HandleFunc("/setdifficult", func(w http.ResponseWriter, r *http.Request) { difficulty.SetPlayerDifficulty(w, r, db, Store) }).Methods("POST")
+	r.HandleFunc("/loadriddle", func(w http.ResponseWriter, r *http.Request) { loadriddle.RiddleLoaders(w, r, Store) }).Methods("POST")
 
-	// Serve Static Files
 	// Serve Static Files
 	r.PathPrefix("/indexFolder/").Handler(http.StripPrefix("/indexFolder/", http.FileServer(http.Dir("indexFolder"))))
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))

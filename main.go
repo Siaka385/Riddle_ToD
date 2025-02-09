@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"sync"
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
@@ -20,20 +19,13 @@ import (
 	utils "Riddle_ToD/Serverside/utils"
 )
 
-var (
-	db *gorm.DB
-	mu sync.Mutex
-)
+var db *gorm.DB
 
-// Note: Don't store your key in your source code. Pass it via an
-// environmental variable, or flag (or both), and don't accidentally commit it
-// alongside your code. Ensure your key is sufficiently random - i.e. use Go's
-// crypto/rand or securecookie.GenerateRandomKey(32) and persist the result.
 var Store *sessions.CookieStore
 
 func InitilizeDatabase() {
 	db = database.Init()
-	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomString(40)))
+	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomKey()))
 }
 
 func main() {

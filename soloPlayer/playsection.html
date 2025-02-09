@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riddle Realm of Dread - Game</title>
-    <link rel="stylesheet" href="starterbootstrap.css">
-    <link rel="stylesheet" href="../css/playsection.css">
+    <!-- <link rel="stylesheet" href="starterbootstrap.css"> -->
+    <link rel="stylesheet" href="/css/playsection.css">
 </head>
 <body>
     <div class="boxcontainer game-container">
@@ -23,18 +23,18 @@
         </div>
 
         <div class="riddle">
-            <h2>I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</h2>
+            <h2 id="riddleQustion"></h2>
         </div>
 
         <div id="hint" class="hint" style="display: none;">
-            Hint: I repeat what you say without a mouth.
+            Hint: <span id="riddleHint">rrrrrrrrrrr</span>
         </div>
 
         <div class="answer-buttons">
-            <button class="btn">An Echo</button>
-            <button class="btn">A Shadow</button>
-            <button class="btn">A Whisper</button>
-            <button class="btn">A Cloud</button>
+            <button class="btn choices" id="choice1"></button>
+            <button class="btn choices" id="choice2"></button>
+            <button class="btn choices" id="choice3"></button>
+            <button class="btn choices" id="choice4"></button>
         </div>
 
         <div id="custom-answer-container" class="custom-answer-container" style="display: none;">
@@ -49,6 +49,6 @@
         </div>
     </div>
 
-    <script src="../js/playsection.js"></script>
+    <script src="/js/playsection.js"></script>
 </body>
 </html>

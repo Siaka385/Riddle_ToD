@@ -1,14 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let riddleNum = {
+        count: 0, // Dynamic value for the count
+    };
+    
+    function loadRiddles() {
+        fetch("http://localhost:8089/loadriddle", {
+            method: "POST", // Sending data to the server
+            headers: {
+                "Content-Type": "application/json", // Specify the content type as JSON
+            },
+            body: JSON.stringify(riddleNum), // Send `riddleNum` as the request payload
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json(); // Parse the response JSON
+            })
+            .then(data => {
+                reddit(data); // Log the loaded data
+            })
+            .catch(err => console.error("Error loading riddles:", err)); // Log any errors
+    }
+    
+    // Call the function to load riddles
+   loadRiddles();
+
+ 
+
+    const riddledisplay=document.getElementById("riddleQustion")
+    const Choices=document.querySelectorAll(".choices")
+    const hints=document.getElementById("riddleHint")
+    
+   function reddit(m){
+             riddledisplay.innerHTML=m.Riddle
+             for (var i = 0;i<4;i++){
+                   Choices[i].innerHTML=m.Choices[i];
+             }
+             hints.innerHTML=m.Hint;
+   }          
+
+    
     const hintLink = document.querySelector('.hint-link');
     const hintElement = document.getElementById('hint');
     const answerButtons = document.querySelectorAll('.answer-buttons .btn');
     const feedbackElement = document.getElementById('feedback');
+
+
     
     // Custom answer elements
-    const customAnswerLink = document.querySelector('.custom-answer-link');
-    const customAnswerContainer = document.getElementById('custom-answer-container');
-    const customAnswerInput = document.getElementById('custom-answer');
-    const customAnswerSubmit = document.querySelector('.custom-answer-submit');
+ //   const customAnswerLink = document.querySelector('.custom-answer-link');
+    // const customAnswerContainer = document.getElementById('custom-answer-container');
+    // const customAnswerInput = document.getElementById('custom-answer');
+    // const customAnswerSubmit = document.querySelector('.custom-answer-submit');
 
     // Add mobile-friendly feedback styles
     const feedbackStyles = `
@@ -77,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Custom answer link toggle
-    customAnswerLink.addEventListener('click', () => {
-        customAnswerContainer.style.display = 
-            customAnswerContainer.style.display === 'none' ? 'flex' : 'none';
-    });
+    // customAnswerLink.addEventListener('click', () => {
+    //     customAnswerContainer.style.display = 
+    //         customAnswerContainer.style.display === 'none' ? 'flex' : 'none';
+    // });
 
     // Function to show feedback with explanation
     const showFeedback = (isCorrect, answer) => {
@@ -113,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Answer selection
     answerButtons.forEach(button => {
         button.addEventListener('click', () => {
+            console.log("hello")
             const selectedAnswer = button.textContent.trim();
             showFeedback(selectedAnswer === 'An Echo', selectedAnswer);
             // Scroll to feedback smoothly
@@ -120,15 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     // Custom answer submission
-    customAnswerSubmit.addEventListener('click', () => {
-        const customAnswer = customAnswerInput.value.trim().toLowerCase();
-        const isCorrect = customAnswer === 'echo';
-        showFeedback(isCorrect, 'An Echo');
-        // Scroll to feedback smoothly
-        feedbackElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // customAnswerSubmit.addEventListener('click', () => {
+    //     const customAnswer = customAnswerInput.value.trim().toLowerCase();
+    //     const isCorrect = customAnswer === 'echo';
+    //     showFeedback(isCorrect, 'An Echo');
+    //     // Scroll to feedback smoothly
+    //     feedbackElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
-        // Clear input
-        customAnswerInput.value = '';
-    });
+    //     // Clear input
+    //     customAnswerInput.value = '';
+    // });
 });

@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sync"
 
 	"github.com/gorilla/sessions"
 	"golang.org/x/crypto/bcrypt"
@@ -20,6 +21,8 @@ type PlayerLogin struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 }
+
+var mu sync.Mutex
 
 // Login handles user login requests
 func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request, store *sessions.CookieStore) {
@@ -62,20 +65,34 @@ func Login(db *gorm.DB, w http.ResponseWriter, r *http.Request, store *sessions.
 	}
 
 	if isUserExist && isPasswordCorrect {
+		mu.Lock()
 		session, _ := store.Get(r, "session-name")
-		// Set some session values.
-		session.Values["Username"] = loginDetails.Username
-		session.Values["User_ID"] = FindUserId(loginDetails, db)
-		session.Values["Authenitcated"] = true
-		store.Options = &sessions.Options{
-			Path:     "/",                  // The root path for the cookie (accessible from all paths)
-			MaxAge:   3600,                 // Session expiration in seconds (1 hour in this case)
-			HttpOnly: true,                 // Prevents JavaScript access to the cookie
-			Secure:   true,                 // Ensures the cookie is sent only over HTTPS
-			SameSite: http.SameSiteLaxMode, // Prevents the cookie from being sent with cross-site requests
+
+		// Iterate through the session values and remove old entries for the same user
+		for key, value := range session.Values {
+			if value == loginDetails.Username || key == "Authenticated" {
+
+				session.Values["Username"] = ""
+				session.Values["Authenitcated"] = false
+				session.Options.MaxAge = -1
+				delete(session.Values, key)
+			}
 		}
 
-		session.Save(r, w)
+		session.Save(r, w) // Save after deletions
+		// Set new session values for the user
+		session.Values["Username"] = loginDetails.Username
+		session.Values["User_ID"] = FindUserId(loginDetails, db)
+		session.Values["Authenticated"] = true
+
+		// Set session options only for this user's session
+		session.Options.MaxAge = 3600 // 1 hour expiration
+		session.Options.HttpOnly = true
+		session.Options.Secure = true
+		session.Options.SameSite = http.SameSiteLaxMode
+
+		session.Save(r, w) // Save the new session
+		mu.Unlock()
 	}
 
 	// Return the response as JSON

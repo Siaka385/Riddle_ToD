@@ -4,14 +4,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"sync"
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
 	"gorm.io/gorm"
 
 	"Riddle_ToD/Serverside"
-	//	rid "Riddle_ToD/Serverside/addriddles"
+	//rid "Riddle_ToD/Serverside/addriddles"
 	auth "Riddle_ToD/Serverside/auth"
 	database "Riddle_ToD/Serverside/database"
 	difficulty "Riddle_ToD/Serverside/difficult"
@@ -20,20 +19,13 @@ import (
 	utils "Riddle_ToD/Serverside/utils"
 )
 
-var (
-	db *gorm.DB
-	mu sync.Mutex
-)
+var db *gorm.DB
 
-// Note: Don't store your key in your source code. Pass it via an
-// environmental variable, or flag (or both), and don't accidentally commit it
-// alongside your code. Ensure your key is sufficiently random - i.e. use Go's
-// crypto/rand or securecookie.GenerateRandomKey(32) and persist the result.
 var Store *sessions.CookieStore
 
 func InitilizeDatabase() {
 	db = database.Init()
-	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomString(40)))
+	Store = sessions.NewCookieStore([]byte(utils.GenerateRandomKey()))
 }
 
 func main() {
@@ -41,7 +33,7 @@ func main() {
 	InitilizeDatabase()
 
 	r := mux.NewRouter()
-	//	rid.Addriddle(db)
+	//rid.Addriddle(db)
 	// Authentication and Registration Routes
 	r.HandleFunc("/loginpage", Serverside.RenderAuthPage).Methods("GET")
 	r.HandleFunc("/registerpage", Serverside.RenderAuthPage).Methods("GET")
@@ -64,6 +56,7 @@ func main() {
 	r.HandleFunc("/selectriddlecategory", func(w http.ResponseWriter, r *http.Request) { Serverside.RenderIndexPage(w, r, db, Store, "category") }).Methods("GET")
 
 	// Gameplay Routes
+	r.HandleFunc("/gameplaymode/{category}/{mode}", func(w http.ResponseWriter, r *http.Request) { loadriddle.LoadRiddles(w, r, db, Store) }).Methods("GET")
 	r.HandleFunc("/gameplaymode/{category}", func(w http.ResponseWriter, r *http.Request) { loadriddle.Selectmode(w, r, db, Store) }).Methods("GET")
 	r.HandleFunc("/playsection", Serverside.Playsection).Methods("GET")
 	//r.HandleFunc("/difficultySetting", func(w http.ResponseWriter, r *http.Request) { Serverside.Filehandler("soloPlayer/difficult.html", w) }).Methods("GET")
@@ -71,8 +64,8 @@ func main() {
 		difficulty.DifficultHandler(w, r, Store, db)
 	}).Methods("GET")
 	r.HandleFunc("/setdifficult", func(w http.ResponseWriter, r *http.Request) { difficulty.SetPlayerDifficulty(w, r, db, Store) }).Methods("POST")
+	r.HandleFunc("/loadriddle", func(w http.ResponseWriter, r *http.Request) { loadriddle.RiddleLoaders(w, r, Store) }).Methods("POST")
 
-	// Serve Static Files
 	// Serve Static Files
 	r.PathPrefix("/indexFolder/").Handler(http.StripPrefix("/indexFolder/", http.FileServer(http.Dir("indexFolder"))))
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))

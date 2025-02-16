@@ -31,7 +31,10 @@ func InitilizeDatabase() {
 func main() {
 
 	InitilizeDatabase()
-
+	// err := rid.Addriddle(db)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
 	r := mux.NewRouter()
 	//rid.Addriddle(db)
 	// Authentication and Registration Routes

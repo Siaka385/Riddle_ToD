@@ -298,3 +298,78 @@ h1 {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+/* Add these styles to your existing CSS file */
+
+.social-signup {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.btn-social {
+    width: 120px;
+    padding: 10px;
+    border: 2px solid var(--blood-red);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-google:hover {
+    background: rgba(219, 68, 55, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(219, 68, 55, 0.3);
+}
+
+.btn-facebook:hover {
+    background: rgba(66, 103, 178, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(66, 103, 178, 0.3);
+}
+
+.divider {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+    line-height: 0.1em;
+    margin: 20px 0;
+}
+
+.divider span {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Update responsive styles */
+@media (max-width: 576px) {
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-social {
+        width: 200px;
+    }
+}
+
+/* Ensure the avatar selection grid stays clean with the new social buttons */
+.avatar-selection {
+    margin-top: 20px;
+}

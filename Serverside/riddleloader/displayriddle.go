@@ -7,8 +7,6 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"strconv"
-	"strings"
 
 	"github.com/gorilla/sessions"
 	"gorm.io/gorm"
@@ -34,7 +32,7 @@ func LoadRiddles(w http.ResponseWriter, r *http.Request, db *gorm.DB, store *ses
 	session, _ := store.Get(r, "session-name")
 
 	// Retrieve user session details
-	userID := session.Values["User_ID"]
+	//userID := session.Values["User_ID"]
 	username := session.Values["Username"]
 	isAuthenticated := session.Values["Authenticated"]
 
@@ -43,30 +41,20 @@ func LoadRiddles(w http.ResponseWriter, r *http.Request, db *gorm.DB, store *ses
 		http.Redirect(w, r, "/intro", http.StatusFound)
 	}
 
-	// Get riddles the user has already solved
-	solvedRiddles := GetSolvedRiddles(db, userID)
-
 	// Get the user's preferred difficulty level
-	userPreferredDifficulty := GetUserPreferredDifficulty(db, userID)
 	riddlesToDisplay = []ServerResponse{}
 
 	if len(FilteredRiddles) == 0 {
-		fmt.Println("CHE")
 		os.Exit(1)
 	}
-	fmt.Println("hello")
 	for i := 0; i < len(FilteredRiddles); i++ {
-		// Check if the riddle is unsolved and matches the user's preferred difficulty
-		if !IsRiddleSolved(solvedRiddles, FilteredRiddles[i].ID) &&
-			strings.EqualFold(FilteredRiddles[i].Difficulty, userPreferredDifficulty) {
-			k := ServerResponse{
-				Id:      uint(FilteredRiddles[i].ID),
-				Riddle:  FilteredRiddles[i].Question,
-				Choices: StringIT(RiddleChoicesMap[FilteredRiddles[i].ID]),
-				Hint:    ReleaseHint(RiddleHintsMap[FilteredRiddles[i].ID]),
-			}
-			riddlesToDisplay = append(riddlesToDisplay, k)
+		k := ServerResponse{
+			Id:      uint(FilteredRiddles[i].ID),
+			Riddle:  FilteredRiddles[i].Question,
+			Choices: StringIT(RiddleChoicesMap[FilteredRiddles[i].ID]),
+			Hint:    ReleaseHint(RiddleHintsMap[FilteredRiddles[i].ID]),
 		}
+		riddlesToDisplay = append(riddlesToDisplay, k)
 
 	}
 
@@ -82,8 +70,8 @@ func LoadRiddles(w http.ResponseWriter, r *http.Request, db *gorm.DB, store *ses
 	// Implement rendering or response handling for `riddlesToDisplay` here
 }
 
-func GetSolvedRiddles(db *gorm.DB, userID any) []string {
-	var solvedRiddlesString string
+func GetSolvedRiddles(db *gorm.DB, userID any) []uint {
+	var solvedRiddlesString []uint
 
 	// Fetch solved riddles from the database
 	err := db.Model(&database.PlayerLevel{}).
@@ -94,34 +82,7 @@ func GetSolvedRiddles(db *gorm.DB, userID any) []string {
 		fmt.Println("Error fetching solved riddles:", err)
 	}
 
-	// Split the solved riddles string into a slice
-	return strings.Split(solvedRiddlesString, " ")
-}
-
-func GetUserPreferredDifficulty(db *gorm.DB, userID any) string {
-	var preferredDifficulty string
-
-	// Fetch the user's preferred difficulty from the database
-	err := db.Model(&database.PlayerLevel{}).
-		Select("prefered_difficulty").
-		Where("user_id = ?", userID).
-		Scan(&preferredDifficulty).Error
-	if err != nil {
-		fmt.Println("Error fetching preferred difficulty:", err)
-	}
-
-	return preferredDifficulty
-}
-
-func IsRiddleSolved(solvedRiddles []string, riddleID int) bool {
-	for _, solvedRiddle := range solvedRiddles {
-		id, _ := strconv.Atoi(solvedRiddle)
-
-		if riddleID == id {
-			return true
-		}
-	}
-	return false
+	return solvedRiddlesString
 }
 
 func RiddleLoaders(w http.ResponseWriter, r *http.Request, store *sessions.CookieStore) {
@@ -147,7 +108,6 @@ func RiddleLoaders(w http.ResponseWriter, r *http.Request, store *sessions.Cooki
 		os.Exit(1)
 	}
 	json.Unmarshal(body, &ted)
-	fmt.Println("request", ted.Count)
 	if len(riddlesToDisplay) > 0 {
 		w.WriteHeader(http.StatusOK)
 		json.NewEncoder(w).Encode(riddlesToDisplay[ted.Count])

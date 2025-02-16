@@ -103,16 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add styles to document
     document.head.insertAdjacentHTML('beforeend', feedbackStyles);
 
-    // Riddle explanation object
-    const riddleExplanations = {
-        'An Echo': [
-            "It \"speaks\" by repeating sounds without having a mouth",
-            "It \"hears\" by receiving sound waves without ears",
-            "It has no physical form (no body)",
-            "It becomes active when sound travels through the air (comes alive with the wind)",
-            "It's a natural phenomenon that demonstrates all these qualities perfectly"
-        ]
-    };
 
     // Hint toggle
     hintLink.addEventListener('click', () => {

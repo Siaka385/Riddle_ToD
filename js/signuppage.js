@@ -85,6 +85,13 @@ function handleServerResponse(message){
     return
   }
 
+  if(message == "Email is not valid"){
+    errorMessage.textContent="Email is not valid"
+    errorMessage.style.display = 'block';
+    scrollToTop()
+  return
+}
+
   if (message == "Passwords do not match"){
       errorMessage.textContent="Passwords do not match"
       errorMessage.style.display = 'block';

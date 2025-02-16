@@ -23,7 +23,7 @@ func Selectmode(w http.ResponseWriter, r *http.Request, db *gorm.DB, session *se
 	sessions, _ := session.Get(r, "session-name")
 
 	//username := session.Values["Username"]
-	//	userId := sessions.Values["User_ID"]
+	userId := sessions.Values["User_ID"]
 	username := sessions.Values["Username"]
 	isLogged := sessions.Values["Authenticated"]
 
@@ -55,13 +55,13 @@ func Selectmode(w http.ResponseWriter, r *http.Request, db *gorm.DB, session *se
 	// }
 
 	if path == "mathematics" {
-		LoadRiddlesFromDB(w, r, "Mathematics", db)
+		LoadRiddlesFromDB(w, r, "Mathematics", db, userId)
 	} else if path == "generalriddles" {
-		LoadRiddlesFromDB(w, r, "General", db)
+		LoadRiddlesFromDB(w, r, "General", db, userId)
 	} else if path == "wordriddles" {
-		LoadRiddlesFromDB(w, r, "Word", db)
+		LoadRiddlesFromDB(w, r, "Word", db, userId)
 	} else if path == "logicriddles" {
-		LoadRiddlesFromDB(w, r, "Logic", db)
+		LoadRiddlesFromDB(w, r, "Logic", db, userId)
 	} else {
 		http.Error(w, "NOT FOUND", http.StatusNotFound)
 		return

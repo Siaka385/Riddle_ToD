@@ -7,10 +7,10 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"sort"
-	"strconv"
+	"regexp"
 	"time"
 
+	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
@@ -37,6 +37,15 @@ type ExistingUser struct {
 }
 
 var ExistingUsers []ExistingUser
+
+func isValidEmail(email string) (bool, error) {
+	emailPattern := `^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`
+	re, err := regexp.Compile(emailPattern)
+	if err != nil {
+		return false, err // Return error instead of crashing
+	}
+	return re.MatchString(email), nil
+}
 
 func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 	if r.Header.Get("Content-Type") != "application/json" {
@@ -76,6 +85,15 @@ func Register(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 		}
 	}
 
+	isEmailValid, err := isValidEmail(playerInput.Email)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	if !isEmailValid {
+		apiResponse = APIResponse{"Email is not valid"}
+		uservalid = false
+	}
 	if uservalid {
 		AddNewUser(db, playerInput)
 	}
@@ -104,7 +122,7 @@ func AddNewUser(db *gorm.DB, playerInput PlayerInput) error {
 	playlevel := database.PlayerLevel{
 		Level:              1,
 		PreferedDifficulty: "Easy",
-		AnsweredRiddles:    "0,",
+		AnsweredRiddles:    []uint{},
 		User_ID:            newPlayer.User_ID,
 	}
 
@@ -171,7 +189,7 @@ func LoadExistingUsers(db *gorm.DB) {
 
 	if err := db.Model(&playerRecord).Select("username", "email", "User_ID").Find(&ExistingUsers).Error; err != nil {
 		log.Println("Error retrieving usernames,emails and User_ID:", err)
-	} 
+	}
 }
 
 func HashPassword(password string) string {
@@ -184,22 +202,6 @@ func HashPassword(password string) string {
 }
 
 func GiveUserId() string {
-	var id []int
-	for i := 0; i < len(ExistingUsers); i++ {
-		num, err := strconv.Atoi(ExistingUsers[i].User_ID)
-		if err != nil {
-			fmt.Println("error converting the user id")
-		}
-		id = append(id, num)
-	}
-
-	if len(id) == 0 {
-		return "1"
-	}
-	sort.Ints(id)
-
-	userid := id[len(id)-1] + 1
-
-	return strconv.Itoa(userid)
-
+	userid := uuid.New()
+	return userid.String()
 }

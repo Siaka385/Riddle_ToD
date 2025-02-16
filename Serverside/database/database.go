@@ -18,7 +18,8 @@ type Player struct {
 type PlayerLevel struct {
 	Level              int `gorm:"not null"`
 	PreferedDifficulty string
-	AnsweredRiddles    string
+	TotalPoints        int    `gorm:"not null"`
+	AnsweredRiddles    []uint `gorm:"serializer:json"`
 	User_ID            string `gorm:"not null"`                              // Foreign key referring to Player.User_ID
 	Player             Player `gorm:"foreignKey:User_ID;references:User_ID"` // Foreign key constraint on User_ID
 }

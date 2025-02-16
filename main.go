@@ -63,6 +63,7 @@ func main() {
 	r.HandleFunc("/difficultysetting", func(w http.ResponseWriter, r *http.Request) {
 		difficulty.DifficultHandler(w, r, Store, db)
 	}).Methods("GET")
+	//playsection
 	r.HandleFunc("/setdifficult", func(w http.ResponseWriter, r *http.Request) { difficulty.SetPlayerDifficulty(w, r, db, Store) }).Methods("POST")
 	r.HandleFunc("/loadriddle", func(w http.ResponseWriter, r *http.Request) { loadriddle.RiddleLoaders(w, r, Store) }).Methods("POST")
 

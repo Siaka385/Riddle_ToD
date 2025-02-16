@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
 
 	"gorm.io/gorm"
 
@@ -36,11 +37,17 @@ var RiddleChoicesMap map[int][]Choice = make(map[int][]Choice)
 var RiddleHintsMap map[int][]Hint = make(map[int][]Hint)
 
 // LoadRiddlesFromDB retrieves riddles based on the selected category, generates choices and hints, and writes the riddles to a JSON file.
-func LoadRiddlesFromDB(w http.ResponseWriter, r *http.Request, category string, db *gorm.DB) {
+func LoadRiddlesFromDB(w http.ResponseWriter, r *http.Request, category string, db *gorm.DB, userID any) {
+
+	userPreferredDifficulty := GetUserPreferredDifficulty(db, userID)
+	solvedRiddles := GetSolvedRiddles(db, userID)
+
+	// Get riddles the user has already solved
 	// Retrieve riddles from the database
 	err := db.Model(&database.Riddle{}).
 		Select("ID, Question, Answer, Explanation, Category, Difficulty, Points").
-		Where("category = ?", category).
+		Where("category = ? AND Difficulty = ?", category, userPreferredDifficulty).
+		Where("ID NOT IN (?)", solvedRiddles).
 		Find(&FilteredRiddles).Error
 
 	if err != nil {
@@ -55,6 +62,32 @@ func LoadRiddlesFromDB(w http.ResponseWriter, r *http.Request, category string, 
 	//fmt.Println(RiddleChoicesMap)
 	GenerateRiddleHints(db)
 	//fmt.Println(RiddleHintsMap)
+}
+
+func GetUserPreferredDifficulty(db *gorm.DB, userID any) string {
+	var preferredDifficulty string
+
+	// Fetch the user's preferred difficulty from the database
+	err := db.Model(&database.PlayerLevel{}).
+		Select("prefered_difficulty").
+		Where("user_id = ?", userID).
+		Scan(&preferredDifficulty).Error
+	if err != nil {
+		fmt.Println("Error fetching preferred difficulty:", err)
+	}
+
+	return preferredDifficulty
+}
+
+func IsRiddleSolved(solvedRiddles []string, riddleID int) bool {
+	for _, solvedRiddle := range solvedRiddles {
+		id, _ := strconv.Atoi(solvedRiddle)
+
+		if riddleID == id {
+			return true
+		}
+	}
+	return false
 }
 
 // WriteRiddlesToFile writes the filtered riddles to a JSON file.
